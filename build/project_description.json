@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "hello_world",
-    "project_version":    "1",
+    "project_version":    "61a32db-dirty",
     "project_path":       "C:/Users/Rafael/OneDrive - UNIVALI/Anexos/Arquivo pra envio/Sistema Temp Real/Network Project M2/hello_world",
     "idf_path":           "C:/Users/Rafael/esp/v5.5.1/esp-idf",
     "build_dir":          "C:/Users/Rafael/OneDrive - UNIVALI/Anexos/Arquivo pra envio/Sistema Temp Real/Network Project M2/hello_world/build",
@@ -11,7 +11,7 @@
     "app_elf":            "hello_world.elf",
     "app_bin":            "hello_world.bin",
     "build_type":         "flash_app",
-    "git_revision":       "v5.5.1-dirty",
+    "git_revision":       "v5.5.1-1-gbb7f939c8",
     "target":             "esp32",
     "rev":                "0",
     "min_rev":            "0",

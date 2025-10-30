@@ -324,19 +324,19 @@ static void task_time1(void *arg)
     esp_sntp_setoperatingmode(SNTP_OPMODE_POLL);
     esp_sntp_setservername(0, "time.google.com");
     esp_sntp_setservername(1, "pool.ntp.br");
-    esp_sntp_set_sync_interval(30000); // 30s
+    esp_sntp_set_sync_interval(20000); // 20s sincroniza a cada 20s
     esp_sntp_set_time_sync_notification_cb(time_sync_notification_cb);
     esp_sntp_init();
 
     // ===== Aguarda sincronização inicial =====
-    ESP_LOGI(TAG_TIME, "Aguardando sincronização SNTP...");
+    ESP_LOGI(TAG_TIME, "Esperando sincronização SNTP...");
     int wait_count = 0;
     while (sntp_get_sync_status() == SNTP_SYNC_STATUS_RESET)
     {
         vTaskDelay(pdMS_TO_TICKS(500));
         wait_count++;
         if (wait_count % 10 == 0) // log a cada 5 s
-            ESP_LOGI(TAG_TIME, "Ainda aguardando SNTP...");
+            ESP_LOGI(TAG_TIME, "Ainda esperando SNTP...");
     }
     ESP_LOGI(TAG_TIME, "SNTP sincronizado com sucesso.");
 
