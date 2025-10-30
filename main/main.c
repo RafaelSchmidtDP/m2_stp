@@ -104,9 +104,9 @@ static SemaphoreHandle_t mutexStats = NULL;
 static SemaphoreHandle_t mutexSock = NULL;
 
 // ----- Sockets compartilhados entre monitor e report -----
-static int g_sock_udp = -1;
-static int g_tcp_listen_fd = -1;
-static int g_client_sock = -1;
+static int g_sock_udp = -1;      // Recebe comandos do PC via UDP e envia logs periódicos de volta.
+static int g_tcp_listen_fd = -1; // Socket de escuta TCP (server) para aceitar conexões de um cliente PC.
+static int g_client_sock = -1;   // Socket TCP ativo para comunicação com o cliente, criado após accept(). Recebe comandos e envia logs
 
 // Variáveis de desempenho (Misses e Ciclos)
 static uint32_t enc_misses = 0;
@@ -736,7 +736,8 @@ static void task_safety(void *arg)
 static void task_monitor(void *arg)
 {
     protocol_mode_t *current_mode = (protocol_mode_t *)arg; // Ponteiro para modo de operação atual (UDP ou TCP)
-
+    // sockets locais da task_monitor que armazenam temporariamente
+    // os descritores de socket antes de passá-los para os globais protegidos por mutex.
     int sock_udp = -1;
     int tcp_listen_fd = -1;
 
