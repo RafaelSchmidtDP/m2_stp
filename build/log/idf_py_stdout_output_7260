@@ -1,0 +1,30 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM3'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ab80h (109440) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002aba8 vaddr=3ffb0000 size=03f8ch ( 16268) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002eb3c vaddr=40080000 size=014dch (  5340) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=90e40h (593472) map[0m

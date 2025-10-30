@@ -1,0 +1,432 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM3'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1aab8h (109240) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002aae0 vaddr=3ffb0000 size=03fach ( 16300) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002ea94 vaddr=40080000 size=01584h (  5508) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=921b0h (598448) map[0m
+[0;32mI (341) esp_image: segment 4: paddr=000c21d8 vaddr=40081584 size=169f4h ( 92660) load[0m
+[0;32mI (377) esp_image: segment 5: paddr=000d8bd4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (389) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (389) boot: Disabling RNG early entropy source...[0m
+[0;32mI (400) cpu_start: Multicore app[0m
+[0;32mI (408) cpu_start: Pro cpu start user code[0m
+[0;32mI (408) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (409) app_init: Application information:[0m
+[0;32mI (409) app_init: Project name:     hello_world[0m
+[0;32mI (413) app_init: App version:      1[0m
+[0;32mI (416) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (421) app_init: ELF file SHA256:  555041aaf...[0m
+[0;32mI (426) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (429) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (433) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (437) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (441) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (447) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB8750 len 000278B0 (158 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (469) heap_init: At 40097F78 len 00008088 (32 KiB): IRAM[0m
+[0;32mI (475) spi_flash: detected chip: generic[0m
+[0;32mI (477) spi_flash: flash io: dio[0m
+[0;33mW (480) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (493) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (503) main_task: Started on CPU0[0m
+[0;32mI (513) main_task: Calling app_main()[0m
+[0;32mI (533) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (543) wifi:wifi driver task: 3ffc0988, prio:23, stack:6656, core=0[0m
+[0;32mI (553) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (553) wifi:wifi certification version: v7.0[0m
+[0;32mI (553) wifi:config NVS flash: enabled[0m
+[0;32mI (553) wifi:config nano formatting: disabled[0m
+[0;32mI (563) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (563) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (563) wifi:Init management short buffer num: 32[0m
+[0;32mI (573) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (573) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (583) wifi:Init static rx buffer num: 10[0m
+[0;32mI (583) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (593) wifi_init: rx ba win: 6[0m
+[0;32mI (593) wifi_init: accept mbox: 6[0m
+[0;32mI (593) wifi_init: tcpip mbox: 32[0m
+[0;32mI (593) wifi_init: udp mbox: 6[0m
+[0;32mI (603) wifi_init: tcp mbox: 6[0m
+[0;32mI (603) wifi_init: tcp tx win: 5760[0m
+[0;32mI (603) wifi_init: tcp rx win: 5760[0m
+[0;32mI (613) wifi_init: tcp mss: 1440[0m
+[0;32mI (613) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (613) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (623) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (693) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (713) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (713) wifi:enable tsf[0m
+[0;32mI (713) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (733) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (733) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (773) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (803) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (813) SISTEMA: Deadlines: ENC=5000us | CTRL=5000us | SORT=10000us | ESTOP=5000us | MON=500000us[0m
+[0;32mI (813) SISTEMA: Modo de Teste: UDP[0m
+[0;32mI (813) SISTEMA: m-k FIRM: (9, 10)[0m
+[0;32mI (813) SISTEMA: Sistema iniciado.[0m
+[0;32mI (813) main_task: Returned from app_main()[0m
+[0;32mI (823) MONITOR: INICIANDO MODO UDP[0m
+[0;32mI (823) TIME: Aguardando sincronização SNTP...[0m
+[1;31mE (823) SISTEMA: Erro ao enviar relatório UDP: errno=118 | SEQ=0[0m
+[0;32mI (913) wifi:connected with Suite3, aid = 18, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (913) wifi:security: WPA2-PSK, phy: bgn, rssi: -33[0m
+[0;32mI (913) wifi:pm start, type: 1[0m
+
+[0;32mI (913) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (993) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[1;31mE (1323) SISTEMA: Erro ao enviar relatório UDP: errno=118 | SEQ=1[0m
+[1;31mE (1823) SISTEMA: Erro ao enviar relatório UDP: errno=118 | SEQ=2[0m
+[1;31mE (2323) SISTEMA: Erro ao enviar relatório UDP: errno=118 | SEQ=3[0m
+[0;32mI (2433) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:6, winSize:64[0m
+[1;31mE (2823) SISTEMA: Erro ao enviar relatório UDP: errno=118 | SEQ=4[0m
+[1;31mE (3323) SISTEMA: Erro ao enviar relatório UDP: errno=118 | SEQ=5[0m
+I (3433) esp_netif_handlers: sta ip: 192.168.7.7, mask: 255.255.255.0, gw: 192.168.7.1
+[0;32mI (3823) SISTEMA: Relatorio UDP enviado com sucesso (79 bytes) | SEQ=6[0m
+[0;32mI (4223) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (4323) SISTEMA: Relatorio UDP enviado com sucesso (79 bytes) | SEQ=7[0m
+[0;32mI (4363) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (4823) TIME: SNTP sincronizado com sucesso.[0m
+[0;32mI (4823) TIME: Hora de referencia: 28/10/2025 19:16:29 | Ciclo: 1[0m
+[0;32mI (4823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=8[0m
+[0;32mI (5323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=9[0m
+[0;32mI (5823) TIME: Hora de referencia: 28/10/2025 19:16:30 | Ciclo: 2[0m
+[0;32mI (5823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=10[0m
+[0;32mI (6323) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=11[0m
+[0;32mI (6823) TIME: Hora de referencia: 28/10/2025 19:16:31 | Ciclo: 3[0m
+[0;32mI (6823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=12[0m
+[0;32mI (7323) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=13[0m
+[0;32mI (7823) TIME: Hora de referencia: 28/10/2025 19:16:32 | Ciclo: 4[0m
+[0;32mI (7823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=14[0m
+[0;32mI (8323) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=15[0m
+[0;32mI (8823) TIME: Hora de referencia: 28/10/2025 19:16:33 | Ciclo: 5[0m
+[0;32mI (8823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=16[0m
+[0;32mI (9323) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=17[0m
+[0;32mI (9823) TIME: Hora de referencia: 28/10/2025 19:16:34 | Ciclo: 6[0m
+[0;32mI (9823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=18[0m
+[0;32mI (10323) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=19[0m
+[0;32mI (10823) TIME: Hora de referencia: 28/10/2025 19:16:35 | Ciclo: 7[0m
+[0;32mI (10823) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10823) SISTEMA: Relatorio UDP enviado com sucesso (86 bytes) | SEQ=20[0m
+[0;32mI (11323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=21[0m
+[0;32mI (11323) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=10850.33 ms | Total peças=1[0m
+[0;32mI (11823) TIME: Hora de referencia: 28/10/2025 19:16:36 | Ciclo: 8[0m
+[0;32mI (11823) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11823) SISTEMA: Relatorio UDP enviado com sucesso (86 bytes) | SEQ=22[0m
+[0;32mI (12323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=23[0m
+[0;32mI (12323) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=11850.34 ms | Total peças=2[0m
+[0;32mI (12823) TIME: Hora de referencia: 28/10/2025 19:16:37 | Ciclo: 9[0m
+[0;32mI (12823) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12823) SISTEMA: Relatorio UDP enviado com sucesso (86 bytes) | SEQ=24[0m
+[0;32mI (13323) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=12850.33 ms | Total peças=3[0m
+[0;32mI (13323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=25[0m
+[0;32mI (13823) TIME: Hora de referencia: 28/10/2025 19:16:38 | Ciclo: 10[0m
+[0;32mI (13823) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13823) SISTEMA: Relatorio UDP enviado com sucesso (86 bytes) | SEQ=26[0m
+[0;32mI (14323) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=13850.34 ms | Total peças=4[0m
+[0;32mI (14323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=27[0m
+[0;32mI (14823) TIME: Hora de referencia: 28/10/2025 19:16:39 | Ciclo: 11[0m
+[0;32mI (14823) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=28[0m
+[0;32mI (15323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15323) SISTEMA: Relatorio UDP enviado com sucesso (86 bytes) | SEQ=29[0m
+[0;32mI (15823) TIME: Hora de referencia: 28/10/2025 19:16:40 | Ciclo: 12[0m
+[0;32mI (15823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=15350.99 ms | Total peças=5[0m
+[0;32mI (15823) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=30[0m
+[0;32mI (16323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16323) SISTEMA: Relatorio UDP enviado com sucesso (86 bytes) | SEQ=31[0m
+[0;32mI (16823) TIME: Hora de referencia: 28/10/2025 19:16:41 | Ciclo: 13[0m
+[0;32mI (16823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=16351.09 ms | Total peças=6[0m
+[0;32mI (16823) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=32[0m
+[0;32mI (17323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17323) SISTEMA: Relatorio UDP enviado com sucesso (86 bytes) | SEQ=33[0m
+[0;32mI (17823) TIME: Hora de referencia: 28/10/2025 19:16:42 | Ciclo: 14[0m
+[0;32mI (17823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=17350.96 ms | Total peças=7[0m
+[0;32mI (17823) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=34[0m
+[0;32mI (18323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18323) SISTEMA: Relatorio UDP enviado com sucesso (86 bytes) | SEQ=35[0m
+[0;32mI (18823) TIME: Hora de referencia: 28/10/2025 19:16:43 | Ciclo: 15[0m
+[0;32mI (18823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=18351.01 ms | Total peças=8[0m
+[0;32mI (18823) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=36[0m
+[0;32mI (19323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19323) SISTEMA: Relatorio UDP enviado com sucesso (86 bytes) | SEQ=37[0m
+[0;32mI (19823) TIME: Hora de referencia: 28/10/2025 19:16:44 | Ciclo: 16[0m
+[0;32mI (19823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=19351.00 ms | Total peças=9[0m
+[0;32mI (19823) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=38[0m
+[0;32mI (20323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20323) SISTEMA: Relatorio UDP enviado com sucesso (86 bytes) | SEQ=39[0m
+[0;32mI (20823) TIME: Hora de referencia: 28/10/2025 19:16:45 | Ciclo: 17[0m
+[0;32mI (20823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=20350.99 ms | Total peças=10[0m
+[0;32mI (20823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=40[0m
+[0;32mI (21323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=41[0m
+[0;32mI (21823) TIME: Hora de referencia: 28/10/2025 19:16:46 | Ciclo: 18[0m
+[0;32mI (21823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=21350.97 ms | Total peças=11[0m
+[0;32mI (21823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=42[0m
+[0;32mI (22323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (22323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=43[0m
+[0;32mI (22823) TIME: Hora de referencia: 28/10/2025 19:16:47 | Ciclo: 19[0m
+[0;32mI (22823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=22350.96 ms | Total peças=12[0m
+[0;32mI (22823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=44[0m
+[0;32mI (23323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (23323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=45[0m
+[0;32mI (23823) TIME: Hora de referencia: 28/10/2025 19:16:48 | Ciclo: 20[0m
+[0;32mI (23823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=23350.96 ms | Total peças=13[0m
+[0;32mI (23823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=46[0m
+[0;32mI (24323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (24323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=47[0m
+[0;32mI (24823) TIME: Hora de referencia: 28/10/2025 19:16:49 | Ciclo: 21[0m
+[0;32mI (24823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=24350.99 ms | Total peças=14[0m
+[0;32mI (24823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=48[0m
+[0;32mI (25323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (25323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=49[0m
+[0;32mI (25823) TIME: Hora de referencia: 28/10/2025 19:16:50 | Ciclo: 22[0m
+[0;32mI (25823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=25351.00 ms | Total peças=15[0m
+[0;32mI (25823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=50[0m
+[0;32mI (26323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (26323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=51[0m
+[0;32mI (26823) TIME: Hora de referencia: 28/10/2025 19:16:51 | Ciclo: 23[0m
+[0;32mI (26823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=26350.98 ms | Total peças=16[0m
+[0;32mI (26823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=52[0m
+[0;32mI (27323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (27323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=53[0m
+[0;32mI (27823) TIME: Hora de referencia: 28/10/2025 19:16:52 | Ciclo: 24[0m
+[0;32mI (27823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=27350.97 ms | Total peças=17[0m
+[0;32mI (27833) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=54[0m
+[0;32mI (28323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (28323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=55[0m
+[0;32mI (28823) TIME: Hora de referencia: 28/10/2025 19:16:53 | Ciclo: 25[0m
+[0;32mI (28823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=28351.01 ms | Total peças=18[0m
+[0;32mI (28823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=56[0m
+[0;32mI (29323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (29323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=57[0m
+[0;32mI (29823) TIME: Hora de referencia: 28/10/2025 19:16:54 | Ciclo: 26[0m
+[0;32mI (29823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=29350.97 ms | Total peças=19[0m
+[0;32mI (29823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=58[0m
+[0;32mI (30323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (30323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=59[0m
+[0;32mI (30823) TIME: Hora de referencia: 28/10/2025 19:16:55 | Ciclo: 27[0m
+[0;32mI (30823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=30350.96 ms | Total peças=20[0m
+[0;32mI (30823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=60[0m
+[0;32mI (31323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (31323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=61[0m
+[0;32mI (31823) TIME: Hora de referencia: 28/10/2025 19:16:56 | Ciclo: 28[0m
+[0;32mI (31823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=31351.65 ms | Total peças=21[0m
+[0;32mI (31823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=62[0m
+[0;32mI (32323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (32323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=63[0m
+[0;32mI (32823) TIME: Hora de referencia: 28/10/2025 19:16:57 | Ciclo: 29[0m
+[0;32mI (32823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=32351.01 ms | Total peças=22[0m
+[0;32mI (32823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=64[0m
+[0;32mI (33323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (33323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=65[0m
+[0;32mI (33823) TIME: Hora de referencia: 28/10/2025 19:16:58 | Ciclo: 30[0m
+[0;32mI (33823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=33350.98 ms | Total peças=23[0m
+[0;32mI (33823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=66[0m
+[0;32mI (34323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (34323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=67[0m
+[0;32mI (34613) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (34823) TIME: Hora de referencia: 28/10/2025 19:16:59 | Ciclo: 0[0m
+[0;32mI (34823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=34350.95 ms | Total peças=24[0m
+[0;32mI (34823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=68[0m
+[0;32mI (35323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (35323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=69[0m
+[0;32mI (35823) TIME: Hora de referencia: 28/10/2025 19:17:00 | Ciclo: 1[0m
+[0;32mI (35823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=35351.04 ms | Total peças=25[0m
+[0;32mI (35823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=70[0m
+[0;32mI (36323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (36323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=71[0m
+[0;32mI (36823) TIME: Hora de referencia: 28/10/2025 19:17:01 | Ciclo: 2[0m
+[0;32mI (36823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=36351.02 ms | Total peças=26[0m
+[0;32mI (36833) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=72[0m
+[0;32mI (37323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (37323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=73[0m
+[0;32mI (37823) TIME: Hora de referencia: 28/10/2025 19:17:02 | Ciclo: 3[0m
+[0;32mI (37823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=37351.02 ms | Total peças=27[0m
+[0;32mI (37823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=74[0m
+[0;32mI (38323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (38323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=75[0m
+[0;32mI (38823) TIME: Hora de referencia: 28/10/2025 19:17:03 | Ciclo: 4[0m
+[0;32mI (38823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=38350.97 ms | Total peças=28[0m
+[0;32mI (38823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=76[0m
+[0;32mI (39323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (39323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=77[0m
+[0;32mI (39823) TIME: Hora de referencia: 28/10/2025 19:17:04 | Ciclo: 5[0m
+[0;32mI (39823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=39351.02 ms | Total peças=29[0m
+[0;32mI (39823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=78[0m
+[0;32mI (40323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (40323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=79[0m
+[0;32mI (40823) TIME: Hora de referencia: 28/10/2025 19:17:05 | Ciclo: 6[0m
+[0;32mI (40823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=40350.93 ms | Total peças=30[0m
+[0;32mI (40823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=80[0m
+[0;32mI (41323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (41323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=81[0m
+[0;32mI (41823) TIME: Hora de referencia: 28/10/2025 19:17:06 | Ciclo: 7[0m
+[0;32mI (41823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=41351.01 ms | Total peças=31[0m
+[0;32mI (41823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=82[0m
+[0;32mI (42323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (42323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=83[0m
+[0;32mI (42823) TIME: Hora de referencia: 28/10/2025 19:17:07 | Ciclo: 8[0m
+[0;32mI (42823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=42351.02 ms | Total peças=32[0m
+[0;32mI (42823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=84[0m
+[0;32mI (43323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (43323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=85[0m
+[0;32mI (43823) TIME: Hora de referencia: 28/10/2025 19:17:08 | Ciclo: 9[0m
+[0;32mI (43823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=43350.96 ms | Total peças=33[0m
+[0;32mI (43823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=86[0m
+[0;32mI (44323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (44323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=87[0m
+[0;32mI (44823) TIME: Hora de referencia: 28/10/2025 19:17:09 | Ciclo: 10[0m
+[0;32mI (44823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=44350.98 ms | Total peças=34[0m
+[0;32mI (44823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=88[0m
+[0;32mI (45323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (45323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=89[0m
+[0;32mI (45823) TIME: Hora de referencia: 28/10/2025 19:17:10 | Ciclo: 11[0m
+[0;32mI (45823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=45351.00 ms | Total peças=35[0m
+[0;32mI (45823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=90[0m
+[0;32mI (46323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (46323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=91[0m
+[0;32mI (46823) TIME: Hora de referencia: 28/10/2025 19:17:11 | Ciclo: 12[0m
+[0;32mI (46823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=46351.00 ms | Total peças=36[0m
+[0;32mI (46823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=92[0m
+[0;32mI (47323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (47323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=93[0m
+[0;32mI (47823) TIME: Hora de referencia: 28/10/2025 19:17:12 | Ciclo: 13[0m
+[0;32mI (47823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=47350.98 ms | Total peças=37[0m
+[0;32mI (47823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=94[0m
+[0;32mI (48323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (48323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=95[0m
+[0;32mI (48823) TIME: Hora de referencia: 28/10/2025 19:17:13 | Ciclo: 14[0m
+[0;32mI (48823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=48351.03 ms | Total peças=38[0m
+[0;32mI (48823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=96[0m
+[0;32mI (49323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (49323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=97[0m
+[0;32mI (49823) TIME: Hora de referencia: 28/10/2025 19:17:14 | Ciclo: 15[0m
+[0;32mI (49823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=49351.01 ms | Total peças=39[0m
+[0;32mI (49823) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=98[0m
+[0;32mI (50323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (50323) SISTEMA: Relatorio UDP enviado com sucesso (87 bytes) | SEQ=99[0m
+[0;32mI (50823) TIME: Hora de referencia: 28/10/2025 19:17:15 | Ciclo: 16[0m
+[0;32mI (50823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=50351.00 ms | Total peças=40[0m
+[0;32mI (50823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=100[0m
+[0;32mI (51323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (51323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=101[0m
+[0;32mI (51823) TIME: Hora de referencia: 28/10/2025 19:17:16 | Ciclo: 17[0m
+[0;32mI (51823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=51351.01 ms | Total peças=41[0m
+[0;32mI (51823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=102[0m
+[0;32mI (52323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (52323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=103[0m
+[0;32mI (52823) TIME: Hora de referencia: 28/10/2025 19:17:17 | Ciclo: 18[0m
+[0;32mI (52823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=52350.95 ms | Total peças=42[0m
+[0;32mI (52823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=104[0m
+[0;32mI (53323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (53323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=105[0m
+[0;33mW (53323) SISTEMA: SAFETY miss (WCRT): R=5497 us (dl=5000) total=1[0m
+[0;32mI (53823) TIME: Hora de referencia: 28/10/2025 19:17:18 | Ciclo: 19[0m
+[0;32mI (53823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=53351.01 ms | Total peças=43[0m
+[0;32mI (53833) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=106[0m
+[0;32mI (54323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (54323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=107[0m
+[0;32mI (54823) TIME: Hora de referencia: 28/10/2025 19:17:19 | Ciclo: 20[0m
+[0;32mI (54823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=54351.01 ms | Total peças=44[0m
+[0;32mI (54823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=108[0m
+[0;32mI (55323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (55323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=109[0m
+[0;32mI (55823) TIME: Hora de referencia: 28/10/2025 19:17:20 | Ciclo: 21[0m
+[0;32mI (55823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=55350.96 ms | Total peças=45[0m
+[0;32mI (55823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=110[0m
+[0;32mI (56323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (56323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=111[0m
+[0;32mI (56823) TIME: Hora de referencia: 28/10/2025 19:17:21 | Ciclo: 22[0m
+[0;32mI (56823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=56350.95 ms | Total peças=46[0m
+[0;32mI (56823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=112[0m
+[0;32mI (57323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (57323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=113[0m
+[0;32mI (57823) TIME: Hora de referencia: 28/10/2025 19:17:22 | Ciclo: 23[0m
+[0;32mI (57823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=57351.49 ms | Total peças=47[0m
+[0;32mI (57823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=114[0m
+[0;32mI (58323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (58323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=115[0m
+[0;32mI (58823) TIME: Hora de referencia: 28/10/2025 19:17:23 | Ciclo: 24[0m
+[0;32mI (58823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=58351.00 ms | Total peças=48[0m
+[0;32mI (58823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=116[0m
+[0;32mI (59323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (59323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=117[0m
+[0;32mI (59823) TIME: Hora de referencia: 28/10/2025 19:17:24 | Ciclo: 25[0m
+[0;32mI (59823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=59351.02 ms | Total peças=49[0m
+[0;32mI (59823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=118[0m
+[0;32mI (60323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (60323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=119[0m
+[0;32mI (60823) TIME: Hora de referencia: 28/10/2025 19:17:25 | Ciclo: 26[0m
+[0;32mI (60823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=60351.04 ms | Total peças=50[0m
+[0;32mI (60823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=120[0m
+[0;32mI (60833) MONITOR: Relatório UDP enviado (15.99% CPU)[0m
+[0;32mI (61323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (61323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=121[0m
+[0;32mI (61823) TIME: Hora de referencia: 28/10/2025 19:17:26 | Ciclo: 27[0m
+[0;32mI (61823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=122[0m
+[0;32mI (61823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=61352.48 ms | Total peças=51[0m
+[0;32mI (62323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (62323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=123[0m
+[0;32mI (62823) TIME: Hora de referencia: 28/10/2025 19:17:27 | Ciclo: 28[0m
+[0;32mI (62823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=62350.87 ms | Total peças=52[0m
+[0;32mI (62823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=124[0m
+[0;32mI (63323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (63323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=125[0m
+[0;32mI (63823) TIME: Hora de referencia: 28/10/2025 19:17:28 | Ciclo: 29[0m
+[0;32mI (63823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=63350.88 ms | Total peças=53[0m
+[0;32mI (63823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=126[0m
+[0;32mI (64323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (64323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=127[0m
+[0;32mI (64823) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (64823) TIME: Hora de referencia: 28/10/2025 19:17:29 | Ciclo: 0[0m
+[0;32mI (64823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=64351.24 ms | Total peças=54[0m
+[0;32mI (64823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=128[0m
+[0;32mI (65323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (65323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=129[0m
+[0;32mI (65823) TIME: Hora de referencia: 28/10/2025 19:17:30 | Ciclo: 1[0m
+[0;32mI (65823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=65350.92 ms | Total peças=55[0m
+[0;32mI (65823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=130[0m
+[0;32mI (66323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (66323) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=131[0m
+[0;32mI (66823) TIME: Hora de referencia: 28/10/2025 19:17:31 | Ciclo: 2[0m
+[0;32mI (66823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=66350.87 ms | Total peças=56[0m
+[0;32mI (66823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=132[0m
+[0;32mI (67323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (67323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=133[0m
+[0;32mI (67823) TIME: Hora de referencia: 28/10/2025 19:17:32 | Ciclo: 3[0m
+[0;32mI (67823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=67350.88 ms | Total peças=57[0m
+[0;32mI (67823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=134[0m
+[0;32mI (68323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (68323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=135[0m
+[0;32mI (68823) TIME: Hora de referencia: 28/10/2025 19:17:33 | Ciclo: 4[0m
+[0;32mI (68823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=68350.93 ms | Total peças=58[0m
+[0;32mI (68823) SISTEMA: Relatorio UDP enviado com sucesso (89 bytes) | SEQ=136[0m
+[0;32mI (69323) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (69323) SISTEMA: Relatorio UDP enviado com sucesso (88 bytes) | SEQ=137[0m

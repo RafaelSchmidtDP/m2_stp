@@ -1,0 +1,399 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM3'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a9d8h (109016) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002aa00 vaddr=3ffb0000 size=03fbch ( 16316) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002e9c4 vaddr=40080000 size=01654h (  5716) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=91840h (596032) map[0m
+[0;32mI (340) esp_image: segment 4: paddr=000c1868 vaddr=40081654 size=16924h ( 92452) load[0m
+[0;32mI (376) esp_image: segment 5: paddr=000d8194 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (388) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (388) boot: Disabling RNG early entropy source...[0m
+[0;32mI (399) cpu_start: Multicore app[0m
+[0;32mI (407) cpu_start: Pro cpu start user code[0m
+[0;32mI (407) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (408) app_init: Application information:[0m
+[0;32mI (408) app_init: Project name:     hello_world[0m
+[0;32mI (412) app_init: App version:      1[0m
+[0;32mI (415) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (420) app_init: ELF file SHA256:  f077e27b2...[0m
+[0;32mI (425) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (428) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (432) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (436) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (440) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (447) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFB8750 len 000278B0 (158 KiB): DRAM[0m
+[0;32mI (457) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (462) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (468) heap_init: At 40097F78 len 00008088 (32 KiB): IRAM[0m
+[0;32mI (474) spi_flash: detected chip: generic[0m
+[0;32mI (477) spi_flash: flash io: dio[0m
+[0;33mW (479) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (492) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (502) main_task: Started on CPU0[0m
+[0;32mI (512) main_task: Calling app_main()[0m
+[0;32mI (532) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (542) wifi:wifi driver task: 3ffc0988, prio:23, stack:6656, core=0[0m
+[0;32mI (552) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (552) wifi:wifi certification version: v7.0[0m
+[0;32mI (552) wifi:config NVS flash: enabled[0m
+[0;32mI (552) wifi:config nano formatting: disabled[0m
+[0;32mI (562) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (562) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (562) wifi:Init management short buffer num: 32[0m
+[0;32mI (572) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (572) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (582) wifi:Init static rx buffer num: 10[0m
+[0;32mI (582) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (592) wifi_init: rx ba win: 6[0m
+[0;32mI (592) wifi_init: accept mbox: 6[0m
+[0;32mI (592) wifi_init: tcpip mbox: 32[0m
+[0;32mI (592) wifi_init: udp mbox: 6[0m
+[0;32mI (602) wifi_init: tcp mbox: 6[0m
+[0;32mI (602) wifi_init: tcp tx win: 5760[0m
+[0;32mI (602) wifi_init: tcp rx win: 5760[0m
+[0;32mI (612) wifi_init: tcp mss: 1440[0m
+[0;32mI (612) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (612) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (622) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (692) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (702) wifi:enable tsf[0m
+[0;32mI (702) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (712) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (712) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (752) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (782) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (792) SISTEMA: Deadlines: ENC=5000us | CTRL=5000us | SORT=10000us | ESTOP=5000us | MON=500000us[0m
+[0;32mI (792) SISTEMA: Modo de Teste (Comandos/Logs): UDP[0m
+[0;32mI (792) SISTEMA: Relatório de 60s será enviado via UDP DEDICADO.[0m
+[0;32mI (802) SISTEMA: Sistema iniciado.[0m
+[0;32mI (802) main_task: Returned from app_main()[0m
+[0;32mI (802) MONITOR: Task de relatório 60s iniciada.[0m
+[0;32mI (812) MONITOR: INICIANDO MODO UDP (Task 2)[0m
+[0;32mI (812) TIME: Aguardando sincronização SNTP...[0m
+[0;32mI (882) wifi:connected with Suite3, aid = 16, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (882) wifi:security: WPA2-PSK, phy: bgn, rssi: -36[0m
+[0;32mI (892) wifi:pm start, type: 1[0m
+
+[0;32mI (892) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (982) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1912) esp_netif_handlers: sta ip: 192.168.7.7, mask: 255.255.255.0, gw: 192.168.7.1[0m
+[0;32mI (2522) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:8, winSize:64[0m
+[0;32mI (3872) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (4052) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (4312) TIME: SNTP sincronizado com sucesso.[0m
+[0;32mI (4312) TIME: Hora de ref: 29/10/2025 18:10:09 | Ciclo: 1[0m
+[0;32mI (5312) TIME: Hora de ref: 29/10/2025 18:10:10 | Ciclo: 2[0m
+[0;32mI (5812) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (6312) TIME: Hora de ref: 29/10/2025 18:10:11 | Ciclo: 3[0m
+[0;32mI (6312) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (6812) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (7312) TIME: Hora de ref: 29/10/2025 18:10:12 | Ciclo: 4[0m
+[0;32mI (7312) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (7812) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (8312) TIME: Hora de ref: 29/10/2025 18:10:13 | Ciclo: 5[0m
+[0;32mI (8312) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (8812) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (9312) TIME: Hora de ref: 29/10/2025 18:10:14 | Ciclo: 6[0m
+[0;32mI (9312) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (9812) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (10312) TIME: Hora de ref: 29/10/2025 18:10:15 | Ciclo: 7[0m
+[0;32mI (10312) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (10812) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (11312) TIME: Hora de ref: 29/10/2025 18:10:16 | Ciclo: 8[0m
+[0;32mI (11312) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (11812) MONITOR: Comando recebido: 1[0m
+[0;32mI (12312) TIME: Hora de ref: 29/10/2025 18:10:17 | Ciclo: 9[0m
+[0;32mI (12312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (12812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (13312) TIME: Hora de ref: 29/10/2025 18:10:18 | Ciclo: 10[0m
+[0;32mI (13312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (13812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (14312) TIME: Hora de ref: 29/10/2025 18:10:19 | Ciclo: 11[0m
+[0;32mI (14312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (14812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (15312) TIME: Hora de ref: 29/10/2025 18:10:20 | Ciclo: 12[0m
+[0;32mI (15312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (15812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (16312) TIME: Hora de ref: 29/10/2025 18:10:21 | Ciclo: 13[0m
+[0;32mI (16312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (16812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (17312) TIME: Hora de ref: 29/10/2025 18:10:22 | Ciclo: 14[0m
+[0;32mI (17312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (17812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (18312) TIME: Hora de ref: 29/10/2025 18:10:23 | Ciclo: 15[0m
+[0;32mI (18312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (18812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (19312) TIME: Hora de ref: 29/10/2025 18:10:24 | Ciclo: 16[0m
+[0;32mI (19312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (19812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (20312) TIME: Hora de ref: 29/10/2025 18:10:25 | Ciclo: 17[0m
+[0;32mI (20312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (20812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (21312) TIME: Hora de ref: 29/10/2025 18:10:26 | Ciclo: 18[0m
+[0;32mI (21312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (21812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (22312) TIME: Hora de ref: 29/10/2025 18:10:27 | Ciclo: 19[0m
+[0;32mI (22312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (22812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (23312) TIME: Hora de ref: 29/10/2025 18:10:28 | Ciclo: 20[0m
+[0;32mI (23312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (23812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (24312) TIME: Hora de ref: 29/10/2025 18:10:29 | Ciclo: 21[0m
+[0;32mI (24312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (24812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (25312) TIME: Hora de ref: 29/10/2025 18:10:30 | Ciclo: 22[0m
+[0;32mI (25312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (25812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (26312) TIME: Hora de ref: 29/10/2025 18:10:31 | Ciclo: 23[0m
+[0;32mI (26312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (26812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (27312) TIME: Hora de ref: 29/10/2025 18:10:32 | Ciclo: 24[0m
+[0;32mI (27312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (27812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (28312) TIME: Hora de ref: 29/10/2025 18:10:33 | Ciclo: 25[0m
+[0;32mI (28312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (28812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (29312) TIME: Hora de ref: 29/10/2025 18:10:34 | Ciclo: 26[0m
+[0;32mI (29312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (29812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (30312) TIME: Hora de ref: 29/10/2025 18:10:35 | Ciclo: 27[0m
+[0;32mI (30312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (30812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (31312) TIME: Hora de ref: 29/10/2025 18:10:36 | Ciclo: 28[0m
+[0;32mI (31312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (31812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (32312) TIME: Hora de ref: 29/10/2025 18:10:37 | Ciclo: 29[0m
+[0;32mI (32312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (32812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (33312) TIME: Hora de ref: 29/10/2025 18:10:38 | Ciclo: 30[0m
+[0;32mI (33312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (33812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (34162) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (34312) TIME: Hora de ref: 29/10/2025 18:10:39 | Ciclo: 0[0m
+[0;32mI (34312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (34812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (35312) TIME: Hora de ref: 29/10/2025 18:10:40 | Ciclo: 1[0m
+[0;32mI (35312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (35812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (36312) TIME: Hora de ref: 29/10/2025 18:10:41 | Ciclo: 2[0m
+[0;32mI (36312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (36812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (37312) TIME: Hora de ref: 29/10/2025 18:10:42 | Ciclo: 3[0m
+[0;32mI (37312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (37812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (38312) TIME: Hora de ref: 29/10/2025 18:10:43 | Ciclo: 4[0m
+[0;32mI (38312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (38812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (39312) TIME: Hora de ref: 29/10/2025 18:10:44 | Ciclo: 5[0m
+[0;32mI (39312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (39812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (40312) TIME: Hora de ref: 29/10/2025 18:10:45 | Ciclo: 6[0m
+[0;32mI (40312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (40812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (41312) TIME: Hora de ref: 29/10/2025 18:10:46 | Ciclo: 7[0m
+[0;32mI (41312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (41812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (42312) TIME: Hora de ref: 29/10/2025 18:10:47 | Ciclo: 8[0m
+[0;32mI (42312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (42812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (43312) TIME: Hora de ref: 29/10/2025 18:10:48 | Ciclo: 9[0m
+[0;32mI (43312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (43812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (44312) TIME: Hora de ref: 29/10/2025 18:10:49 | Ciclo: 10[0m
+[0;32mI (44312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (44812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (45312) TIME: Hora de ref: 29/10/2025 18:10:50 | Ciclo: 11[0m
+[0;32mI (45312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (45812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (46312) TIME: Hora de ref: 29/10/2025 18:10:51 | Ciclo: 12[0m
+[0;32mI (46312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (46812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (47312) TIME: Hora de ref: 29/10/2025 18:10:52 | Ciclo: 13[0m
+[0;32mI (47312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (47812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (48312) TIME: Hora de ref: 29/10/2025 18:10:53 | Ciclo: 14[0m
+[0;32mI (48312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (48812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (49312) TIME: Hora de ref: 29/10/2025 18:10:54 | Ciclo: 15[0m
+[0;32mI (49312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (49812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (50312) TIME: Hora de ref: 29/10/2025 18:10:55 | Ciclo: 16[0m
+[0;32mI (50312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (50812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (51312) TIME: Hora de ref: 29/10/2025 18:10:56 | Ciclo: 17[0m
+[0;32mI (51312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (51812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (52312) TIME: Hora de ref: 29/10/2025 18:10:57 | Ciclo: 18[0m
+[0;32mI (52312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (52812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (53312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (53312) TIME: Hora de ref: 29/10/2025 18:10:58 | Ciclo: 19[0m
+[0;32mI (53812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (54312) TIME: Hora de ref: 29/10/2025 18:10:59 | Ciclo: 20[0m
+[0;32mI (54312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (54812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (55312) TIME: Hora de ref: 29/10/2025 18:11:00 | Ciclo: 21[0m
+[0;32mI (55312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (55812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (56312) TIME: Hora de ref: 29/10/2025 18:11:01 | Ciclo: 22[0m
+[0;32mI (56312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (56812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (57312) TIME: Hora de ref: 29/10/2025 18:11:02 | Ciclo: 23[0m
+[0;32mI (57312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (57812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (58312) TIME: Hora de ref: 29/10/2025 18:11:03 | Ciclo: 24[0m
+[0;32mI (58312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (58812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (59312) TIME: Hora de ref: 29/10/2025 18:11:04 | Ciclo: 25[0m
+[0;32mI (59312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (59812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (60312) TIME: Hora de ref: 29/10/2025 18:11:05 | Ciclo: 26[0m
+[0;32mI (60312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (60812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (61312) TIME: Hora de ref: 29/10/2025 18:11:06 | Ciclo: 27[0m
+[0;32mI (61312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (61812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (62312) TIME: Hora de ref: 29/10/2025 18:11:07 | Ciclo: 28[0m
+[0;32mI (62312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (62812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (63312) TIME: Hora de ref: 29/10/2025 18:11:08 | Ciclo: 29[0m
+[0;32mI (63312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (63812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (64262) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (64312) TIME: Hora de ref: 29/10/2025 18:11:09 | Ciclo: 0[0m
+[0;32mI (64312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (64812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (65312) TIME: Hora de ref: 29/10/2025 18:11:10 | Ciclo: 1[0m
+[0;32mI (65312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (65812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (66312) TIME: Hora de ref: 29/10/2025 18:11:11 | Ciclo: 2[0m
+[0;32mI (66312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (66812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (67312) TIME: Hora de ref: 29/10/2025 18:11:12 | Ciclo: 3[0m
+[0;32mI (67312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (67812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (68312) TIME: Hora de ref: 29/10/2025 18:11:13 | Ciclo: 4[0m
+[0;32mI (68312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (68812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (69312) TIME: Hora de ref: 29/10/2025 18:11:14 | Ciclo: 5[0m
+[0;32mI (69312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (69812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (70312) TIME: Hora de ref: 29/10/2025 18:11:15 | Ciclo: 6[0m
+[0;32mI (70312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (70812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (71312) TIME: Hora de ref: 29/10/2025 18:11:16 | Ciclo: 7[0m
+[0;32mI (71312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (71812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (72312) TIME: Hora de ref: 29/10/2025 18:11:17 | Ciclo: 8[0m
+[0;32mI (72312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (72812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (73312) TIME: Hora de ref: 29/10/2025 18:11:18 | Ciclo: 9[0m
+[0;32mI (73312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (73812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (74312) TIME: Hora de ref: 29/10/2025 18:11:19 | Ciclo: 10[0m
+[0;32mI (74312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (74812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (75312) TIME: Hora de ref: 29/10/2025 18:11:20 | Ciclo: 11[0m
+[0;32mI (75312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (75812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (76312) TIME: Hora de ref: 29/10/2025 18:11:21 | Ciclo: 12[0m
+[0;32mI (76312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (76812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (77312) TIME: Hora de ref: 29/10/2025 18:11:22 | Ciclo: 13[0m
+[0;32mI (77312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (77812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (78312) TIME: Hora de ref: 29/10/2025 18:11:23 | Ciclo: 14[0m
+[0;32mI (78312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (78812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (79312) TIME: Hora de ref: 29/10/2025 18:11:24 | Ciclo: 15[0m
+[0;32mI (79312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (79812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (80312) TIME: Hora de ref: 29/10/2025 18:11:25 | Ciclo: 16[0m
+[0;32mI (80312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (80812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (81312) TIME: Hora de ref: 29/10/2025 18:11:26 | Ciclo: 17[0m
+[0;32mI (81312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (81812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (82312) TIME: Hora de ref: 29/10/2025 18:11:27 | Ciclo: 18[0m
+[0;32mI (82312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (82812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (83312) TIME: Hora de ref: 29/10/2025 18:11:28 | Ciclo: 19[0m
+[0;32mI (83312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (83812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (84312) TIME: Hora de ref: 29/10/2025 18:11:29 | Ciclo: 20[0m
+[0;32mI (84312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (84812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (85312) TIME: Hora de ref: 29/10/2025 18:11:30 | Ciclo: 21[0m
+[0;32mI (85312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (85812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (86312) TIME: Hora de ref: 29/10/2025 18:11:31 | Ciclo: 22[0m
+[0;32mI (86312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (86812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (87312) TIME: Hora de ref: 29/10/2025 18:11:32 | Ciclo: 23[0m
+[0;32mI (87312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (87812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (88312) TIME: Hora de ref: 29/10/2025 18:11:33 | Ciclo: 24[0m
+[0;32mI (88312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (88812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (89312) TIME: Hora de ref: 29/10/2025 18:11:34 | Ciclo: 25[0m
+[0;32mI (89312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (89812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (90312) TIME: Hora de ref: 29/10/2025 18:11:35 | Ciclo: 26[0m
+[0;32mI (90312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (90812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (91312) TIME: Hora de ref: 29/10/2025 18:11:36 | Ciclo: 27[0m
+[0;32mI (91312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (91812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (92312) TIME: Hora de ref: 29/10/2025 18:11:37 | Ciclo: 28[0m
+[0;32mI (92312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (92812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (93312) TIME: Hora de ref: 29/10/2025 18:11:38 | Ciclo: 29[0m
+[0;32mI (93312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (93812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (94312) TIME: Hora de ref: 29/10/2025 18:11:39 | Ciclo: 30[0m
+[0;32mI (94312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (94352) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (94812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (95312) TIME: Hora de ref: 29/10/2025 18:11:40 | Ciclo: 0[0m
+[0;32mI (95312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (95812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (96312) TIME: Hora de ref: 29/10/2025 18:11:41 | Ciclo: 1[0m
+[0;32mI (96312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (96812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (97312) TIME: Hora de ref: 29/10/2025 18:11:42 | Ciclo: 2[0m
+[0;32mI (97312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (97812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (98312) TIME: Hora de ref: 29/10/2025 18:11:43 | Ciclo: 3[0m
+[0;32mI (98312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (98812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (99312) TIME: Hora de ref: 29/10/2025 18:11:44 | Ciclo: 4[0m
+[0;32mI (99312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (99812) MONITOR: Comando recebido: SORT_ACT[0m
+[0;32mI (100312) TIME: Hora de ref: 29/10/2025 18:11:45 | Ciclo: 5[0m
+[0;32mI (100312) MONITOR: Comando recebido: SAFETY_ON[0m
+[0;32mI (101312) TIME: Hora de ref: 29/10/2025 18:11:46 | Ciclo: 6[0m

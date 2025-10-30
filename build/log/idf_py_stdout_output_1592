@@ -1,0 +1,118 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a980h (108928) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002a9a8 vaddr=3ffb0000 size=03f8ch ( 16268) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002e93c vaddr=40080000 size=016dch (  5852) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=903c0h (590784) map[0m
+[0;32mI (338) esp_image: segment 4: paddr=000c03e8 vaddr=400816dc size=1689ch ( 92316) load[0m
+[0;32mI (375) esp_image: segment 5: paddr=000d6c8c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (386) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (387) boot: Disabling RNG early entropy source...[0m
+[0;32mI (397) cpu_start: Multicore app[0m
+[0;32mI (406) cpu_start: Pro cpu start user code[0m
+[0;32mI (406) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (406) app_init: Application information:[0m
+[0;32mI (406) app_init: Project name:     hello_world[0m
+[0;32mI (410) app_init: App version:      1[0m
+[0;32mI (413) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (418) app_init: ELF file SHA256:  38d218000...[0m
+[0;32mI (423) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (426) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (430) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (434) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (438) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (445) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (450) heap_init: At 3FFB8638 len 000279C8 (158 KiB): DRAM[0m
+[0;32mI (455) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (466) heap_init: At 40097F78 len 00008088 (32 KiB): IRAM[0m
+[0;32mI (472) spi_flash: detected chip: generic[0m
+[0;32mI (475) spi_flash: flash io: dio[0m
+[0;33mW (478) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (490) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (500) main_task: Started on CPU0[0m
+[0;32mI (510) main_task: Calling app_main()[0m
+[0;32mI (530) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1430) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (1440) wifi:wifi driver task: 3ffc066c, prio:23, stack:6656, core=0[0m
+[0;32mI (1450) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1450) wifi:wifi certification version: v7.0[0m
+[0;32mI (1450) wifi:config NVS flash: enabled[0m
+[0;32mI (1450) wifi:config nano formatting: disabled[0m
+[0;32mI (1460) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1460) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1460) wifi:Init management short buffer num: 32[0m
+[0;32mI (1470) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1470) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1480) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1480) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1490) wifi_init: rx ba win: 6[0m
+[0;32mI (1490) wifi_init: accept mbox: 6[0m
+[0;32mI (1490) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1490) wifi_init: udp mbox: 6[0m
+[0;32mI (1500) wifi_init: tcp mbox: 6[0m
+[0;32mI (1500) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1500) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1510) wifi_init: tcp mss: 1440[0m
+[0;32mI (1510) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1510) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1520) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1600) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (1600) wifi:enable tsf[0m
+[0;32mI (1600) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (1610) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1620) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1660) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1680) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1690) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1690) TIME: Iniciando TIME_TASK (periodo 1s)[0m
+[0;32mI (1690) TIME: Inicializando SNTP...[0m
+[0;32mI (1690) MONITOR: INICIANDO MODO UDP: Foco na periodicidade (D: 500ms).[0m
+[0;32mI (1690) SISTEMA: Sistema iniciado. Use touch pads:[0m
+[0;32mI (1700) SISTEMA: - Touch B (GPIO 12): Detecção objeto[0m
+[0;32mI (1700) SISTEMA: - Touch C (GPIO 14): HMI/Telemetria[0m
+[0;32mI (1710) SISTEMA: - Touch D (GPIO 27): E-stop (zera RPM instantaneamente)[0m
+[0;32mI (1710) main_task: Returned from app_main()[0m
+[0;32mI (1790) wifi:connected with Suite3, aid = 16, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (1790) wifi:security: WPA2-PSK, phy: bgn, rssi: -42[0m
+[0;32mI (1790) wifi:pm start, type: 1[0m
+
+[0;32mI (1790) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;33mW (1800) SISTEMA: CTRL miss: dur=18041 us (dl=5000) total=1[0m
+[0;32mI (1890) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3310) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:6, winSize:64[0m
+[0;32mI (4300) esp_netif_handlers: sta ip: 192.168.7.7, mask: 255.255.255.0, gw: 192.168.7.1[0m
+[0;32mI (5650) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (5670) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (5690) TIME: Hora atual: Sat Oct 25 22:06:11 2025[0m
+[0;32mI (5690) TIME: Hora atual: 2025-10-25 22:06:11 | Ciclos desde sync: 0[0m
+[0;32mI (6690) TIME: Hora atual: 2025-10-25 22:06:12 | Ciclos desde sync: 1[0m
+[0;32mI (7690) TIME: Hora atual: 2025-10-25 22:06:13 | Ciclos desde sync: 2[0m
+[0;32mI (8690) TIME: Hora atual: 2025-10-25 22:06:14 | Ciclos desde sync: 3[0m
+[0;32mI (9690) TIME: Hora atual: 2025-10-25 22:06:15 | Ciclos desde sync: 4[0m
+[0;32mI (10690) TIME: Hora atual: 2025-10-25 22:06:16 | Ciclos desde sync: 5[0m
+[0;32mI (11690) TIME: Hora atual: 2025-10-25 22:06:17 | Ciclos desde sync: 6[0m

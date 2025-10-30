@@ -1,0 +1,448 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM3'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ade8h (110056) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=0002ae10 vaddr=3ffb0000 size=03f9ch ( 16284) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002edb4 vaddr=40080000 size=01264h (  4708) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=91e88h (597640) map[0m
+[0;32mI (341) esp_image: segment 4: paddr=000c1eb0 vaddr=40081264 size=16d20h ( 93472) load[0m
+[0;32mI (378) esp_image: segment 5: paddr=000d8bd8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (390) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (390) boot: Disabling RNG early entropy source...[0m
+[0;32mI (400) cpu_start: Multicore app[0m
+[0;32mI (409) cpu_start: Pro cpu start user code[0m
+[0;32mI (409) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (409) app_init: Application information:[0m
+[0;32mI (409) app_init: Project name:     hello_world[0m
+[0;32mI (413) app_init: App version:      1[0m
+[0;32mI (416) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (422) app_init: ELF file SHA256:  6d9e0f79f...[0m
+[0;32mI (426) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (430) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (434) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (437) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (442) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (448) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFB8738 len 000278C8 (158 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (469) heap_init: At 40097F84 len 0000807C (32 KiB): IRAM[0m
+[0;32mI (476) spi_flash: detected chip: generic[0m
+[0;32mI (478) spi_flash: flash io: dio[0m
+[0;33mW (481) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (493) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (503) main_task: Started on CPU0[0m
+[0;32mI (513) main_task: Calling app_main()[0m
+[0;32mI (533) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (543) wifi:wifi driver task: 3ffc09d8, prio:23, stack:6656, core=0[0m
+[0;32mI (553) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (553) wifi:wifi certification version: v7.0[0m
+[0;32mI (553) wifi:config NVS flash: enabled[0m
+[0;32mI (553) wifi:config nano formatting: disabled[0m
+[0;32mI (563) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (563) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (573) wifi:Init management short buffer num: 32[0m
+[0;32mI (573) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (573) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (583) wifi:Init static rx buffer num: 10[0m
+[0;32mI (583) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (593) wifi_init: rx ba win: 6[0m
+[0;32mI (593) wifi_init: accept mbox: 6[0m
+[0;32mI (593) wifi_init: tcpip mbox: 32[0m
+[0;32mI (593) wifi_init: udp mbox: 6[0m
+[0;32mI (603) wifi_init: tcp mbox: 6[0m
+[0;32mI (603) wifi_init: tcp tx win: 5760[0m
+[0;32mI (603) wifi_init: tcp rx win: 5760[0m
+[0;32mI (613) wifi_init: tcp mss: 1440[0m
+[0;32mI (613) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (613) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (623) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (693) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (703) wifi:enable tsf[0m
+[0;32mI (703) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (713) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (713) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (763) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (783) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (793) SISTEMA: Deadlines: ENC=5000us | CTRL=5000us | SORT=10000us | ESTOP=5000us | MON=500000us[0m
+[0;32mI (793) SISTEMA: Modo de Teste: UDP[0m
+[0;32mI (793) SISTEMA: m-k FIRM: (9, 10)[0m
+[0;32mI (793) SISTEMA: Sistema iniciado.[0m
+[0;32mI (793) main_task: Returned from app_main()[0m
+[0;32mI (803) MONITOR: INICIANDO MODO UDP[0m
+[0;32mI (803) TIME: Aguardando sincronização SNTP...[0m
+[1;31mE (803) MONITOR: Erro sendto UDP (118)[0m
+[0;32mI (893) wifi:connected with Suite3, aid = 16, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (893) wifi:security: WPA2-PSK, phy: bgn, rssi: -37[0m
+[0;32mI (903) wifi:pm start, type: 1[0m
+
+[0;32mI (903) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (923) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[1;31mE (1303) MONITOR: Erro sendto UDP (118)[0m
+[1;31mE (1803) MONITOR: Erro sendto UDP (118)[0m
+[0;32mI (1933) esp_netif_handlers: sta ip: 192.168.7.7, mask: 255.255.255.0, gw: 192.168.7.1[0m
+[0;32mI (2303) MONITOR: [LOG PERIÓDICO ESP32] Sent 79 bytes[0m
+[0;32mI (2463) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:7, winSize:64[0m
+[0;32mI (2803) MONITOR: [LOG PERIÓDICO ESP32] Sent 79 bytes[0m
+[0;32mI (3303) MONITOR: [LOG PERIÓDICO ESP32] Sent 79 bytes[0m
+[0;32mI (3803) MONITOR: [LOG PERIÓDICO ESP32] Sent 79 bytes[0m
+[0;32mI (4303) MONITOR: [LOG PERIÓDICO ESP32] Sent 79 bytes[0m
+[0;32mI (4803) MONITOR: [LOG PERIÓDICO ESP32] Sent 79 bytes[0m
+[0;32mI (5153) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (5303) MONITOR: [LOG PERIÓDICO ESP32] Sent 79 bytes[0m
+[0;32mI (5323) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (5803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (5813) TIME: Ainda aguardando SNTP...[0m
+[0;32mI (5813) TIME: SNTP sincronizado com sucesso.[0m
+[0;32mI (5813) TIME: Hora de ref: 29/10/2025 23:49:00 | Ciclo: 1[0m
+[0;32mI (6303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (6803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (6813) TIME: Hora de ref: 29/10/2025 23:49:01 | Ciclo: 2[0m
+[0;32mI (7303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (7803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (7813) TIME: Hora de ref: 29/10/2025 23:49:02 | Ciclo: 3[0m
+[0;32mI (8303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (8803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (8813) TIME: Hora de ref: 29/10/2025 23:49:03 | Ciclo: 4[0m
+[0;32mI (9303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (9803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (9813) TIME: Hora de ref: 29/10/2025 23:49:04 | Ciclo: 5[0m
+[0;32mI (10303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (10803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (10813) TIME: Hora de ref: 29/10/2025 23:49:05 | Ciclo: 6[0m
+[0;32mI (11303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (11803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (11813) TIME: Hora de ref: 29/10/2025 23:49:06 | Ciclo: 7[0m
+[0;32mI (12303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (12803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (12813) TIME: Hora de ref: 29/10/2025 23:49:07 | Ciclo: 8[0m
+[0;32mI (13303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (13803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (13813) TIME: Hora de ref: 29/10/2025 23:49:08 | Ciclo: 9[0m
+[0;32mI (14303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (14803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (14813) TIME: Hora de ref: 29/10/2025 23:49:09 | Ciclo: 10[0m
+[0;32mI (15303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (15803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (15813) TIME: Hora de ref: 29/10/2025 23:49:10 | Ciclo: 11[0m
+[0;32mI (16303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (16803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (16813) TIME: Hora de ref: 29/10/2025 23:49:11 | Ciclo: 12[0m
+[0;32mI (17303) MONITOR: Comando recebido: SORT_ACT,1761792551179131[0m
+[0;32mI (17303) MONITOR: Sort de rede com TS | Latency (PC send -> ESP32 Recv)=363.00 ms[0m
+[0;32mI (17303) SISTEMA: [NET B] Objeto detectado (Rede) | Lat E2E (PC→Task)=-1761792534348.70 ms | Lat In-ESP32=-1761792534711.69 ms | Total peças=1[0m
+[0;32mI (17303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (17803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (17813) TIME: Hora de ref: 29/10/2025 23:49:12 | Ciclo: 13[0m
+[0;32mI (18303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (18803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (18813) TIME: Hora de ref: 29/10/2025 23:49:13 | Ciclo: 14[0m
+[0;32mI (19303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (19803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (19813) TIME: Hora de ref: 29/10/2025 23:49:14 | Ciclo: 15[0m
+[0;32mI (20303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (20803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (20813) TIME: Hora de ref: 29/10/2025 23:49:15 | Ciclo: 16[0m
+[0;32mI (21303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (21803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (21813) TIME: Hora de ref: 29/10/2025 23:49:16 | Ciclo: 17[0m
+[0;32mI (22303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (22803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (22813) TIME: Hora de ref: 29/10/2025 23:49:17 | Ciclo: 18[0m
+[0;32mI (23303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (23803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (23813) TIME: Hora de ref: 29/10/2025 23:49:18 | Ciclo: 19[0m
+[0;32mI (24303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (24803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (24813) TIME: Hora de ref: 29/10/2025 23:49:19 | Ciclo: 20[0m
+[0;32mI (25303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (25803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (25813) TIME: Hora de ref: 29/10/2025 23:49:20 | Ciclo: 21[0m
+[0;32mI (26303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (26803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (26813) TIME: Hora de ref: 29/10/2025 23:49:21 | Ciclo: 22[0m
+[0;32mI (27303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (27803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (27813) TIME: Hora de ref: 29/10/2025 23:49:22 | Ciclo: 23[0m
+[0;32mI (28303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (28803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (28813) TIME: Hora de ref: 29/10/2025 23:49:23 | Ciclo: 24[0m
+[0;32mI (29303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (29803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (29813) TIME: Hora de ref: 29/10/2025 23:49:24 | Ciclo: 25[0m
+[0;32mI (30303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (30803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (30813) TIME: Hora de ref: 29/10/2025 23:49:25 | Ciclo: 26[0m
+[0;32mI (31303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (31803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (31813) TIME: Hora de ref: 29/10/2025 23:49:26 | Ciclo: 27[0m
+[0;32mI (32303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (32803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (32813) TIME: Hora de ref: 29/10/2025 23:49:27 | Ciclo: 28[0m
+[0;32mI (33303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (33803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (33813) TIME: Hora de ref: 29/10/2025 23:49:28 | Ciclo: 29[0m
+[0;32mI (34303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (34803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (34813) TIME: Hora de ref: 29/10/2025 23:49:29 | Ciclo: 30[0m
+[0;32mI (35303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (35543) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (35803) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (35813) TIME: Hora de ref: 29/10/2025 23:49:29 | Ciclo: 0[0m
+[0;32mI (36303) MONITOR: [LOG PERIÓDICO ESP32] Sent 89 bytes[0m
+[0;32mI (36803) MONITOR: Comando recebido: SAFETY_ON,1761792570987673[0m
+[0;32mI (36803) MONITOR: E-stop de rede com TS | Latency (PC send -> ESP32 Recv)=-16.34 ms[0m
+[0;32mI (36803) SISTEMA: [NET D] E-stop acionado (Rede) | Lat E2E (PC→Task)=-1761792534657.34 ms | Lat In-ESP32=-1761792534641.00 ms | Sistema totalmente zerado[0m
+[0;32mI (36803) MONITOR: [LOG PERIÓDICO ESP32] Sent 86 bytes[0m
+[0;32mI (36813) TIME: Hora de ref: 29/10/2025 23:49:30 | Ciclo: 1[0m
+[0;32mI (37303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (37803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (37813) TIME: Hora de ref: 29/10/2025 23:49:31 | Ciclo: 2[0m
+[0;32mI (38303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (38803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (38813) TIME: Hora de ref: 29/10/2025 23:49:32 | Ciclo: 3[0m
+[0;32mI (39303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (39803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (39813) TIME: Hora de ref: 29/10/2025 23:49:33 | Ciclo: 4[0m
+[0;32mI (40303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (40803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (40813) TIME: Hora de ref: 29/10/2025 23:49:34 | Ciclo: 5[0m
+[0;32mI (41303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (41803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (41813) TIME: Hora de ref: 29/10/2025 23:49:35 | Ciclo: 6[0m
+[0;32mI (42303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (42803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (42813) TIME: Hora de ref: 29/10/2025 23:49:36 | Ciclo: 7[0m
+[0;32mI (43303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (43803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (43813) TIME: Hora de ref: 29/10/2025 23:49:37 | Ciclo: 8[0m
+[0;32mI (44303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (44803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (44813) TIME: Hora de ref: 29/10/2025 23:49:38 | Ciclo: 9[0m
+[0;32mI (45303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (45803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (45813) TIME: Hora de ref: 29/10/2025 23:49:39 | Ciclo: 10[0m
+[0;32mI (46303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (46803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (46813) TIME: Hora de ref: 29/10/2025 23:49:40 | Ciclo: 11[0m
+[0;32mI (47303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (47803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (47813) TIME: Hora de ref: 29/10/2025 23:49:41 | Ciclo: 12[0m
+[0;32mI (48303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (48803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (48813) TIME: Hora de ref: 29/10/2025 23:49:42 | Ciclo: 13[0m
+[0;32mI (49303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (49803) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (49813) TIME: Hora de ref: 29/10/2025 23:49:43 | Ciclo: 14[0m
+[0;32mI (50303) MONITOR: [LOG PERIÓDICO ESP32] Sent 87 bytes[0m
+[0;32mI (50803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (50813) TIME: Hora de ref: 29/10/2025 23:49:44 | Ciclo: 15[0m
+[0;32mI (51303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (51803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (51813) TIME: Hora de ref: 29/10/2025 23:49:45 | Ciclo: 16[0m
+[0;32mI (52303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (52803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (52813) TIME: Hora de ref: 29/10/2025 23:49:46 | Ciclo: 17[0m
+[0;32mI (53303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (53803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (53813) TIME: Hora de ref: 29/10/2025 23:49:47 | Ciclo: 18[0m
+[0;32mI (54303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (54803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (54813) TIME: Hora de ref: 29/10/2025 23:49:48 | Ciclo: 19[0m
+[0;32mI (55303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (55803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (55813) TIME: Hora de ref: 29/10/2025 23:49:49 | Ciclo: 20[0m
+[0;32mI (56303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (56803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (56813) TIME: Hora de ref: 29/10/2025 23:49:50 | Ciclo: 21[0m
+[0;32mI (57303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (57803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (57813) TIME: Hora de ref: 29/10/2025 23:49:51 | Ciclo: 22[0m
+[0;32mI (58303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (58803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (58813) TIME: Hora de ref: 29/10/2025 23:49:52 | Ciclo: 23[0m
+[0;32mI (59303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (59803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (59813) TIME: Hora de ref: 29/10/2025 23:49:53 | Ciclo: 24[0m
+[0;32mI (60303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (60793) MONITOR: Relatório UDP enviado (14.55% CPU)[0m
+[0;32mI (60803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (60813) TIME: Hora de ref: 29/10/2025 23:49:54 | Ciclo: 25[0m
+[0;32mI (61303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (61803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (61813) TIME: Hora de ref: 29/10/2025 23:49:55 | Ciclo: 26[0m
+[0;32mI (62303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (62803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (62813) TIME: Hora de ref: 29/10/2025 23:49:56 | Ciclo: 27[0m
+[0;32mI (63303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (63803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (63813) TIME: Hora de ref: 29/10/2025 23:49:57 | Ciclo: 28[0m
+[0;32mI (64303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (64803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (64813) TIME: Hora de ref: 29/10/2025 23:49:58 | Ciclo: 29[0m
+[0;32mI (65303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (65753) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (65803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (65813) TIME: Hora de ref: 29/10/2025 23:50:00 | Ciclo: 0[0m
+[0;32mI (66303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (66803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (66813) TIME: Hora de ref: 29/10/2025 23:50:01 | Ciclo: 1[0m
+[0;32mI (67303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (67803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (67813) TIME: Hora de ref: 29/10/2025 23:50:02 | Ciclo: 2[0m
+[0;32mI (68303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (68803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (68813) TIME: Hora de ref: 29/10/2025 23:50:03 | Ciclo: 3[0m
+[0;32mI (69303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (69803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (69813) TIME: Hora de ref: 29/10/2025 23:50:04 | Ciclo: 4[0m
+[0;32mI (70303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (70803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (70813) TIME: Hora de ref: 29/10/2025 23:50:05 | Ciclo: 5[0m
+[0;32mI (71303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (71803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (71813) TIME: Hora de ref: 29/10/2025 23:50:06 | Ciclo: 6[0m
+[0;32mI (72303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (72803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (72813) TIME: Hora de ref: 29/10/2025 23:50:07 | Ciclo: 7[0m
+[0;32mI (73303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (73803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (73813) TIME: Hora de ref: 29/10/2025 23:50:08 | Ciclo: 8[0m
+[0;32mI (74303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (74803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (74813) TIME: Hora de ref: 29/10/2025 23:50:09 | Ciclo: 9[0m
+[0;32mI (75303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (75803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (75813) TIME: Hora de ref: 29/10/2025 23:50:10 | Ciclo: 10[0m
+[0;32mI (76303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (76803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (76813) TIME: Hora de ref: 29/10/2025 23:50:11 | Ciclo: 11[0m
+[0;32mI (77303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (77803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (77813) TIME: Hora de ref: 29/10/2025 23:50:12 | Ciclo: 12[0m
+[0;32mI (78303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (78803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (78813) TIME: Hora de ref: 29/10/2025 23:50:13 | Ciclo: 13[0m
+[0;32mI (79303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (79803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (79813) TIME: Hora de ref: 29/10/2025 23:50:14 | Ciclo: 14[0m
+[0;32mI (80303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (80803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (80813) TIME: Hora de ref: 29/10/2025 23:50:15 | Ciclo: 15[0m
+[0;32mI (81303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (81803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (81813) TIME: Hora de ref: 29/10/2025 23:50:16 | Ciclo: 16[0m
+[0;32mI (82303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (82803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (82813) TIME: Hora de ref: 29/10/2025 23:50:17 | Ciclo: 17[0m
+[0;32mI (83303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (83803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (83813) TIME: Hora de ref: 29/10/2025 23:50:18 | Ciclo: 18[0m
+[0;32mI (84303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (84803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (84813) TIME: Hora de ref: 29/10/2025 23:50:19 | Ciclo: 19[0m
+[0;32mI (85303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (85803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (85813) TIME: Hora de ref: 29/10/2025 23:50:20 | Ciclo: 20[0m
+[0;32mI (86303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (86803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (86813) TIME: Hora de ref: 29/10/2025 23:50:21 | Ciclo: 21[0m
+[0;32mI (87303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (87803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (87813) TIME: Hora de ref: 29/10/2025 23:50:22 | Ciclo: 22[0m
+[0;32mI (88303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (88803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (88813) TIME: Hora de ref: 29/10/2025 23:50:23 | Ciclo: 23[0m
+[0;32mI (89303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (89803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (89813) TIME: Hora de ref: 29/10/2025 23:50:24 | Ciclo: 24[0m
+[0;32mI (90303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (90803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (90813) TIME: Hora de ref: 29/10/2025 23:50:25 | Ciclo: 25[0m
+[0;32mI (91303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (91803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (91813) TIME: Hora de ref: 29/10/2025 23:50:26 | Ciclo: 26[0m
+[0;32mI (92303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (92803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (92813) TIME: Hora de ref: 29/10/2025 23:50:27 | Ciclo: 27[0m
+[0;32mI (93303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (93803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (93813) TIME: Hora de ref: 29/10/2025 23:50:28 | Ciclo: 28[0m
+[0;32mI (94303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (94803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (94813) TIME: Hora de ref: 29/10/2025 23:50:29 | Ciclo: 29[0m
+[0;32mI (95303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (95803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (95813) TIME: Hora de ref: 29/10/2025 23:50:30 | Ciclo: 30[0m
+[0;32mI (95953) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (96303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (96803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (96813) TIME: Hora de ref: 29/10/2025 23:50:30 | Ciclo: 0[0m
+[0;32mI (97303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (97803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (97813) TIME: Hora de ref: 29/10/2025 23:50:31 | Ciclo: 1[0m
+[0;32mI (98303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (98803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (98813) TIME: Hora de ref: 29/10/2025 23:50:32 | Ciclo: 2[0m
+[0;32mI (99303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (99803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (99813) TIME: Hora de ref: 29/10/2025 23:50:33 | Ciclo: 3[0m
+[0;32mI (100303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (100803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (100813) TIME: Hora de ref: 29/10/2025 23:50:34 | Ciclo: 4[0m
+[0;32mI (101303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (101803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (101813) TIME: Hora de ref: 29/10/2025 23:50:35 | Ciclo: 5[0m
+[0;32mI (102303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (102803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (102813) TIME: Hora de ref: 29/10/2025 23:50:36 | Ciclo: 6[0m
+[0;32mI (103303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (103803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (103813) TIME: Hora de ref: 29/10/2025 23:50:37 | Ciclo: 7[0m
+[0;32mI (104303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (104803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (104813) TIME: Hora de ref: 29/10/2025 23:50:38 | Ciclo: 8[0m
+[0;32mI (105303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (105803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (105813) TIME: Hora de ref: 29/10/2025 23:50:39 | Ciclo: 9[0m
+[0;32mI (106303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (106803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (106813) TIME: Hora de ref: 29/10/2025 23:50:40 | Ciclo: 10[0m
+[0;32mI (107303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (107803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (107813) TIME: Hora de ref: 29/10/2025 23:50:41 | Ciclo: 11[0m
+[0;32mI (108303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (108803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (108813) TIME: Hora de ref: 29/10/2025 23:50:42 | Ciclo: 12[0m
+[0;32mI (109303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (109803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (109813) TIME: Hora de ref: 29/10/2025 23:50:43 | Ciclo: 13[0m
+[0;32mI (110303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (110803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (110813) TIME: Hora de ref: 29/10/2025 23:50:44 | Ciclo: 14[0m
+[0;32mI (111303) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (111803) MONITOR: [LOG PERIÓDICO ESP32] Sent 88 bytes[0m
+[0;32mI (111813) TIME: Hora de ref: 29/10/2025 23:50:45 | Ciclo: 15[0m

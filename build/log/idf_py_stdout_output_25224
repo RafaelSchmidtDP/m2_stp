@@ -1,0 +1,469 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a86ch ( 43116) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a894 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001ccd4 vaddr=40080000 size=03344h ( 13124) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=168b8h ( 92344) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000368e0 vaddr=40083344 size=0a2cch ( 41676) load[0m
+[0;32mI (162) esp_image: segment 5: paddr=00040bb4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     hello_world[0m
+[0;32mI (193) app_init: App version:      1[0m
+[0;32mI (196) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (202) app_init: ELF file SHA256:  c974d8562...[0m
+[0;32mI (206) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (210) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (213) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (217) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (222) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (228) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (233) heap_init: At 3FFB2D80 len 0002D280 (180 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (243) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (249) heap_init: At 4008D610 len 000129F0 (74 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (258) spi_flash: flash io: dio[0m
+[0;33mW (261) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (273) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (293) main_task: Calling app_main()[0m
+[0;32mI (293) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1193) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (1193) SISTEMA: Teste de 60 segundos iniciado[0m
+[0;32mI (1283) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1283) SISTEMA: Sistema iniciado. Use touch pads:[0m
+[0;32mI (1283) SISTEMA: - Touch B (GPIO 12): Detecção objeto[0m
+[0;32mI (1283) SISTEMA: - Touch C (GPIO 14): HMI/Telemetria[0m
+[0;32mI (1283) SISTEMA: - Touch D (GPIO 27): E-stop (zera RPM instantaneamente)[0m
+[0;32mI (1293) SISTEMA: Monitor iniciado - Relatórios a cada 60 segundos[0m
+[0;32mI (1293) main_task: Returned from app_main()[0m
+[0;32mI (6943) SISTEMA: [TOUCH C] Telemetria | Vel: 120.5 RPM | Peças: 0[0m
+[0;32mI (6973) SISTEMA: [TOUCH C] Telemetria | Vel: 120.5 RPM | Peças: 0[0m
+[0;32mI (7003) SISTEMA: [TOUCH C] Telemetria | Vel: 120.5 RPM | Peças: 0[0m
+[0;32mI (7033) SISTEMA: [TOUCH C] Telemetria | Vel: 120.5 RPM | Peças: 0[0m
+[0;32mI (7063) SISTEMA: [TOUCH C] Telemetria | Vel: 120.5 RPM | Peças: 0[0m
+[0;32mI (7093) SISTEMA: [TOUCH C] Telemetria | Vel: 120.5 RPM | Peças: 0[0m
+[0;32mI (7533) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.02 ms | Total peças=1[0m
+[0;32mI (7563) SISTEMA: [TOUCH C] Telemetria | Vel: 120.5 RPM | Peças: 1[0m
+[0;32mI (7563) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.27 ms | Total peças=2[0m
+[0;32mI (7593) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=3[0m
+[0;32mI (7603) SISTEMA: [TOUCH C] Telemetria | Vel: 120.5 RPM | Peças: 3[0m
+[0;32mI (7623) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=4[0m
+[0;32mI (7783) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=5[0m
+[0;32mI (7813) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=6[0m
+[0;32mI (7843) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=7[0m
+[0;32mI (7853) SISTEMA: [TOUCH C] Telemetria | Vel: 120.5 RPM | Peças: 7[0m
+[0;32mI (8223) SISTEMA: [TOUCH C] Telemetria | Vel: 120.5 RPM | Peças: 7[0m
+[0;32mI (8223) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.54 ms | Total peças=8[0m
+[0;32mI (8443) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=9[0m
+[0;32mI (8693) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 9[0m
+[0;32mI (8693) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.92 ms | Total peças=10[0m
+[0;32mI (8723) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=11[0m
+[0;32mI (8733) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 11[0m
+[0;32mI (8753) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=12[0m
+[0;32mI (8763) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 12[0m
+[0;32mI (8783) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=13[0m
+[0;32mI (8793) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 13[0m
+[0;32mI (8873) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=14[0m
+[0;32mI (8883) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 14[0m
+[0;32mI (8913) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 14[0m
+[0;32mI (8913) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.30 ms | Total peças=15[0m
+[0;32mI (8943) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 15[0m
+[0;32mI (8943) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.92 ms | Total peças=16[0m
+[0;32mI (9223) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=17[0m
+[0;32mI (9233) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 17[0m
+[0;32mI (9253) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=18[0m
+[0;32mI (9263) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 18[0m
+[0;32mI (9283) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=19[0m
+[0;32mI (9293) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 19[0m
+[0;32mI (9313) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=20[0m
+[0;32mI (9323) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 20[0m
+[0;32mI (9353) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 21[0m
+[0;32mI (9353) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=21[0m
+[0;32mI (10263) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 22[0m
+[0;32mI (10263) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=22[0m
+[0;32mI (10293) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 22[0m
+[0;32mI (10293) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.98 ms | Total peças=23[0m
+[0;32mI (10323) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=24[0m
+[0;32mI (10333) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 24[0m
+[0;32mI (10353) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=25[0m
+[0;32mI (10363) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 25[0m
+[0;32mI (10383) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=26[0m
+[0;32mI (10393) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 26[0m
+[0;32mI (10763) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 26[0m
+[0;32mI (10763) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.45 ms | Total peças=27[0m
+[0;32mI (10793) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=28[0m
+[0;32mI (10803) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 28[0m
+[0;32mI (10823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=29[0m
+[0;32mI (10833) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 29[0m
+[0;32mI (10853) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=30[0m
+[0;32mI (11103) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=31[0m
+[0;32mI (11133) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=32[0m
+[0;32mI (11143) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 32[0m
+[0;32mI (11173) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 33[0m
+[0;32mI (11173) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=33[0m
+[0;32mI (11203) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 33[0m
+[0;32mI (11203) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.19 ms | Total peças=34[0m
+[0;32mI (11453) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 34[0m
+[0;32mI (11453) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.19 ms | Total peças=35[0m
+[0;32mI (11483) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=36[0m
+[0;32mI (11493) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 36[0m
+[0;32mI (11513) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=37[0m
+[0;32mI (11543) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=38[0m
+[0;32mI (11553) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 38[0m
+[0;32mI (11763) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=39[0m
+[0;32mI (11793) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=40[0m
+[0;32mI (11823) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=41[0m
+[0;32mI (11833) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 41[0m
+[0;32mI (11863) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 42[0m
+[0;32mI (11863) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=42[0m
+[0;32mI (12173) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=43[0m
+[0;32mI (12423) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=44[0m
+[0;32mI (12433) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 44[0m
+[0;32mI (12453) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=45[0m
+[0;32mI (12483) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=46[0m
+[0;32mI (12493) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 46[0m
+[0;32mI (12513) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=47[0m
+[0;32mI (12523) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 47[0m
+[0;32mI (12643) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=48[0m
+[0;32mI (12653) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 48[0m
+[0;32mI (12673) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=49[0m
+[0;32mI (12683) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 49[0m
+[0;32mI (12703) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=50[0m
+[0;32mI (12733) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=51[0m
+[0;32mI (12743) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 51[0m
+[0;32mI (13053) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 51[0m
+[0;32mI (13053) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.26 ms | Total peças=52[0m
+[0;32mI (13083) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=53[0m
+[0;32mI (13093) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 53[0m
+[0;32mI (13113) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=54[0m
+[0;32mI (13123) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 54[0m
+[0;32mI (13143) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=55[0m
+[0;32mI (13153) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 55[0m
+[0;32mI (13173) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=56[0m
+[0;32mI (13183) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 56[0m
+[0;32mI (13203) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=57[0m
+[0;32mI (13213) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 57[0m
+[0;32mI (13243) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=58[0m
+[0;32mI (13333) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=59[0m
+[0;32mI (13343) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 59[0m
+[0;32mI (13363) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=60[0m
+[0;32mI (13373) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 60[0m
+[0;32mI (13393) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=61[0m
+[0;32mI (13423) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=62[0m
+[0;32mI (13433) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 62[0m
+[0;32mI (13463) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 63[0m
+[0;32mI (13463) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=63[0m
+[0;32mI (13933) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 64[0m
+[0;32mI (13933) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=64[0m
+[0;32mI (13963) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 64[0m
+[0;32mI (13963) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.41 ms | Total peças=65[0m
+[0;32mI (13993) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=66[0m
+[0;32mI (14003) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 66[0m
+[0;32mI (14023) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=67[0m
+[0;32mI (14033) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 67[0m
+[0;32mI (14053) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=68[0m
+[0;32mI (14063) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14093) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14123) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14153) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14183) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14313) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14343) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14373) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14403) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14433) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14753) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14783) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14813) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (14843) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15063) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15093) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15133) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15313) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15343) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15383) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15413) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15443) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15603) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15633) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15663) SISTEMA: [TOUCH C] Telemetria | Vel: 120.4 RPM | Peças: 68[0m
+[0;32mI (15913) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 68[0m
+[0;32mI (15943) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 68[0m
+[0;32mI (15973) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 68[0m
+[0;32mI (16003) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 68[0m
+[0;32mI (16033) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 68[0m
+[0;32mI (16063) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=69[0m
+[0;32mI (16073) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 69[0m
+[0;32mI (16093) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=70[0m
+[0;32mI (16103) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 70[0m
+[0;32mI (16123) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=71[0m
+[0;32mI (16133) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 71[0m
+[0;32mI (16153) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=72[0m
+[0;32mI (16163) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 72[0m
+[0;32mI (16283) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=73[0m
+[0;32mI (16293) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 73[0m
+[0;32mI (16313) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=74[0m
+[0;32mI (16343) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=75[0m
+[0;32mI (16373) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=76[0m
+[0;32mI (16383) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 76[0m
+[0;32mI (16403) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=77[0m
+[0;32mI (16413) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 77[0m
+[0;32mI (16503) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=78[0m
+[0;32mI (16533) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=79[0m
+[0;32mI (16543) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 79[0m
+[0;32mI (16563) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=80[0m
+[0;32mI (16663) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 81[0m
+[0;32mI (16663) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=81[0m
+[0;32mI (16693) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 81[0m
+[0;32mI (16693) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.19 ms | Total peças=82[0m
+[0;32mI (16723) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.19 ms | Total peças=83[0m
+[0;32mI (17043) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 83[0m
+[0;32mI (17073) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 83[0m
+[0;32mI (17103) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 83[0m
+[0;32mI (17233) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 83[0m
+[0;32mI (17263) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 83[0m
+[0;32mI (17443) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=84[0m
+[0;32mI (17453) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 84[0m
+[0;32mI (17473) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=85[0m
+[0;32mI (17483) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 85[0m
+[0;32mI (17503) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=86[0m
+[0;32mI (17633) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 86[0m
+[0;32mI (17633) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.33 ms | Total peças=87[0m
+[0;32mI (17663) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=88[0m
+[0;32mI (17673) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (17923) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (17953) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (18073) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (18103) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (18143) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (18293) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (18323) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (18363) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (18583) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (18923) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (18953) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (18983) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19013) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19143) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19173) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19203) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19303) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19333) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19363) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19483) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19523) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19703) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19743) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19773) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19803) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19833) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19863) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19893) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19923) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19963) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (19993) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20023) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20053) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20083) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20113) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20143) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20173) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20213) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20243) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20273) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20303) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20333) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20363) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20393) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20433) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20463) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20493) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20523) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20553) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20583) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20613) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20653) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20683) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20713) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20743) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20773) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20803) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20833) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20863) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20903) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20933) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20963) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (20993) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21023) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21053) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21083) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21123) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21153) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21183) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21213) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21243) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21273) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21303) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21343) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21373) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21403) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21433) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21463) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21493) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21523) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21563) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21593) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21623) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21653) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21683) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21713) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21743) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21773) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21813) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21843) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21873) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21903) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21933) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21963) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (21993) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22033) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22063) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22093) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22123) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22153) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22183) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22213) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22253) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22283) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22313) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22343) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22373) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22403) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22433) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22463) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22503) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22533) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22563) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22593) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22623) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22653) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22683) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22723) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22753) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22783) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22813) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22843) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22873) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22903) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22943) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (22973) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23003) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23033) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23063) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23093) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23123) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23153) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23193) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23223) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23253) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23283) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23313) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23343) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23373) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23413) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23443) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23473) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23503) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23533) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23563) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23593) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23633) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23663) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23693) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23723) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23753) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23783) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23813) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23853) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23883) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23913) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23943) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (23973) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24003) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24033) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24063) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24103) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24133) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24163) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24193) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24223) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24253) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24283) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24323) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24353) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24383) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24413) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24443) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24473) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24503) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24543) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24573) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24603) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24633) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24663) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24693) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24723) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24753) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24793) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24823) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24853) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24883) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24913) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24943) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (24973) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25013) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25043) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25073) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25103) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25133) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25163) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25193) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25233) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25263) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25293) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25323) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25353) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25383) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25413) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25453) SISTEMA: [TOUCH C] Telemetria | Vel: 120.3 RPM | Peças: 88[0m
+[0;32mI (25633) SISTEMA: [TOUCH C] Telemetria | Vel: 120.2 RPM | Peças: 88[0m

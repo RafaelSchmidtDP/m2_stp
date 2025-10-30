@@ -1,0 +1,156 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a8e0h (108768) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002a908 vaddr=3ffb0000 size=03f8ch ( 16268) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002e89c vaddr=40080000 size=0177ch (  6012) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9031ch (590620) map[0m
+[0;32mI (338) esp_image: segment 4: paddr=000c0344 vaddr=4008177c size=167fch ( 92156) load[0m
+[0;32mI (374) esp_image: segment 5: paddr=000d6b48 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (386) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (386) boot: Disabling RNG early entropy source...[0m
+[0;32mI (397) cpu_start: Multicore app[0m
+[0;32mI (405) cpu_start: Pro cpu start user code[0m
+[0;32mI (405) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (405) app_init: Application information:[0m
+[0;32mI (406) app_init: Project name:     hello_world[0m
+[0;32mI (410) app_init: App version:      1[0m
+[0;32mI (413) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (418) app_init: ELF file SHA256:  30b61e83a...[0m
+[0;32mI (422) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (426) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (430) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (434) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (438) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (444) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (449) heap_init: At 3FFB8638 len 000279C8 (158 KiB): DRAM[0m
+[0;32mI (455) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (466) heap_init: At 40097F78 len 00008088 (32 KiB): IRAM[0m
+[0;32mI (472) spi_flash: detected chip: generic[0m
+[0;32mI (474) spi_flash: flash io: dio[0m
+[0;33mW (477) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (490) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (500) main_task: Started on CPU0[0m
+[0;32mI (510) main_task: Calling app_main()[0m
+[0;32mI (530) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1430) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (1440) wifi:wifi driver task: 3ffc0564, prio:23, stack:6656, core=0[0m
+[0;32mI (1450) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1450) wifi:wifi certification version: v7.0[0m
+[0;32mI (1450) wifi:config NVS flash: enabled[0m
+[0;32mI (1450) wifi:config nano formatting: disabled[0m
+[0;32mI (1450) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1460) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1460) wifi:Init management short buffer num: 32[0m
+[0;32mI (1470) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1470) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1480) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1480) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1490) wifi_init: rx ba win: 6[0m
+[0;32mI (1490) wifi_init: accept mbox: 6[0m
+[0;32mI (1490) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1490) wifi_init: udp mbox: 6[0m
+[0;32mI (1500) wifi_init: tcp mbox: 6[0m
+[0;32mI (1500) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1500) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1510) wifi_init: tcp mss: 1440[0m
+[0;32mI (1510) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1510) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1520) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1590) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (1590) wifi:enable tsf[0m
+[0;32mI (1600) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (1680) wifi:new:<8,1>, old:<1,0>, ap:<255,255>, sta:<8,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1680) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1690) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1690) TIME: Inicializando SNTP...[0m
+[0;32mI (1690) MONITOR: INICIANDO MODO TCP: Foco na confiabilidade (Bloqueante).[0m
+[0;32mI (1690) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1700) MONITOR: TCP Server: Aguardando cliente (BLOQUEANTE)...[0m
+[0;32mI (1690) SISTEMA: Sistema iniciado. Use touch pads:[0m
+[0;32mI (1710) SISTEMA: - Touch B (GPIO 12): Detecção objeto[0m
+[0;32mI (1710) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1730) SISTEMA: - Touch C (GPIO 14): HMI/Telemetria[0m
+[0;32mI (1730) SISTEMA: - Touch D (GPIO 27): E-stop (zera RPM instantaneamente)[0m
+[0;32mI (1730) main_task: Returned from app_main()[0m
+[0;32mI (1730) wifi:connected with Rocha2, aid = 4, channel 8, 40U, bssid = 08:40:f3:e8:e6:41[0m
+[0;32mI (1740) wifi:security: WPA2-PSK, phy: bgn, rssi: -49[0m
+[0;32mI (1750) wifi:pm start, type: 1[0m
+
+[0;32mI (1750) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1780) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2790) esp_netif_handlers: sta ip: 192.168.1.115, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3670) wifi:<ba-add>idx:0 (ifx:0, 08:40:f3:e8:e6:41), tid:0, ssn:2, winSize:64[0m
+[0;32mI (4120) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (4190) TIME: Hora atual: Sat Oct 18 04:46:38 2025[0m
+[0;32mI (20440) MONITOR: Cliente TCP conectado. Iniciando comunicação.[0m
+[0;32mI (20450) MONITOR: TCP RX: SAFETY_ON[0m
+
+[0;32mI (20450) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21550) MONITOR: TCP RX: SORT_ACT[0m
+
+[0;32mI (21550) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=21081.84 ms | Total peças=1[0m
+[0;32mI (22580) MONITOR: TCP RX: ping[0m
+
+[0;32mI (23590) MONITOR: Cliente TCP saiu.[0m
+[0;32mI (23600) MONITOR: TCP Server: Aguardando cliente (BLOQUEANTE)...[0m
+[0;32mI (219450) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=2[0m
+[0;32mI (219480) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=3[0m
+[0;32mI (219510) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=4[0m
+[0;32mI (219540) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=5[0m
+[0;32mI (220860) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=6[0m
+[0;32mI (220900) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.81 ms | Total peças=7[0m
+[0;32mI (220930) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.45 ms | Total peças=8[0m
+[0;32mI (220960) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=9[0m
+[0;32mI (221400) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=10[0m
+[0;32mI (221430) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=11[0m
+[0;32mI (221460) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=12[0m
+[0;32mI (221590) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.50 ms | Total peças=13[0m
+[0;32mI (221620) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=14[0m
+[0;32mI (221650) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=15[0m
+[0;32mI (363810) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=16[0m
+[0;32mI (363840) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=17[0m
+[0;32mI (363880) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=18[0m
+[0;32mI (363910) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.82 ms | Total peças=19[0m
+[0;32mI (364000) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=20[0m
+[0;32mI (364030) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=21[0m
+[0;32mI (364060) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=22[0m
+[0;32mI (364100) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=23[0m
+[0;32mI (364130) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.80 ms | Total peças=24[0m
+[0;32mI (364160) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=25[0m
+[0;32mI (364190) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=26[0m
+[0;32mI (364220) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=27[0m
+[0;32mI (364250) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=28[0m
+[0;32mI (364280) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=29[0m
+[0;32mI (364320) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=30[0m
+[0;32mI (364350) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.80 ms | Total peças=31[0m
+[0;32mI (364380) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=32[0m
+[0;32mI (364410) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=33[0m
+[0;32mI (364440) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=34[0m
+[0;32mI (364470) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=35[0m
+[0;32mI (364500) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=36[0m
+[0;32mI (364540) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=37[0m

@@ -1,0 +1,581 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM3'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 30 2025 04:43:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1acb0h (109744) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=0002acd8 vaddr=3ffb0000 size=03f9ch ( 16284) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002ec7c vaddr=40080000 size=0139ch (  5020) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=91cd4h (597204) map[0m
+[0;32mI (341) esp_image: segment 4: paddr=000c1cfc vaddr=4008139c size=16b90h ( 93072) load[0m
+[0;32mI (378) esp_image: segment 5: paddr=000d8894 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (390) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (390) boot: Disabling RNG early entropy source...[0m
+[0;32mI (400) cpu_start: Multicore app[0m
+[0;32mI (409) cpu_start: Pro cpu start user code[0m
+[0;32mI (409) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (409) app_init: Application information:[0m
+[0;32mI (409) app_init: Project name:     hello_world[0m
+[0;32mI (413) app_init: App version:      1[0m
+[0;32mI (417) app_init: Compile time:     Oct 30 2025 04:45:09[0m
+[0;32mI (422) app_init: ELF file SHA256:  c616b6dbe...[0m
+[0;32mI (426) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (430) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (434) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (438) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (442) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (448) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFB8738 len 000278C8 (158 KiB): DRAM[0m
+[0;32mI (459) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (470) heap_init: At 40097F2C len 000080D4 (32 KiB): IRAM[0m
+[0;32mI (476) spi_flash: detected chip: generic[0m
+[0;32mI (478) spi_flash: flash io: dio[0m
+[0;33mW (481) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (494) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (504) main_task: Started on CPU0[0m
+[0;32mI (514) main_task: Calling app_main()[0m
+[0;32mI (524) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (544) wifi:wifi driver task: 3ffc09c8, prio:23, stack:6656, core=0[0m
+[0;32mI (554) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (554) wifi:wifi certification version: v7.0[0m
+[0;32mI (554) wifi:config NVS flash: enabled[0m
+[0;32mI (554) wifi:config nano formatting: disabled[0m
+[0;32mI (554) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (564) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (564) wifi:Init management short buffer num: 32[0m
+[0;32mI (564) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (574) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (574) wifi:Init static rx buffer num: 10[0m
+[0;32mI (584) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (584) wifi_init: rx ba win: 6[0m
+[0;32mI (584) wifi_init: accept mbox: 6[0m
+[0;32mI (594) wifi_init: tcpip mbox: 32[0m
+[0;32mI (594) wifi_init: udp mbox: 6[0m
+[0;32mI (594) wifi_init: tcp mbox: 6[0m
+[0;32mI (594) wifi_init: tcp tx win: 5760[0m
+[0;32mI (604) wifi_init: tcp rx win: 5760[0m
+[0;32mI (604) wifi_init: tcp mss: 1440[0m
+[0;32mI (604) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (614) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (614) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (684) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (684) wifi:enable tsf[0m
+[0;32mI (694) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (704) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (704) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (754) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (774) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (784) SISTEMA: Deadlines: ENC=5000us | CTRL=5000us | SORT=10000us | ESTOP=5000us | MON=500000us[0m
+[0;32mI (784) SISTEMA: Modo de Teste: TCP[0m
+[0;32mI (784) SISTEMA: m-k FIRM: (9, 10)[0m
+[0;32mI (784) SISTEMA: Sistema iniciado.[0m
+[0;32mI (784) main_task: Returned from app_main()[0m
+[0;32mI (794) MONITOR: INICIANDO MODO TCP (recv não-bloqueante com MSG_DONTWAIT)[0m
+[0;32mI (794) TIME: Aguardando sincronização SNTP...[0m
+[0;32mI (884) wifi:connected with Suite3, aid = 16, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (884) wifi:security: WPA2-PSK, phy: bgn, rssi: -37[0m
+[0;32mI (884) wifi:pm start, type: 1[0m
+
+[0;32mI (884) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (954) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2404) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:6, winSize:64[0m
+[0;32mI (3394) esp_netif_handlers: sta ip: 192.168.7.7, mask: 255.255.255.0, gw: 192.168.7.1[0m
+[0;32mI (3834) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (4024) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (4314) TIME: SNTP sincronizado com sucesso.[0m
+[0;32mI (4314) TIME: Hora de ref: 30/10/2025 05:23:56 | Ciclo: 1[0m
+[0;32mI (5264) MONITOR: Cliente TCP conectado[0m
+[0;32mI (5314) TIME: Hora de ref: 30/10/2025 05:23:57 | Ciclo: 2[0m
+[0;32mI (6294) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (6294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=5821.65 ms | Total peças=1[0m
+[0;32mI (6314) TIME: Hora de ref: 30/10/2025 05:23:58 | Ciclo: 3[0m
+[0;32mI (7294) MONITOR: Comando recebido: SAFETY_ON[0m
+SORT_ACT
+
+[0;32mI (7294) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=6822.80 ms | Total peças=2[0m
+[0;32mI (7314) TIME: Hora de ref: 30/10/2025 05:23:59 | Ciclo: 4[0m
+[0;32mI (8294) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (8294) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8314) TIME: Hora de ref: 30/10/2025 05:24:00 | Ciclo: 5[0m
+[0;32mI (9294) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9304) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (9304) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.15 ms | Total peças=3[0m
+[0;32mI (9314) TIME: Hora de ref: 30/10/2025 05:24:01 | Ciclo: 6[0m
+[0;32mI (9334) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9334) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (9334) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.69 ms | Total peças=4[0m
+[0;32mI (9364) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9364) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.48 ms | Total peças=5[0m
+[0;32mI (9374) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (9394) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.01 ms | Total peças=6[0m
+[0;32mI (9744) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9744) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9744) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.30 ms | Total peças=7[0m
+[0;32mI (9774) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9774) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.40 ms | Total peças=8[0m
+[0;32mI (9784) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 8[0m
+[0;32mI (9804) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9804) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.54 ms | Total peças=9[0m
+[0;32mI (9814) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 9[0m
+[0;32mI (10314) TIME: Hora de ref: 30/10/2025 05:24:02 | Ciclo: 7[0m
+[0;32mI (10524) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10534) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 9[0m
+[0;32mI (10534) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.70 ms | Total peças=10[0m
+[0;32mI (10564) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10564) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 10[0m
+[0;32mI (10564) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.85 ms | Total peças=11[0m
+[0;32mI (10594) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10594) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.40 ms | Total peças=12[0m
+[0;32mI (10604) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 12[0m
+[0;32mI (10624) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.01 ms | Total peças=13[0m
+[0;32mI (11314) TIME: Hora de ref: 30/10/2025 05:24:03 | Ciclo: 8[0m
+[0;32mI (11794) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (11794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12294) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (12294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=11821.58 ms | Total peças=14[0m
+[0;32mI (12314) TIME: Hora de ref: 30/10/2025 05:24:04 | Ciclo: 9[0m
+[0;32mI (12794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (13294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (13314) TIME: Hora de ref: 30/10/2025 05:24:05 | Ciclo: 10[0m
+[0;32mI (13794) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (13794) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=13321.58 ms | Total peças=15[0m
+[0;32mI (14294) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (14294) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14314) TIME: Hora de ref: 30/10/2025 05:24:06 | Ciclo: 11[0m
+[0;32mI (14794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (15314) TIME: Hora de ref: 30/10/2025 05:24:07 | Ciclo: 12[0m
+[0;32mI (15544) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15544) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.50 ms | Total peças=16[0m
+[0;32mI (15554) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 16[0m
+[0;32mI (15574) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15574) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.06 ms | Total peças=17[0m
+[0;32mI (15584) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 17[0m
+[0;32mI (16144) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=18[0m
+[0;32mI (16174) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.01 ms | Total peças=19[0m
+[0;32mI (16204) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.01 ms | Total peças=20[0m
+[0;32mI (16314) TIME: Hora de ref: 30/10/2025 05:24:08 | Ciclo: 13[0m
+[0;32mI (17314) TIME: Hora de ref: 30/10/2025 05:24:09 | Ciclo: 14[0m
+[0;32mI (17794) MONITOR: Comando recebido: SORT_ACT[0m
+SAFETY_ON
+
+[0;32mI (17794) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=17321.57 ms | Total peças=21[0m
+[0;32mI (17794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (17804) SISTEMA: SAFETY miss (WCRT): R=7382 us (dl=5000) total=1[0m
+[0;32mI (18294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (18314) TIME: Hora de ref: 30/10/2025 05:24:10 | Ciclo: 15[0m
+[0;32mI (18794) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (18794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19294) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (19294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=18821.65 ms | Total peças=22[0m
+[0;32mI (19314) TIME: Hora de ref: 30/10/2025 05:24:11 | Ciclo: 16[0m
+[0;32mI (20294) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (20294) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20314) TIME: Hora de ref: 30/10/2025 05:24:12 | Ciclo: 17[0m
+[0;32mI (20794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (21294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (21314) TIME: Hora de ref: 30/10/2025 05:24:13 | Ciclo: 18[0m
+[0;32mI (21794) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (21794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (22294) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (22294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=21821.60 ms | Total peças=23[0m
+[0;32mI (22314) TIME: Hora de ref: 30/10/2025 05:24:14 | Ciclo: 19[0m
+[0;32mI (22924) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (22924) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.59 ms | Total peças=24[0m
+[0;32mI (22934) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 24[0m
+[0;32mI (22954) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (22954) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.05 ms | Total peças=25[0m
+[0;32mI (22964) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 25[0m
+[0;32mI (23274) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 25[0m
+[0;32mI (23274) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.02 ms | Total peças=26[0m
+[0;32mI (23304) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (23304) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.56 ms | Total peças=27[0m
+[0;32mI (23314) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 27[0m
+[0;32mI (23314) TIME: Hora de ref: 30/10/2025 05:24:15 | Ciclo: 20[0m
+[0;32mI (23334) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=28[0m
+[0;32mI (23804) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (23804) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.58 ms | Total peças=29[0m
+[0;32mI (23814) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 29[0m
+[0;32mI (24314) TIME: Hora de ref: 30/10/2025 05:24:16 | Ciclo: 21[0m
+[0;32mI (25294) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (25294) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (25314) TIME: Hora de ref: 30/10/2025 05:24:17 | Ciclo: 22[0m
+[0;32mI (25794) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (25794) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=25321.55 ms | Total peças=30[0m
+[0;32mI (26294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (26314) TIME: Hora de ref: 30/10/2025 05:24:18 | Ciclo: 23[0m
+[0;32mI (26794) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (26794) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=26321.57 ms | Total peças=31[0m
+[0;32mI (27314) TIME: Hora de ref: 30/10/2025 05:24:19 | Ciclo: 24[0m
+[0;32mI (27794) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (27794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (28294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (28314) TIME: Hora de ref: 30/10/2025 05:24:20 | Ciclo: 25[0m
+[0;32mI (29174) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (29174) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 31[0m
+[0;32mI (29174) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.39 ms | Total peças=32[0m
+[0;32mI (29314) TIME: Hora de ref: 30/10/2025 05:24:21 | Ciclo: 26[0m
+[0;32mI (29834) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (29834) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.64 ms | Total peças=33[0m
+[0;32mI (29844) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 33[0m
+[0;32mI (29864) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (29864) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.31 ms | Total peças=34[0m
+[0;32mI (29874) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 34[0m
+[0;32mI (29894) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.01 ms | Total peças=35[0m
+[0;32mI (29904) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 35[0m
+[0;32mI (30214) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 35[0m
+[0;32mI (30214) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.15 ms | Total peças=36[0m
+[0;32mI (30314) TIME: Hora de ref: 30/10/2025 05:24:22 | Ciclo: 27[0m
+[0;32mI (31294) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (31294) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (31314) TIME: Hora de ref: 30/10/2025 05:24:23 | Ciclo: 28[0m
+[0;32mI (31794) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (31794) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=31321.59 ms | Total peças=37[0m
+[0;32mI (32294) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (32294) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (32314) TIME: Hora de ref: 30/10/2025 05:24:24 | Ciclo: 29[0m
+[0;32mI (32794) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (32794) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=32321.60 ms | Total peças=38[0m
+[0;32mI (33314) TIME: Hora de ref: 30/10/2025 05:24:25 | Ciclo: 30[0m
+[0;32mI (33334) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=39[0m
+[0;32mI (33344) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 39[0m
+[0;32mI (33364) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.01 ms | Total peças=40[0m
+[0;32mI (33374) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 40[0m
+[0;32mI (33844) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.98 ms | Total peças=41[0m
+[0;32mI (34234) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (34314) TIME: Hora de ref: 30/10/2025 05:24:26 | Ciclo: 0[0m
+[0;32mI (34534) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=42[0m
+[0;32mI (35314) TIME: Hora de ref: 30/10/2025 05:24:27 | Ciclo: 1[0m
+[0;32mI (35794) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (35794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (36294) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (36294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=35821.65 ms | Total peças=43[0m
+[0;32mI (36314) TIME: Hora de ref: 30/10/2025 05:24:28 | Ciclo: 2[0m
+[0;32mI (36794) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (36794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (37294) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (37294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=36821.60 ms | Total peças=44[0m
+[0;32mI (37314) TIME: Hora de ref: 30/10/2025 05:24:29 | Ciclo: 3[0m
+[0;32mI (37794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (38294) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (38294) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (38314) TIME: Hora de ref: 30/10/2025 05:24:30 | Ciclo: 4[0m
+[0;32mI (38794) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (38794) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=38321.55 ms | Total peças=45[0m
+[0;32mI (39294) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (39294) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (39314) TIME: Hora de ref: 30/10/2025 05:24:31 | Ciclo: 5[0m
+[0;32mI (39794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (40314) TIME: Hora de ref: 30/10/2025 05:24:32 | Ciclo: 6[0m
+[0;32mI (40914) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.02 ms | Total peças=46[0m
+[0;32mI (40924) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 46[0m
+[0;32mI (40944) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (40944) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.27 ms | Total peças=47[0m
+[0;32mI (40954) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 47[0m
+[0;32mI (40974) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (40974) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.06 ms | Total peças=48[0m
+[0;32mI (40984) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 48[0m
+[0;32mI (41314) TIME: Hora de ref: 30/10/2025 05:24:33 | Ciclo: 7[0m
+[0;32mI (41354) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (41354) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=49[0m
+[0;32mI (41364) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 49[0m
+[0;32mI (41384) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (41384) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.05 ms | Total peças=50[0m
+[0;32mI (41394) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 50[0m
+[0;32mI (41414) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=0.01 ms | Total peças=51[0m
+[0;32mI (42294) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (42294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=41821.61 ms | Total peças=52[0m
+[0;32mI (42314) TIME: Hora de ref: 30/10/2025 05:24:34 | Ciclo: 8[0m
+[0;32mI (42794) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (42794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (43294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (43314) TIME: Hora de ref: 30/10/2025 05:24:35 | Ciclo: 9[0m
+[0;32mI (43794) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (43794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (44294) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (44294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=43821.59 ms | Total peças=53[0m
+[0;32mI (44314) TIME: Hora de ref: 30/10/2025 05:24:36 | Ciclo: 10[0m
+[0;32mI (44794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (45294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (45314) TIME: Hora de ref: 30/10/2025 05:24:37 | Ciclo: 11[0m
+[0;32mI (45794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (46294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (46314) TIME: Hora de ref: 30/10/2025 05:24:38 | Ciclo: 12[0m
+[0;32mI (46794) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (46794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (47294) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (47294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=46821.60 ms | Total peças=54[0m
+[0;32mI (47314) TIME: Hora de ref: 30/10/2025 05:24:39 | Ciclo: 13[0m
+[0;32mI (47794) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (47794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (48294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (48314) TIME: Hora de ref: 30/10/2025 05:24:40 | Ciclo: 14[0m
+[0;32mI (48794) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (48794) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=48321.53 ms | Total peças=55[0m
+[0;32mI (49314) TIME: Hora de ref: 30/10/2025 05:24:41 | Ciclo: 15[0m
+[0;32mI (49794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (50294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (50314) TIME: Hora de ref: 30/10/2025 05:24:42 | Ciclo: 16[0m
+[0;32mI (50794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (51294) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (51294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=50821.58 ms | Total peças=56[0m
+[0;32mI (51314) TIME: Hora de ref: 30/10/2025 05:24:43 | Ciclo: 17[0m
+[0;32mI (51794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (52294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (52314) TIME: Hora de ref: 30/10/2025 05:24:44 | Ciclo: 18[0m
+[0;32mI (53294) MONITOR: Comando recebido: PING[0m
+SAFETY_ON
+
+[0;32mI (53294) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (53314) TIME: Hora de ref: 30/10/2025 05:24:45 | Ciclo: 19[0m
+[0;32mI (54294) MONITOR: Comando recebido: SORT_ACT[0m
+
+[0;32mI (54294) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=53821.63 ms | Total peças=57[0m
+[0;32mI (54314) TIME: Hora de ref: 30/10/2025 05:24:46 | Ciclo: 20[0m
+[0;32mI (55314) TIME: Hora de ref: 30/10/2025 05:24:47 | Ciclo: 21[0m
+[0;32mI (56194) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (56194) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.59 ms | Total peças=58[0m
+[0;32mI (56204) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 58[0m
+[0;32mI (56224) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (56234) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 59[0m
+[0;32mI (56234) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.07 ms | Total peças=59[0m
+[0;32mI (56264) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (56264) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 59[0m
+[0;32mI (56264) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.09 ms | Total peças=60[0m
+[0;32mI (56314) TIME: Hora de ref: 30/10/2025 05:24:48 | Ciclo: 22[0m
+[0;32mI (57314) TIME: Hora de ref: 30/10/2025 05:24:49 | Ciclo: 23[0m
+[0;32mI (57794) MONITOR: Comando recebido: SAFETY_ON[0m
+
+[0;32mI (57794) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (58294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (58314) TIME: Hora de ref: 30/10/2025 05:24:50 | Ciclo: 24[0m
+[0;32mI (58794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (59294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (59314) TIME: Hora de ref: 30/10/2025 05:24:51 | Ciclo: 25[0m
+[0;32mI (59794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (60294) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (60314) TIME: Hora de ref: 30/10/2025 05:24:52 | Ciclo: 26[0m
+[0;32mI (60784) MONITOR: Relatório TCP enviado (15.48% CPU)[0m
+[0;32mI (60794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (61314) TIME: Hora de ref: 30/10/2025 05:24:53 | Ciclo: 27[0m
+[0;32mI (61794) MONITOR: Comando recebido: PING[0m
+
+[0;32mI (62314) TIME: Hora de ref: 30/10/2025 05:24:54 | Ciclo: 28[0m
+[0;32mI (63314) TIME: Hora de ref: 30/10/2025 05:24:55 | Ciclo: 29[0m
+[0;32mI (64314) TIME: Hora de ref: 30/10/2025 05:24:56 | Ciclo: 30[0m
+[0;32mI (64444) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (65314) TIME: Hora de ref: 30/10/2025 05:24:57 | Ciclo: 0[0m
+[0;32mI (66314) TIME: Hora de ref: 30/10/2025 05:24:58 | Ciclo: 1[0m
+[0;32mI (67314) TIME: Hora de ref: 30/10/2025 05:24:59 | Ciclo: 2[0m
+[0;32mI (68314) TIME: Hora de ref: 30/10/2025 05:25:00 | Ciclo: 3[0m
+[0;32mI (69314) TIME: Hora de ref: 30/10/2025 05:25:01 | Ciclo: 4[0m
+[0;32mI (70314) TIME: Hora de ref: 30/10/2025 05:25:02 | Ciclo: 5[0m
+[0;32mI (71314) TIME: Hora de ref: 30/10/2025 05:25:03 | Ciclo: 6[0m
+[0;32mI (72314) TIME: Hora de ref: 30/10/2025 05:25:04 | Ciclo: 7[0m
+[0;32mI (73314) TIME: Hora de ref: 30/10/2025 05:25:05 | Ciclo: 8[0m
+[0;32mI (74314) TIME: Hora de ref: 30/10/2025 05:25:06 | Ciclo: 9[0m
+[0;32mI (75314) TIME: Hora de ref: 30/10/2025 05:25:07 | Ciclo: 10[0m
+[0;32mI (76314) TIME: Hora de ref: 30/10/2025 05:25:08 | Ciclo: 11[0m
+[0;32mI (77314) TIME: Hora de ref: 30/10/2025 05:25:09 | Ciclo: 12[0m
+[0;32mI (78314) TIME: Hora de ref: 30/10/2025 05:25:10 | Ciclo: 13[0m
+[0;32mI (79314) TIME: Hora de ref: 30/10/2025 05:25:11 | Ciclo: 14[0m
+[0;32mI (80314) TIME: Hora de ref: 30/10/2025 05:25:12 | Ciclo: 15[0m
+[0;32mI (81314) TIME: Hora de ref: 30/10/2025 05:25:13 | Ciclo: 16[0m
+[0;32mI (82314) TIME: Hora de ref: 30/10/2025 05:25:14 | Ciclo: 17[0m
+[0;32mI (83314) TIME: Hora de ref: 30/10/2025 05:25:15 | Ciclo: 18[0m
+[0;32mI (84314) TIME: Hora de ref: 30/10/2025 05:25:16 | Ciclo: 19[0m
+[0;32mI (85314) TIME: Hora de ref: 30/10/2025 05:25:17 | Ciclo: 20[0m
+[0;32mI (86314) TIME: Hora de ref: 30/10/2025 05:25:18 | Ciclo: 21[0m
+[0;32mI (87314) TIME: Hora de ref: 30/10/2025 05:25:19 | Ciclo: 22[0m
+[0;32mI (88314) TIME: Hora de ref: 30/10/2025 05:25:20 | Ciclo: 23[0m
+[0;32mI (89314) TIME: Hora de ref: 30/10/2025 05:25:21 | Ciclo: 24[0m
+[0;32mI (90314) TIME: Hora de ref: 30/10/2025 05:25:22 | Ciclo: 25[0m
+[0;32mI (91314) TIME: Hora de ref: 30/10/2025 05:25:23 | Ciclo: 26[0m
+[0;32mI (92314) TIME: Hora de ref: 30/10/2025 05:25:24 | Ciclo: 27[0m
+[0;32mI (93314) TIME: Hora de ref: 30/10/2025 05:25:25 | Ciclo: 28[0m
+[0;32mI (94314) TIME: Hora de ref: 30/10/2025 05:25:26 | Ciclo: 29[0m
+[0;32mI (94654) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (95314) TIME: Hora de ref: 30/10/2025 05:25:27 | Ciclo: 0[0m
+[0;32mI (96314) TIME: Hora de ref: 30/10/2025 05:25:28 | Ciclo: 1[0m
+[0;32mI (97314) TIME: Hora de ref: 30/10/2025 05:25:29 | Ciclo: 2[0m
+[0;32mI (98314) TIME: Hora de ref: 30/10/2025 05:25:30 | Ciclo: 3[0m
+[0;32mI (99314) TIME: Hora de ref: 30/10/2025 05:25:31 | Ciclo: 4[0m
+[0;32mI (100314) TIME: Hora de ref: 30/10/2025 05:25:32 | Ciclo: 5[0m
+[0;32mI (101314) TIME: Hora de ref: 30/10/2025 05:25:33 | Ciclo: 6[0m
+[0;32mI (102314) TIME: Hora de ref: 30/10/2025 05:25:34 | Ciclo: 7[0m
+[0;32mI (103314) TIME: Hora de ref: 30/10/2025 05:25:35 | Ciclo: 8[0m
+[0;32mI (104314) TIME: Hora de ref: 30/10/2025 05:25:36 | Ciclo: 9[0m
+[0;32mI (105314) TIME: Hora de ref: 30/10/2025 05:25:37 | Ciclo: 10[0m
+[0;32mI (106314) TIME: Hora de ref: 30/10/2025 05:25:38 | Ciclo: 11[0m
+[0;32mI (107314) TIME: Hora de ref: 30/10/2025 05:25:39 | Ciclo: 12[0m
+[0;32mI (108314) TIME: Hora de ref: 30/10/2025 05:25:40 | Ciclo: 13[0m
+[0;32mI (109314) TIME: Hora de ref: 30/10/2025 05:25:41 | Ciclo: 14[0m
+[0;32mI (110314) TIME: Hora de ref: 30/10/2025 05:25:42 | Ciclo: 15[0m
+[0;32mI (111314) TIME: Hora de ref: 30/10/2025 05:25:43 | Ciclo: 16[0m
+[0;32mI (112314) TIME: Hora de ref: 30/10/2025 05:25:44 | Ciclo: 17[0m
+[0;32mI (113314) TIME: Hora de ref: 30/10/2025 05:25:45 | Ciclo: 18[0m
+[0;32mI (114314) TIME: Hora de ref: 30/10/2025 05:25:46 | Ciclo: 19[0m
+[0;32mI (115314) TIME: Hora de ref: 30/10/2025 05:25:47 | Ciclo: 20[0m
+[0;32mI (116314) TIME: Hora de ref: 30/10/2025 05:25:48 | Ciclo: 21[0m
+[0;32mI (117314) TIME: Hora de ref: 30/10/2025 05:25:49 | Ciclo: 22[0m
+[0;32mI (118314) TIME: Hora de ref: 30/10/2025 05:25:50 | Ciclo: 23[0m
+[0;32mI (119314) TIME: Hora de ref: 30/10/2025 05:25:51 | Ciclo: 24[0m
+[0;32mI (120314) TIME: Hora de ref: 30/10/2025 05:25:52 | Ciclo: 25[0m
+[0;32mI (120784) MONITOR: Relatório TCP enviado (14.93% CPU)[0m
+[0;32mI (121314) TIME: Hora de ref: 30/10/2025 05:25:53 | Ciclo: 26[0m
+[0;32mI (122314) TIME: Hora de ref: 30/10/2025 05:25:54 | Ciclo: 27[0m
+[0;32mI (123314) TIME: Hora de ref: 30/10/2025 05:25:55 | Ciclo: 28[0m
+[0;32mI (124314) TIME: Hora de ref: 30/10/2025 05:25:56 | Ciclo: 29[0m
+[0;32mI (124794) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (125314) TIME: Hora de ref: 30/10/2025 05:25:57 | Ciclo: 0[0m
+[0;32mI (126314) TIME: Hora de ref: 30/10/2025 05:25:58 | Ciclo: 1[0m
+[0;32mI (127314) TIME: Hora de ref: 30/10/2025 05:25:59 | Ciclo: 2[0m
+[0;32mI (128314) TIME: Hora de ref: 30/10/2025 05:26:00 | Ciclo: 3[0m
+[0;32mI (129314) TIME: Hora de ref: 30/10/2025 05:26:01 | Ciclo: 4[0m
+[0;32mI (130314) TIME: Hora de ref: 30/10/2025 05:26:02 | Ciclo: 5[0m
+[0;32mI (131314) TIME: Hora de ref: 30/10/2025 05:26:03 | Ciclo: 6[0m
+[0;32mI (132314) TIME: Hora de ref: 30/10/2025 05:26:04 | Ciclo: 7[0m
+[0;32mI (133314) TIME: Hora de ref: 30/10/2025 05:26:05 | Ciclo: 8[0m
+[0;32mI (134314) TIME: Hora de ref: 30/10/2025 05:26:06 | Ciclo: 9[0m
+[0;32mI (135314) TIME: Hora de ref: 30/10/2025 05:26:07 | Ciclo: 10[0m
+[0;32mI (136314) TIME: Hora de ref: 30/10/2025 05:26:08 | Ciclo: 11[0m
+[0;32mI (137314) TIME: Hora de ref: 30/10/2025 05:26:09 | Ciclo: 12[0m
+[0;32mI (138314) TIME: Hora de ref: 30/10/2025 05:26:10 | Ciclo: 13[0m
+[0;32mI (139314) TIME: Hora de ref: 30/10/2025 05:26:11 | Ciclo: 14[0m
+[0;32mI (140314) TIME: Hora de ref: 30/10/2025 05:26:12 | Ciclo: 15[0m
+[0;32mI (141314) TIME: Hora de ref: 30/10/2025 05:26:13 | Ciclo: 16[0m
+[0;32mI (142314) TIME: Hora de ref: 30/10/2025 05:26:14 | Ciclo: 17[0m
+[0;32mI (143314) TIME: Hora de ref: 30/10/2025 05:26:15 | Ciclo: 18[0m
+[0;32mI (144314) TIME: Hora de ref: 30/10/2025 05:26:16 | Ciclo: 19[0m
+[0;32mI (145314) TIME: Hora de ref: 30/10/2025 05:26:17 | Ciclo: 20[0m
+[0;32mI (146314) TIME: Hora de ref: 30/10/2025 05:26:18 | Ciclo: 21[0m
+[0;32mI (147314) TIME: Hora de ref: 30/10/2025 05:26:19 | Ciclo: 22[0m
+[0;32mI (148314) TIME: Hora de ref: 30/10/2025 05:26:20 | Ciclo: 23[0m
+[0;32mI (149314) TIME: Hora de ref: 30/10/2025 05:26:21 | Ciclo: 24[0m
+[0;32mI (150314) TIME: Hora de ref: 30/10/2025 05:26:22 | Ciclo: 25[0m
+[0;32mI (151314) TIME: Hora de ref: 30/10/2025 05:26:23 | Ciclo: 26[0m
+[0;32mI (152314) TIME: Hora de ref: 30/10/2025 05:26:24 | Ciclo: 27[0m
+[0;32mI (153314) TIME: Hora de ref: 30/10/2025 05:26:25 | Ciclo: 28[0m
+[0;32mI (154314) TIME: Hora de ref: 30/10/2025 05:26:26 | Ciclo: 29[0m
+[0;32mI (154964) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (155314) TIME: Hora de ref: 30/10/2025 05:26:27 | Ciclo: 0[0m
+[0;32mI (156314) TIME: Hora de ref: 30/10/2025 05:26:28 | Ciclo: 1[0m
+[0;32mI (157314) TIME: Hora de ref: 30/10/2025 05:26:29 | Ciclo: 2[0m
+[0;32mI (158314) TIME: Hora de ref: 30/10/2025 05:26:30 | Ciclo: 3[0m
+[0;32mI (159314) TIME: Hora de ref: 30/10/2025 05:26:31 | Ciclo: 4[0m
+[0;32mI (160314) TIME: Hora de ref: 30/10/2025 05:26:32 | Ciclo: 5[0m
+[0;32mI (161314) TIME: Hora de ref: 30/10/2025 05:26:33 | Ciclo: 6[0m
+[0;32mI (162314) TIME: Hora de ref: 30/10/2025 05:26:34 | Ciclo: 7[0m
+[0;32mI (163314) TIME: Hora de ref: 30/10/2025 05:26:35 | Ciclo: 8[0m
+[0;32mI (164314) TIME: Hora de ref: 30/10/2025 05:26:36 | Ciclo: 9[0m
+[0;32mI (165314) TIME: Hora de ref: 30/10/2025 05:26:37 | Ciclo: 10[0m
+[0;32mI (166314) TIME: Hora de ref: 30/10/2025 05:26:38 | Ciclo: 11[0m
+[0;32mI (167314) TIME: Hora de ref: 30/10/2025 05:26:39 | Ciclo: 12[0m
+[0;32mI (168314) TIME: Hora de ref: 30/10/2025 05:26:40 | Ciclo: 13[0m
+[0;32mI (169314) TIME: Hora de ref: 30/10/2025 05:26:41 | Ciclo: 14[0m
+[0;32mI (170314) TIME: Hora de ref: 30/10/2025 05:26:42 | Ciclo: 15[0m
+[0;32mI (171314) TIME: Hora de ref: 30/10/2025 05:26:43 | Ciclo: 16[0m
+[0;32mI (172314) TIME: Hora de ref: 30/10/2025 05:26:44 | Ciclo: 17[0m
+[0;32mI (173314) TIME: Hora de ref: 30/10/2025 05:26:45 | Ciclo: 18[0m
+[0;32mI (174314) TIME: Hora de ref: 30/10/2025 05:26:46 | Ciclo: 19[0m
+[0;32mI (175314) TIME: Hora de ref: 30/10/2025 05:26:47 | Ciclo: 20[0m
+[0;32mI (176314) TIME: Hora de ref: 30/10/2025 05:26:48 | Ciclo: 21[0m
+[0;32mI (177314) TIME: Hora de ref: 30/10/2025 05:26:49 | Ciclo: 22[0m
+[0;32mI (178314) TIME: Hora de ref: 30/10/2025 05:26:50 | Ciclo: 23[0m
+[0;32mI (179314) TIME: Hora de ref: 30/10/2025 05:26:51 | Ciclo: 24[0m
+[0;32mI (180314) TIME: Hora de ref: 30/10/2025 05:26:52 | Ciclo: 25[0m
+[0;32mI (180784) MONITOR: Relatório TCP enviado (14.93% CPU)[0m
+[0;32mI (181314) TIME: Hora de ref: 30/10/2025 05:26:53 | Ciclo: 26[0m
+[0;32mI (182314) TIME: Hora de ref: 30/10/2025 05:26:54 | Ciclo: 27[0m
+[0;32mI (183314) TIME: Hora de ref: 30/10/2025 05:26:55 | Ciclo: 28[0m
+[0;32mI (184314) TIME: Hora de ref: 30/10/2025 05:26:56 | Ciclo: 29[0m
+[0;32mI (185174) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (185314) TIME: Hora de ref: 30/10/2025 05:26:57 | Ciclo: 0[0m
+[0;32mI (186314) TIME: Hora de ref: 30/10/2025 05:26:58 | Ciclo: 1[0m
+[0;32mI (187314) TIME: Hora de ref: 30/10/2025 05:26:59 | Ciclo: 2[0m
+[0;32mI (188314) TIME: Hora de ref: 30/10/2025 05:27:00 | Ciclo: 3[0m
+[0;32mI (189314) TIME: Hora de ref: 30/10/2025 05:27:01 | Ciclo: 4[0m

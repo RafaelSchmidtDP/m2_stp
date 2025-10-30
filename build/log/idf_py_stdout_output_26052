@@ -1,0 +1,196 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM3'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a998h (108952) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002a9c0 vaddr=3ffb0000 size=03fach ( 16300) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002e974 vaddr=40080000 size=016a4h (  5796) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9209ch (598172) map[0m
+[0;32mI (341) esp_image: segment 4: paddr=000c20c4 vaddr=400816a4 size=168d4h ( 92372) load[0m
+[0;32mI (377) esp_image: segment 5: paddr=000d89a0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (389) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (389) boot: Disabling RNG early entropy source...[0m
+[0;32mI (400) cpu_start: Multicore app[0m
+[0;32mI (408) cpu_start: Pro cpu start user code[0m
+[0;32mI (408) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (408) app_init: Application information:[0m
+[0;32mI (408) app_init: Project name:     hello_world[0m
+[0;32mI (413) app_init: App version:      1[0m
+[0;32mI (416) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (421) app_init: ELF file SHA256:  774900850...[0m
+[0;32mI (425) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (429) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (433) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (437) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (441) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (447) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB8750 len 000278B0 (158 KiB): DRAM[0m
+[0;32mI (457) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (468) heap_init: At 40097F78 len 00008088 (32 KiB): IRAM[0m
+[0;32mI (475) spi_flash: detected chip: generic[0m
+[0;32mI (477) spi_flash: flash io: dio[0m
+[0;33mW (480) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (493) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (503) main_task: Started on CPU0[0m
+[0;32mI (513) main_task: Calling app_main()[0m
+[0;32mI (533) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (543) wifi:wifi driver task: 3ffc0904, prio:23, stack:6656, core=0[0m
+[0;32mI (553) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (553) wifi:wifi certification version: v7.0[0m
+[0;32mI (553) wifi:config NVS flash: enabled[0m
+[0;32mI (553) wifi:config nano formatting: disabled[0m
+[0;32mI (563) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (563) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (563) wifi:Init management short buffer num: 32[0m
+[0;32mI (573) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (573) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (583) wifi:Init static rx buffer num: 10[0m
+[0;32mI (583) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (593) wifi_init: rx ba win: 6[0m
+[0;32mI (593) wifi_init: accept mbox: 6[0m
+[0;32mI (593) wifi_init: tcpip mbox: 32[0m
+[0;32mI (593) wifi_init: udp mbox: 6[0m
+[0;32mI (603) wifi_init: tcp mbox: 6[0m
+[0;32mI (603) wifi_init: tcp tx win: 5760[0m
+[0;32mI (603) wifi_init: tcp rx win: 5760[0m
+[0;32mI (613) wifi_init: tcp mss: 1440[0m
+[0;32mI (613) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (613) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (623) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (703) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (703) wifi:enable tsf[0m
+[0;32mI (703) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (723) wifi:new:<9,1>, old:<1,0>, ap:<255,255>, sta:<9,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (723) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (733) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (743) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (753) wifi:connected with NET_VIRTUA_3313, aid = 3, channel 9, 40U, bssid = 34:0a:33:25:12:ee[0m
+[0;32mI (753) wifi:security: WPA2-PSK, phy: bgn, rssi: -62[0m
+[0;32mI (763) wifi:pm start, type: 1[0m
+
+[0;32mI (763) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (803) SISTEMA: Deadlines: ENC=5000us | CTRL=5000us | SORT=10000us | ESTOP=5000us | MON=500000us[0m
+[0;32mI (803) SISTEMA: Modo de Teste: UDP[0m
+[0;32mI (803) SISTEMA: m-k FIRM: (9, 10)[0m
+[0;32mI (803) MONITOR: INICIANDO MODO UDP[0m
+[0;32mI (813) SISTEMA: Sistema iniciado.[0m
+[0;32mI (813) main_task: Returned from app_main()[0m
+[0;32mI (823) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1793) esp_netif_handlers: sta ip: 192.168.0.191, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (1853) wifi:<ba-add>idx:0 (ifx:0, 34:0a:33:25:12:ee), tid:0, ssn:2, winSize:64[0m
+[0;32mI (4723) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (4813) TIME: Hora de referencia: 28/10/2025 16:28:21 | Ciclo: 1[0m
+[0;32mI (5813) TIME: Hora de referencia: 28/10/2025 16:28:22 | Ciclo: 2[0m
+[0;32mI (6813) TIME: Hora de referencia: 28/10/2025 16:28:23 | Ciclo: 3[0m
+[0;32mI (7813) TIME: Hora de referencia: 28/10/2025 16:28:24 | Ciclo: 4[0m
+[0;32mI (8813) TIME: Hora de referencia: 28/10/2025 16:28:25 | Ciclo: 5[0m
+[0;32mI (9813) TIME: Hora de referencia: 28/10/2025 16:28:26 | Ciclo: 6[0m
+[0;32mI (10813) TIME: Hora de referencia: 28/10/2025 16:28:27 | Ciclo: 7[0m
+[0;32mI (11813) TIME: Hora de referencia: 28/10/2025 16:28:28 | Ciclo: 8[0m
+[0;32mI (12813) TIME: Hora de referencia: 28/10/2025 16:28:29 | Ciclo: 9[0m
+[0;32mI (13813) TIME: Hora de referencia: 28/10/2025 16:28:30 | Ciclo: 10[0m
+[0;32mI (14813) TIME: Hora de referencia: 28/10/2025 16:28:31 | Ciclo: 11[0m
+[0;32mI (15813) TIME: Hora de referencia: 28/10/2025 16:28:32 | Ciclo: 12[0m
+[0;32mI (16813) TIME: Hora de referencia: 28/10/2025 16:28:33 | Ciclo: 13[0m
+[0;32mI (17813) TIME: Hora de referencia: 28/10/2025 16:28:34 | Ciclo: 14[0m
+[0;32mI (18813) TIME: Hora de referencia: 28/10/2025 16:28:35 | Ciclo: 15[0m
+[0;32mI (19813) TIME: Hora de referencia: 28/10/2025 16:28:36 | Ciclo: 16[0m
+[0;32mI (20813) TIME: Hora de referencia: 28/10/2025 16:28:37 | Ciclo: 17[0m
+[0;32mI (21813) TIME: Hora de referencia: 28/10/2025 16:28:38 | Ciclo: 18[0m
+[0;32mI (22813) TIME: Hora de referencia: 28/10/2025 16:28:39 | Ciclo: 19[0m
+[0;32mI (23813) TIME: Hora de referencia: 28/10/2025 16:28:40 | Ciclo: 20[0m
+[0;32mI (24813) TIME: Hora de referencia: 28/10/2025 16:28:41 | Ciclo: 21[0m
+[0;32mI (25813) TIME: Hora de referencia: 28/10/2025 16:28:42 | Ciclo: 22[0m
+[0;32mI (26813) TIME: Hora de referencia: 28/10/2025 16:28:43 | Ciclo: 23[0m
+[0;32mI (27813) TIME: Hora de referencia: 28/10/2025 16:28:44 | Ciclo: 24[0m
+[0;32mI (28813) TIME: Hora de referencia: 28/10/2025 16:28:45 | Ciclo: 25[0m
+[0;32mI (29813) TIME: Hora de referencia: 28/10/2025 16:28:46 | Ciclo: 26[0m
+[0;32mI (30813) TIME: Hora de referencia: 28/10/2025 16:28:47 | Ciclo: 27[0m
+[0;32mI (31813) TIME: Hora de referencia: 28/10/2025 16:28:48 | Ciclo: 28[0m
+[0;32mI (32813) TIME: Hora de referencia: 28/10/2025 16:28:49 | Ciclo: 29[0m
+[0;32mI (33813) TIME: Hora de referencia: 28/10/2025 16:28:50 | Ciclo: 30[0m
+[0;32mI (34813) TIME: Hora de referencia: 28/10/2025 16:28:51 | Ciclo: 31[0m
+[0;32mI (34813) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (35813) TIME: Hora de referencia: 28/10/2025 16:28:52 | Ciclo: 0[0m
+[0;32mI (36813) TIME: Hora de referencia: 28/10/2025 16:28:53 | Ciclo: 1[0m
+[0;32mI (37813) TIME: Hora de referencia: 28/10/2025 16:28:54 | Ciclo: 2[0m
+[0;32mI (38813) TIME: Hora de referencia: 28/10/2025 16:28:55 | Ciclo: 3[0m
+[0;32mI (39813) TIME: Hora de referencia: 28/10/2025 16:28:56 | Ciclo: 4[0m
+[0;32mI (40813) TIME: Hora de referencia: 28/10/2025 16:28:57 | Ciclo: 5[0m
+[0;32mI (41813) TIME: Hora de referencia: 28/10/2025 16:28:58 | Ciclo: 6[0m
+[0;32mI (42813) TIME: Hora de referencia: 28/10/2025 16:28:59 | Ciclo: 7[0m
+[0;32mI (43813) TIME: Hora de referencia: 28/10/2025 16:29:00 | Ciclo: 8[0m
+[0;32mI (44813) TIME: Hora de referencia: 28/10/2025 16:29:01 | Ciclo: 9[0m
+[0;32mI (45813) TIME: Hora de referencia: 28/10/2025 16:29:02 | Ciclo: 10[0m
+[0;32mI (46813) TIME: Hora de referencia: 28/10/2025 16:29:03 | Ciclo: 11[0m
+[0;32mI (47813) TIME: Hora de referencia: 28/10/2025 16:29:04 | Ciclo: 12[0m
+[0;32mI (48813) TIME: Hora de referencia: 28/10/2025 16:29:05 | Ciclo: 13[0m
+[0;32mI (49813) TIME: Hora de referencia: 28/10/2025 16:29:06 | Ciclo: 14[0m
+[0;32mI (50813) TIME: Hora de referencia: 28/10/2025 16:29:07 | Ciclo: 15[0m
+[0;32mI (51813) TIME: Hora de referencia: 28/10/2025 16:29:08 | Ciclo: 16[0m
+[0;32mI (52813) TIME: Hora de referencia: 28/10/2025 16:29:09 | Ciclo: 17[0m
+[0;32mI (53813) TIME: Hora de referencia: 28/10/2025 16:29:10 | Ciclo: 18[0m
+[0;32mI (54813) TIME: Hora de referencia: 28/10/2025 16:29:11 | Ciclo: 19[0m
+[0;32mI (55813) TIME: Hora de referencia: 28/10/2025 16:29:12 | Ciclo: 20[0m
+[0;32mI (56813) TIME: Hora de referencia: 28/10/2025 16:29:13 | Ciclo: 21[0m
+[0;32mI (57813) TIME: Hora de referencia: 28/10/2025 16:29:14 | Ciclo: 22[0m
+[0;32mI (58813) TIME: Hora de referencia: 28/10/2025 16:29:15 | Ciclo: 23[0m
+[0;32mI (59813) TIME: Hora de referencia: 28/10/2025 16:29:16 | Ciclo: 24[0m
+[0;32mI (60813) TIME: Hora de referencia: 28/10/2025 16:29:17 | Ciclo: 25[0m
+[0;32mI (61303) MONITOR: Relatório UDP enviado (14.44% CPU)[0m
+[0;32mI (61813) TIME: Hora de referencia: 28/10/2025 16:29:18 | Ciclo: 26[0m
+[0;32mI (62813) TIME: Hora de referencia: 28/10/2025 16:29:19 | Ciclo: 27[0m
+[0;32mI (63813) TIME: Hora de referencia: 28/10/2025 16:29:20 | Ciclo: 28[0m
+[0;32mI (64813) TIME: Hora de referencia: 28/10/2025 16:29:21 | Ciclo: 29[0m
+[0;32mI (64933) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (65813) TIME: Hora de referencia: 28/10/2025 16:29:22 | Ciclo: 0[0m
+[0;32mI (66813) TIME: Hora de referencia: 28/10/2025 16:29:23 | Ciclo: 1[0m
+[0;32mI (67813) TIME: Hora de referencia: 28/10/2025 16:29:24 | Ciclo: 2[0m
+[0;32mI (68813) TIME: Hora de referencia: 28/10/2025 16:29:25 | Ciclo: 3[0m
+[0;32mI (69813) TIME: Hora de referencia: 28/10/2025 16:29:26 | Ciclo: 4[0m
+[0;32mI (70813) TIME: Hora de referencia: 28/10/2025 16:29:27 | Ciclo: 5[0m
+[0;32mI (71813) TIME: Hora de referencia: 28/10/2025 16:29:28 | Ciclo: 6[0m
+[0;32mI (72813) TIME: Hora de referencia: 28/10/2025 16:29:29 | Ciclo: 7[0m
+[0;32mI (73813) TIME: Hora de referencia: 28/10/2025 16:29:30 | Ciclo: 8[0m
+[0;32mI (74813) TIME: Hora de referencia: 28/10/2025 16:29:31 | Ciclo: 9[0m
+[0;32mI (75813) TIME: Hora de referencia: 28/10/2025 16:29:32 | Ciclo: 10[0m
+[0;32mI (76813) TIME: Hora de referencia: 28/10/2025 16:29:33 | Ciclo: 11[0m
+[0;32mI (77813) TIME: Hora de referencia: 28/10/2025 16:29:34 | Ciclo: 12[0m
+[0;32mI (78653) wifi:<ba-add>idx:1 (ifx:0, 34:0a:33:25:12:ee), tid:6, ssn:2, winSize:64[0m
+[0;32mI (78813) TIME: Hora de referencia: 28/10/2025 16:29:35 | Ciclo: 13[0m
+[0;32mI (79813) TIME: Hora de referencia: 28/10/2025 16:29:36 | Ciclo: 14[0m
+[0;32mI (80813) TIME: Hora de referencia: 28/10/2025 16:29:37 | Ciclo: 15[0m
+[0;32mI (81813) TIME: Hora de referencia: 28/10/2025 16:29:38 | Ciclo: 16[0m
+[0;32mI (82813) TIME: Hora de referencia: 28/10/2025 16:29:39 | Ciclo: 17[0m
+[0;32mI (83813) TIME: Hora de referencia: 28/10/2025 16:29:40 | Ciclo: 18[0m
+[0;32mI (84813) TIME: Hora de referencia: 28/10/2025 16:29:41 | Ciclo: 19[0m
+[0;32mI (85813) TIME: Hora de referencia: 28/10/2025 16:29:42 | Ciclo: 20[0m
+[0;32mI (86813) TIME: Hora de referencia: 28/10/2025 16:29:43 | Ciclo: 21[0m
+[0;32mI (87813) TIME: Hora de referencia: 28/10/2025 16:29:44 | Ciclo: 22[0m
+[0;32mI (88813) TIME: Hora de referencia: 28/10/2025 16:29:45 | Ciclo: 23[0m
+[0;32mI (89813) TIME: Hora de referencia: 28/10/2025 16:29:46 | Ciclo: 24[0m
+[0;32mI (90813) TIME: Hora de referencia: 28/10/2025 16:29:47 | Ciclo: 25[0m
+[0;32mI (91813) TIME: Hora de referencia: 28/10/2025 16:29:48 | Ciclo: 26[0m

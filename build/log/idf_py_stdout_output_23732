@@ -1,0 +1,268 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM3'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1aec4h (110276) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=0002aeec vaddr=3ffb0000 size=03f8ch ( 16268) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002ee80 vaddr=40080000 size=01198h (  4504) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=93728h (603944) map[0m
+[0;32mI (343) esp_image: segment 4: paddr=000c3750 vaddr=40081198 size=16fd8h ( 94168) load[0m
+[0;32mI (380) esp_image: segment 5: paddr=000da730 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (392) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (392) boot: Disabling RNG early entropy source...[0m
+[0;32mI (403) cpu_start: Multicore app[0m
+[0;32mI (411) cpu_start: Pro cpu start user code[0m
+[0;32mI (411) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (411) app_init: Application information:[0m
+[0;32mI (412) app_init: Project name:     hello_world[0m
+[0;32mI (416) app_init: App version:      1[0m
+[0;32mI (419) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (424) app_init: ELF file SHA256:  61c9f27a4...[0m
+[0;32mI (429) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (432) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (436) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (440) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (444) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (450) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (455) heap_init: At 3FFB8728 len 000278D8 (158 KiB): DRAM[0m
+[0;32mI (461) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (466) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (472) heap_init: At 40098170 len 00007E90 (31 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: generic[0m
+[0;32mI (480) spi_flash: flash io: dio[0m
+[0;33mW (483) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (496) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (506) main_task: Started on CPU0[0m
+[0;32mI (516) main_task: Calling app_main()[0m
+[0;32mI (546) wifi:wifi driver task: 3ffc0fa8, prio:23, stack:6656, core=0[0m
+[0;32mI (556) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (556) wifi:wifi certification version: v7.0[0m
+[0;32mI (556) wifi:config NVS flash: enabled[0m
+[0;32mI (556) wifi:config nano formatting: disabled[0m
+[0;32mI (566) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (566) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (566) wifi:Init management short buffer num: 32[0m
+[0;32mI (576) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (576) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (586) wifi:Init static rx buffer num: 10[0m
+[0;32mI (586) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (596) wifi_init: rx ba win: 6[0m
+[0;32mI (596) wifi_init: accept mbox: 6[0m
+[0;32mI (596) wifi_init: tcpip mbox: 32[0m
+[0;32mI (596) wifi_init: udp mbox: 6[0m
+[0;32mI (606) wifi_init: tcp mbox: 6[0m
+[0;32mI (606) wifi_init: tcp tx win: 5760[0m
+[0;32mI (606) wifi_init: tcp rx win: 5760[0m
+[0;32mI (616) wifi_init: tcp mss: 1440[0m
+[0;32mI (616) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (616) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (626) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (626) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (706) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (706) wifi:enable tsf[0m
+[0;32mI (706) ESTEIRA: Conectando ao WiFi...[0m
+[0;32mI (716) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (726) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (746) ESTEIRA: Iniciando SNTP...[0m
+[0;32mI (746) ESTEIRA: Monitor Task (Controle) - Servidor UDP ativo na porta 10421[0m
+[0;32mI (746) ESTEIRA: Monitor Task - Enviando status UDP para 192.168.7.5:10421 a cada 500ms.[0m
+[0;32mI (746) ESTEIRA: Tasks criadas e esteira inicializada com Touch pads[0m
+[0;32mI (756) main_task: Returned from app_main()[0m
+[0;32mI (756) ESTEIRA: Aguardando sincronizacao SNTP inicial...[0m
+[0;32mI (776) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (796) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (906) wifi:connected with Suite3, aid = 19, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (906) wifi:security: WPA2-PSK, phy: bgn, rssi: -38[0m
+[0;32mI (906) wifi:pm start, type: 0[0m
+
+[0;32mI (906) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (976) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1936) esp_netif_handlers: sta ip: 192.168.7.6, mask: 255.255.255.0, gw: 192.168.7.1[0m
+[0;32mI (4146) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:7, winSize:64[0m
+[0;32mI (4166) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (4236) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (4766) ESTEIRA: Hora inicial sincronizada: 27/10/2025 18:46:10[0m
+[0;32mI (4766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:10[0m
+[0;32mI (5766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:11[0m
+[0;32mI (6766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:12[0m
+[0;32mI (7766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:13[0m
+[0;32mI (8766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:14[0m
+[0;32mI (9766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:15[0m
+[0;32mI (10766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:16[0m
+[0;32mI (11766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:17[0m
+[0;32mI (12766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:18[0m
+[0;32mI (13766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:19[0m
+[0;32mI (14766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:20[0m
+[0;32mI (15766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:21[0m
+[0;32mI (16766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:22[0m
+[0;32mI (17246) ESTEIRA: UDP RX de 192.168.7.5:10421: status[0m
+
+[0;32mI (17766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:23[0m
+[0;32mI (18766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:24[0m
+[0;32mI (19766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:25[0m
+[0;32mI (20766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:26[0m
+[0;32mI (21766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:27[0m
+[0;32mI (22766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:28[0m
+[0;32mI (23766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:29[0m
+[0;32mI (24316) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (24766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:30[0m
+[0;32mI (25766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:31[0m
+[0;32mI (26766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:32[0m
+[0;32mI (27766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:33[0m
+[0;32mI (28246) ESTEIRA: UDP RX de 192.168.7.5:10421: estop_on[0m
+
+[0;32mI (28246) ESTEIRA: Comando E-STOP acionado (via cliente).[0m
+SAFETY: E-STOP acionado @ 27769880 -> motor parado (lat=40 us)
+[0;32mI (28766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:34[0m
+[0;32mI (29766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:35[0m
+[0;32mI (30766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:36[0m
+[0;32mI (31766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:37[0m
+[0;32mI (32766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:38[0m
+[0;32mI (33766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:39[0m
+[0;32mI (34766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:40[0m
+[0;32mI (35766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:41[0m
+[0;32mI (36766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:42[0m
+[0;32mI (37766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:43[0m
+[0;32mI (38766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:44[0m
+[0;32mI (39766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:45[0m
+[0;32mI (40766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:46[0m
+[0;32mI (41766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:47[0m
+[0;32mI (42766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:48[0m
+[0;32mI (43766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:49[0m
+[0;32mI (44396) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (44766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:50[0m
+[0;32mI (45246) ESTEIRA: UDP RX de 192.168.7.5:10421: set_rpm 3[0m
+
+[0;32mI (45766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:51[0m
+[0;32mI (46766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:52[0m
+[0;32mI (47766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:53[0m
+[0;32mI (48766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:54[0m
+[0;32mI (49746) ESTEIRA: UDP RX de 192.168.7.5:10421: status[0m
+
+[0;32mI (49766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:55[0m
+[0;32mI (50766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:56[0m
+[0;32mI (51766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:57[0m
+[0;32mI (52766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:58[0m
+[0;32mI (53766) ESTEIRA: Hora de Referencia: 27/10/2025 18:46:59[0m
+[0;32mI (54766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:00[0m
+[0;32mI (55766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:01[0m
+[0;32mI (56766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:02[0m
+[0;32mI (57766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:03[0m
+[0;32mI (58766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:04[0m
+[0;32mI (59766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:05[0m
+[0;32mI (60246) ESTEIRA: Relatorio Estatistico Enviado.[0m
+[0;32mI (60766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:06[0m
+[0;32mI (61766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:07[0m
+[0;32mI (62766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:08[0m
+[0;32mI (63766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:09[0m
+[0;32mI (64486) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (64766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:10[0m
+[0;32mI (65766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:11[0m
+[0;32mI (66746) ESTEIRA: UDP RX de 192.168.7.5:10421: ping[0m
+
+[0;32mI (66766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:12[0m
+[0;32mI (67766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:13[0m
+[0;32mI (68766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:14[0m
+[0;32mI (69766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:15[0m
+[0;32mI (70766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:16[0m
+[0;32mI (71766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:17[0m
+[0;32mI (72766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:18[0m
+[0;32mI (73766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:19[0m
+[0;32mI (74766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:20[0m
+[0;32mI (75766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:21[0m
+[0;32mI (76766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:22[0m
+[0;32mI (77766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:23[0m
+[0;32mI (78766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:24[0m
+[0;32mI (79766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:25[0m
+[0;32mI (80766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:26[0m
+[0;32mI (81766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:27[0m
+[0;32mI (82766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:28[0m
+[0;32mI (83766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:29[0m
+[0;32mI (84576) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (84766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:30[0m
+[0;32mI (85766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:31[0m
+[0;32mI (86766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:32[0m
+[0;32mI (87246) ESTEIRA: UDP RX de 192.168.7.5:10421: status[0m
+
+[0;32mI (87766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:33[0m
+[0;32mI (88766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:34[0m
+[0;32mI (89766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:35[0m
+[0;32mI (90766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:36[0m
+[0;32mI (91766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:37[0m
+[0;32mI (92766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:38[0m
+[0;32mI (93766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:39[0m
+[0;32mI (94766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:40[0m
+[0;32mI (95766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:41[0m
+[0;32mI (96766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:42[0m
+[0;32mI (97766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:43[0m
+[0;32mI (98766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:44[0m
+[0;32mI (99766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:45[0m
+[0;32mI (100746) ESTEIRA: UDP RX de 192.168.7.5:10421: estop_on[0m
+
+[0;32mI (100746) ESTEIRA: Comando E-STOP acionado (via cliente).[0m
+SAFETY: E-STOP acionado @ 100269858 -> motor parado (lat=32 us)
+[0;32mI (100766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:46[0m
+[0;32mI (101766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:47[0m
+[0;32mI (102766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:48[0m
+[0;32mI (103766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:49[0m
+[0;32mI (104656) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (104766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:50[0m
+[0;32mI (105766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:51[0m
+[0;32mI (106766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:52[0m
+[0;32mI (107766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:53[0m
+[0;32mI (108766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:54[0m
+[0;32mI (109766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:55[0m
+[0;32mI (110766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:56[0m
+[0;32mI (111766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:57[0m
+[0;32mI (112766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:58[0m
+[0;32mI (113766) ESTEIRA: Hora de Referencia: 27/10/2025 18:47:59[0m
+[0;32mI (114766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:00[0m
+[0;32mI (115766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:01[0m
+[0;32mI (116766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:02[0m
+[0;32mI (117766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:03[0m
+[0;32mI (118766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:04[0m
+[0;32mI (119766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:05[0m
+[0;32mI (120246) ESTEIRA: Relatorio Estatistico Enviado.[0m
+[0;32mI (120766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:06[0m
+[0;32mI (121766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:07[0m
+[0;32mI (122766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:08[0m
+[0;32mI (123766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:09[0m
+[0;32mI (124746) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (124766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:10[0m
+[0;32mI (125766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:11[0m
+[0;32mI (126766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:12[0m
+[0;32mI (127766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:13[0m
+[0;32mI (128766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:14[0m
+[0;32mI (129766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:15[0m
+[0;32mI (130766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:16[0m
+[0;32mI (131766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:17[0m
+[0;32mI (132766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:18[0m
+[0;32mI (133766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:19[0m
+[0;32mI (134766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:20[0m
+[0;32mI (135766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:21[0m
+[0;32mI (136766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:22[0m
+[0;32mI (137766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:23[0m
+[0;32mI (138766) ESTEIRA: Hora de Referencia: 27/10/2025 18:48:24[0m

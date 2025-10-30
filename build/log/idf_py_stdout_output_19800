@@ -1,0 +1,279 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a980h (108928) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002a9a8 vaddr=3ffb0000 size=03f8ch ( 16268) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002e93c vaddr=40080000 size=016dch (  5852) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=903c0h (590784) map[0m
+[0;32mI (338) esp_image: segment 4: paddr=000c03e8 vaddr=400816dc size=1689ch ( 92316) load[0m
+[0;32mI (375) esp_image: segment 5: paddr=000d6c8c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (386) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (387) boot: Disabling RNG early entropy source...[0m
+[0;32mI (397) cpu_start: Multicore app[0m
+[0;32mI (406) cpu_start: Pro cpu start user code[0m
+[0;32mI (406) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (406) app_init: Application information:[0m
+[0;32mI (406) app_init: Project name:     hello_world[0m
+[0;32mI (410) app_init: App version:      1[0m
+[0;32mI (413) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (418) app_init: ELF file SHA256:  38d218000...[0m
+[0;32mI (423) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (426) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (430) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (434) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (438) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (445) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (450) heap_init: At 3FFB8638 len 000279C8 (158 KiB): DRAM[0m
+[0;32mI (455) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (466) heap_init: At 40097F78 len 00008088 (32 KiB): IRAM[0m
+[0;32mI (472) spi_flash: detected chip: generic[0m
+[0;32mI (475) spi_flash: flash io: dio[0m
+[0;33mW (478) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (490) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (500) main_task: Started on CPU0[0m
+[0;32mI (510) main_task: Calling app_main()[0m
+[0;32mI (530) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1430) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (1440) wifi:wifi driver task: 3ffc066c, prio:23, stack:6656, core=0[0m
+[0;32mI (1450) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1450) wifi:wifi certification version: v7.0[0m
+[0;32mI (1450) wifi:config NVS flash: enabled[0m
+[0;32mI (1450) wifi:config nano formatting: disabled[0m
+[0;32mI (1460) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1460) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1460) wifi:Init management short buffer num: 32[0m
+[0;32mI (1470) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1470) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1480) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1480) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1490) wifi_init: rx ba win: 6[0m
+[0;32mI (1490) wifi_init: accept mbox: 6[0m
+[0;32mI (1490) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1490) wifi_init: udp mbox: 6[0m
+[0;32mI (1500) wifi_init: tcp mbox: 6[0m
+[0;32mI (1500) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1500) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1510) wifi_init: tcp mss: 1440[0m
+[0;32mI (1510) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1510) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1520) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1600) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (1600) wifi:enable tsf[0m
+[0;32mI (1600) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (1610) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1610) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1660) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1680) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1690) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1690) TIME: Iniciando TIME_TASK (periodo 1s)[0m
+[0;32mI (1690) TIME: Inicializando SNTP...[0m
+[0;32mI (1690) MONITOR: INICIANDO MODO UDP: Foco na periodicidade (D: 500ms).[0m
+[0;32mI (1690) SISTEMA: Sistema iniciado. Use touch pads:[0m
+[0;32mI (1700) SISTEMA: - Touch B (GPIO 12): Detecção objeto[0m
+[0;32mI (1700) SISTEMA: - Touch C (GPIO 14): HMI/Telemetria[0m
+[0;32mI (1710) SISTEMA: - Touch D (GPIO 27): E-stop (zera RPM instantaneamente)[0m
+[0;32mI (1710) main_task: Returned from app_main()[0m
+[0;32mI (1790) wifi:connected with Suite3, aid = 16, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (1790) wifi:security: WPA2-PSK, phy: bgn, rssi: -55[0m
+[0;32mI (1800) wifi:pm start, type: 1[0m
+
+[0;32mI (1800) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1830) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2140) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (5150) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:5, winSize:64[0m
+[0;32mI (6320) esp_netif_handlers: sta ip: 192.168.7.7, mask: 255.255.255.0, gw: 192.168.7.1[0m
+[0;32mI (6690) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (6690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7190) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (7190) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=6720.98 ms | Total peças=1[0m
+[0;32mI (7690) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (7690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8190) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (8190) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=7721.05 ms | Total peças=2[0m
+[0;32mI (9190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (9190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (9690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=9220.97 ms | Total peças=3[0m
+[0;32mI (10190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (10190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (10690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=10220.97 ms | Total peças=4[0m
+[0;32mI (11190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (11190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (11590) TIME: Não foi possível sincronizar o tempo via SNTP.[0m
+[0;32mI (11590) TIME: Hora atual: 1970-01-01 00:00:11 | Ciclos desde sync: 0[0m
+[0;32mI (11690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (11690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=11220.97 ms | Total peças=5[0m
+[0;32mI (12190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (12190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12590) TIME: Hora atual: 1970-01-01 00:00:12 | Ciclos desde sync: 1[0m
+[0;32mI (12690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (12690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=12223.19 ms | Total peças=6[0m
+[0;32mI (13190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (13190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13590) TIME: Hora atual: 1970-01-01 00:00:13 | Ciclos desde sync: 2[0m
+[0;32mI (13690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (13690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=13220.98 ms | Total peças=7[0m
+[0;32mI (14190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (14190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14590) TIME: Hora atual: 1970-01-01 00:00:14 | Ciclos desde sync: 3[0m
+[0;32mI (14690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (14690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=14221.23 ms | Total peças=8[0m
+[0;32mI (15190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (15190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15590) TIME: Hora atual: 1970-01-01 00:00:15 | Ciclos desde sync: 4[0m
+[0;32mI (15690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (15690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=15220.97 ms | Total peças=9[0m
+[0;32mI (16190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (16190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16590) TIME: Hora atual: 1970-01-01 00:00:16 | Ciclos desde sync: 5[0m
+[0;32mI (16690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (16690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=16221.05 ms | Total peças=10[0m
+[0;32mI (17190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (17190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17590) TIME: Hora atual: 1970-01-01 00:00:17 | Ciclos desde sync: 6[0m
+[0;32mI (17690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (17690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=17220.97 ms | Total peças=11[0m
+[0;32mI (18190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (18190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18590) TIME: Hora atual: 1970-01-01 00:00:18 | Ciclos desde sync: 7[0m
+[0;32mI (18690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (18690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=18220.98 ms | Total peças=12[0m
+[0;32mI (19190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (19190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19590) TIME: Hora atual: 1970-01-01 00:00:19 | Ciclos desde sync: 8[0m
+[0;32mI (19690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (19690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=19220.97 ms | Total peças=13[0m
+[0;32mI (20190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (20190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20590) TIME: Hora atual: 1970-01-01 00:00:20 | Ciclos desde sync: 9[0m
+[0;32mI (20690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (20690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=20220.97 ms | Total peças=14[0m
+[0;32mI (21190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (21190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21590) TIME: Hora atual: 1970-01-01 00:00:21 | Ciclos desde sync: 10[0m
+[0;32mI (21690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (21690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=21220.97 ms | Total peças=15[0m
+[0;32mI (22190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (22190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (22590) TIME: Hora atual: 1970-01-01 00:00:22 | Ciclos desde sync: 11[0m
+[0;32mI (22690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (22690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=22220.98 ms | Total peças=16[0m
+[0;32mI (23190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (23190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (23590) TIME: Hora atual: 1970-01-01 00:00:23 | Ciclos desde sync: 12[0m
+[0;32mI (23690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (23690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=23220.97 ms | Total peças=17[0m
+[0;32mI (24190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (24190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (24590) TIME: Hora atual: 1970-01-01 00:00:24 | Ciclos desde sync: 13[0m
+[0;32mI (24690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (24690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=24220.97 ms | Total peças=18[0m
+[0;32mI (25190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (25190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (25590) TIME: Hora atual: 1970-01-01 00:00:25 | Ciclos desde sync: 14[0m
+[0;32mI (25690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (25690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=25221.19 ms | Total peças=19[0m
+[0;32mI (26190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (26190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (26590) TIME: Hora atual: 1970-01-01 00:00:26 | Ciclos desde sync: 15[0m
+[0;32mI (26690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (26690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=26220.97 ms | Total peças=20[0m
+[0;32mI (27190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (27190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (27590) TIME: Hora atual: 1970-01-01 00:00:27 | Ciclos desde sync: 16[0m
+[0;32mI (27690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (27690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=27220.97 ms | Total peças=21[0m
+[0;32mI (28190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (28190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (28590) TIME: Hora atual: 1970-01-01 00:00:28 | Ciclos desde sync: 17[0m
+[0;32mI (28690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (28690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=28220.97 ms | Total peças=22[0m
+[0;32mI (29190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (29190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (29590) TIME: Hora atual: 1970-01-01 00:00:29 | Ciclos desde sync: 18[0m
+[0;32mI (29690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (29690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=29222.99 ms | Total peças=23[0m
+[0;32mI (30190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (30190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (30590) TIME: Hora atual: 1970-01-01 00:00:30 | Ciclos desde sync: 19[0m
+[0;32mI (30690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (30690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=30220.97 ms | Total peças=24[0m
+[0;32mI (31190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (31190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (31590) TIME: Hora atual: 1970-01-01 00:00:31 | Ciclos desde sync: 20[0m
+[0;32mI (31690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (31690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=31220.98 ms | Total peças=25[0m
+[0;32mI (32190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (32190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (32590) TIME: Hora atual: 1970-01-01 00:00:32 | Ciclos desde sync: 21[0m
+[0;32mI (32690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (32690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=32220.98 ms | Total peças=26[0m
+[0;32mI (33190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (33190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (33590) TIME: Hora atual: 1970-01-01 00:00:33 | Ciclos desde sync: 22[0m
+[0;32mI (33690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (33690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=33221.03 ms | Total peças=27[0m
+[0;32mI (34190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (34190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (34590) TIME: Hora atual: 1970-01-01 00:00:34 | Ciclos desde sync: 23[0m
+[0;32mI (34690) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (34690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (34710) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (35590) TIME: Hora atual: 2025-10-26 01:10:07 | Ciclos desde sync: 24[0m
+[0;32mI (35690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (35690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=35220.97 ms | Total peças=28[0m
+[0;32mI (36190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (36190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (36590) TIME: Hora atual: 2025-10-26 01:10:08 | Ciclos desde sync: 25[0m
+[0;32mI (36690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (36690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=36220.97 ms | Total peças=29[0m
+[0;32mI (37190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (37190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (37590) TIME: Hora atual: 2025-10-26 01:10:09 | Ciclos desde sync: 26[0m
+[0;32mI (37690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (37690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=37220.97 ms | Total peças=30[0m
+[0;32mI (38190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (38190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (38590) TIME: Hora atual: 2025-10-26 01:10:10 | Ciclos desde sync: 27[0m
+[0;32mI (38690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (38690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=38220.97 ms | Total peças=31[0m
+[0;32mI (39190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (39190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (39590) TIME: Hora atual: 2025-10-26 01:10:11 | Ciclos desde sync: 28[0m
+[0;32mI (39690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (39690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=39220.98 ms | Total peças=32[0m
+[0;32mI (40190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (40190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (40590) TIME: Hora atual: 2025-10-26 01:10:12 | Ciclos desde sync: 29[0m
+[0;32mI (40690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (40690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=40220.98 ms | Total peças=33[0m
+[0;32mI (41190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (41190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (41590) TIME: Hora atual: 2025-10-26 01:10:13 | Ciclos desde sync: 30[0m
+[0;32mI (41690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (41690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=41220.98 ms | Total peças=34[0m

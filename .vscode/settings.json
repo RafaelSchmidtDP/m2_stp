@@ -1,0 +1,24 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.espIdfPathWin": "C:\\Users\\Rafael\\esp\\v5.5.1\\esp-idf",
+  "idf.toolsPathWin": "C:\\Users\\Rafael\\.espressif",
+  "idf.pythonInstallPath": "C:\\Users\\Rafael\\.espressif\\tools\\idf-python\\3.11.2\\python.exe",
+  "files.associations": {
+    "sdkconfig.h": "c",
+    "esp_timer.h": "c",
+    "task.h": "c",
+    "esp_sntp.h": "c",
+    "esp_wifi.h": "c",
+    "netdb.h": "c",
+    "esp_mac.h": "c",
+    "nvs_flash.h": "c",
+    "string.h": "c",
+    "time.h": "c",
+    "bitset": "c",
+    "thread": "c",
+    "functional": "c",
+    "netif.h": "c"
+  },
+  "idf.portWin": "COM3",
+  "idf.flashType": "UART"
+}

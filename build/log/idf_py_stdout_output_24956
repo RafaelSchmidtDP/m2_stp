@@ -1,0 +1,633 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM3'
+          v5.5.1
+I (�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ab80h (109440) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002aba8 vaddr=3ffb0000 size=03f8ch ( 16268) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002eb3c vaddr=40080000 size=014dch (  5340) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=90e40h (593472) map[0m
+[0;32mI (340) esp_image: segment 4: paddr=000c0e68 vaddr=400814dc size=16a9ch ( 92828) load[0m
+[0;32mI (376) esp_image: segment 5: paddr=000d790c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (388) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (388) boot: Disabling RNG early entropy source...[0m
+[0;32mI (398) cpu_start: Multicore app[0m
+[0;32mI (407) cpu_start: Pro cpu start user code[0m
+[0;32mI (407) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (407) app_init: Application information:[0m
+[0;32mI (407) app_init: Project name:     hello_world[0m
+[0;32mI (411) app_init: App version:      1[0m
+[0;32mI (415) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (420) app_init: ELF file SHA256:  93eff6323...[0m
+[0;32mI (424) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (428) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (432) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (436) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (440) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFB86B8 len 00027948 (158 KiB): DRAM[0m
+[0;32mI (456) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (461) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (467) heap_init: At 40097F78 len 00008088 (32 KiB): IRAM[0m
+[0;32mI (474) spi_flash: detected chip: generic[0m
+[0;32mI (476) spi_flash: flash io: dio[0m
+[0;33mW (479) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (491) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (501) main_task: Started on CPU0[0m
+[0;32mI (511) main_task: Calling app_main()[0m
+[0;32mI (531) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1431) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (1441) wifi:wifi driver task: 3ffc06ec, prio:23, stack:6656, core=0[0m
+[0;32mI (1451) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1451) wifi:wifi certification version: v7.0[0m
+[0;32mI (1451) wifi:config NVS flash: enabled[0m
+[0;32mI (1451) wifi:config nano formatting: disabled[0m
+[0;32mI (1461) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1461) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1461) wifi:Init management short buffer num: 32[0m
+[0;32mI (1471) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1471) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1481) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1481) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1491) wifi_init: rx ba win: 6[0m
+[0;32mI (1491) wifi_init: accept mbox: 6[0m
+[0;32mI (1491) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1491) wifi_init: udp mbox: 6[0m
+[0;32mI (1501) wifi_init: tcp mbox: 6[0m
+[0;32mI (1501) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1501) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1511) wifi_init: tcp mss: 1440[0m
+[0;32mI (1511) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1511) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1521) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1601) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (1601) wifi:enable tsf[0m
+[0;32mI (1601) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (1611) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1621) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1661) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1681) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1691) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1691) TIME: Iniciando TIME_TASK (periodo 1s)[0m
+[0;32mI (1691) TIME: Inicializando SNTP...[0m
+[0;32mI (1691) MONITOR: INICIANDO MODO UDP: Foco na periodicidade (D: 500ms).[0m
+[0;32mI (1691) SISTEMA: Sistema iniciado. Use touch pads:[0m
+[0;32mI (1701) SISTEMA: - Touch B (GPIO 12): Detecção objeto[0m
+[0;32mI (1701) SISTEMA: - Touch C (GPIO 14): HMI/Telemetria[0m
+[0;32mI (1711) SISTEMA: - Touch D (GPIO 27): E-stop (zera RPM instantaneamente)[0m
+[0;32mI (1711) main_task: Returned from app_main()[0m
+[0;32mI (1791) wifi:connected with Suite3, aid = 19, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (1791) wifi:security: WPA2-PSK, phy: bgn, rssi: -35[0m
+[0;32mI (1801) wifi:pm start, type: 1[0m
+
+[0;32mI (1801) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1841) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3321) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:6, winSize:64[0m
+[0;32mI (4311) esp_netif_handlers: sta ip: 192.168.7.6, mask: 255.255.255.0, gw: 192.168.7.1[0m
+[0;32mI (5191) MONITOR: UDP RX: [TELEM] proto=UDP seq=6 rpm=120.5 count=0 estop=false ts_sntp=000004 ts_us=4220092[0m
+
+[0;32mI (5691) MONITOR: UDP RX: [TELEM] proto=UDP seq=7 rpm=120.5 count=0 estop=false ts_sntp=000004 ts_us=4721151[0m
+
+[0;32mI (6191) MONITOR: UDP RX: [TELEM] proto=UDP seq=8 rpm=120.5 count=0 estop=false ts_sntp=000005 ts_us=5220864[0m
+
+[0;32mI (6691) MONITOR: UDP RX: [TELEM] proto=UDP seq=9 rpm=120.5 count=0 estop=false ts_sntp=000005 ts_us=5720878[0m
+
+[0;32mI (7191) MONITOR: UDP RX: [TELEM] proto=UDP seq=10 rpm=120.5 count=0 estop=false ts_sntp=000006 ts_us=6220993[0m
+
+[0;32mI (7691) MONITOR: UDP RX: [TELEM] proto=UDP seq=11 rpm=120.5 count=0 estop=false ts_sntp=000006 ts_us=6720854[0m
+
+[0;32mI (8191) MONITOR: UDP RX: [TELEM] proto=UDP seq=12 rpm=120.5 count=0 estop=false ts_sntp=000007 ts_us=7220871[0m
+
+[0;32mI (8691) MONITOR: UDP RX: [TELEM] proto=UDP seq=13 rpm=120.4 count=0 estop=false ts_sntp=000007 ts_us=7721311[0m
+
+[0;32mI (9191) MONITOR: UDP RX: [TELEM] proto=UDP seq=14 rpm=120.4 count=0 estop=false ts_sntp=000008 ts_us=8220858[0m
+
+[0;32mI (9691) MONITOR: UDP RX: [TELEM] proto=UDP seq=15 rpm=120.4 count=0 estop=false ts_sntp=000008 ts_us=8720841[0m
+
+[0;32mI (10191) MONITOR: UDP RX: [TELEM] proto=UDP seq=16 rpm=120.4 count=0 estop=false ts_sntp=000009 ts_us=9220840[0m
+
+[0;32mI (10691) MONITOR: UDP RX: [TELEM] proto=UDP seq=17 rpm=120.4 count=0 estop=false ts_sntp=000009 ts_us=9720848[0m
+
+[0;32mI (11191) MONITOR: UDP RX: [TELEM] proto=UDP seq=18 rpm=120.4 count=0 estop=false ts_sntp=000010 ts_us=10220876[0m
+
+[0;33mW (11591) TIME: Não foi possível sincronizar o tempo via SNTP.[0m
+[0;32mI (11591) TIME: Hora atual: 1970-01-01 00:00:11 | Ciclos desde sync: 0[0m
+[0;32mI (11691) MONITOR: UDP RX: [TELEM] proto=UDP seq=19 rpm=120.4 count=0 estop=false ts_sntp=000010 ts_us=10720887[0m
+
+[0;32mI (12191) MONITOR: UDP RX: [TELEM] proto=UDP seq=20 rpm=120.4 count=0 estop=false ts_sntp=000011 ts_us=11220353[0m
+
+[0;32mI (12591) TIME: Hora atual: 1970-01-01 00:00:12 | Ciclos desde sync: 1[0m
+[0;32mI (12691) MONITOR: UDP RX: [TELEM] proto=UDP seq=21 rpm=120.4 count=0 estop=false ts_sntp=000011 ts_us=11720870[0m
+
+[0;32mI (13191) MONITOR: UDP RX: [TELEM] proto=UDP seq=22 rpm=120.4 count=0 estop=false ts_sntp=000012 ts_us=12220420[0m
+
+[0;32mI (13591) TIME: Hora atual: 1970-01-01 00:00:13 | Ciclos desde sync: 2[0m
+[0;32mI (13691) MONITOR: UDP RX: [TELEM] proto=UDP seq=23 rpm=120.4 count=0 estop=false ts_sntp=000012 ts_us=12720883[0m
+
+[0;32mI (14191) MONITOR: UDP RX: [TELEM] proto=UDP seq=24 rpm=120.4 count=0 estop=false ts_sntp=000013 ts_us=13220402[0m
+
+[0;32mI (14591) TIME: Hora atual: 1970-01-01 00:00:14 | Ciclos desde sync: 3[0m
+[0;32mI (14691) MONITOR: UDP RX: [TELEM] proto=UDP seq=25 rpm=120.4 count=0 estop=false ts_sntp=000013 ts_us=13720856[0m
+
+[0;32mI (15191) MONITOR: UDP RX: [TELEM] proto=UDP seq=26 rpm=120.4 count=0 estop=false ts_sntp=000014 ts_us=14220418[0m
+
+[0;32mI (15591) TIME: Hora atual: 1970-01-01 00:00:15 | Ciclos desde sync: 4[0m
+[0;32mI (15691) MONITOR: UDP RX: [TELEM] proto=UDP seq=27 rpm=120.4 count=0 estop=false ts_sntp=000014 ts_us=14720848[0m
+
+[0;32mI (16191) MONITOR: UDP RX: [TELEM] proto=UDP seq=28 rpm=120.3 count=0 estop=false ts_sntp=000015 ts_us=15220397[0m
+
+[0;32mI (16591) TIME: Hora atual: 1970-01-01 00:00:16 | Ciclos desde sync: 5[0m
+[0;32mI (16691) MONITOR: UDP RX: [TELEM] proto=UDP seq=29 rpm=120.3 count=0 estop=false ts_sntp=000015 ts_us=15720847[0m
+
+[0;32mI (17191) MONITOR: UDP RX: [TELEM] proto=UDP seq=30 rpm=120.3 count=0 estop=false ts_sntp=000016 ts_us=16220582[0m
+
+[0;32mI (17591) TIME: Hora atual: 1970-01-01 00:00:17 | Ciclos desde sync: 6[0m
+[0;32mI (17691) MONITOR: UDP RX: [TELEM] proto=UDP seq=31 rpm=120.3 count=0 estop=false ts_sntp=000016 ts_us=16720851[0m
+
+[0;32mI (18191) MONITOR: UDP RX: [TELEM] proto=UDP seq=32 rpm=120.3 count=0 estop=false ts_sntp=000017 ts_us=17220397[0m
+
+[0;32mI (18591) TIME: Hora atual: 1970-01-01 00:00:18 | Ciclos desde sync: 7[0m
+[0;32mI (18691) MONITOR: UDP RX: [TELEM] proto=UDP seq=33 rpm=120.3 count=0 estop=false ts_sntp=000017 ts_us=17720847[0m
+
+[0;32mI (19191) MONITOR: UDP RX: [TELEM] proto=UDP seq=34 rpm=120.3 count=0 estop=false ts_sntp=000018 ts_us=18220405[0m
+
+[0;32mI (19591) TIME: Hora atual: 1970-01-01 00:00:19 | Ciclos desde sync: 8[0m
+[0;32mI (19691) MONITOR: UDP RX: [TELEM] proto=UDP seq=35 rpm=120.3 count=0 estop=false ts_sntp=000018 ts_us=18720849[0m
+
+[0;32mI (20191) MONITOR: UDP RX: [TELEM] proto=UDP seq=36 rpm=120.3 count=0 estop=false ts_sntp=000019 ts_us=19220396[0m
+
+[0;32mI (20591) TIME: Hora atual: 1970-01-01 00:00:20 | Ciclos desde sync: 9[0m
+[0;32mI (20691) MONITOR: UDP RX: [TELEM] proto=UDP seq=37 rpm=120.3 count=0 estop=false ts_sntp=000019 ts_us=19720848[0m
+
+[0;32mI (21191) MONITOR: UDP RX: [TELEM] proto=UDP seq=38 rpm=120.3 count=0 estop=false ts_sntp=000020 ts_us=20220416[0m
+
+[0;32mI (21591) TIME: Hora atual: 1970-01-01 00:00:21 | Ciclos desde sync: 10[0m
+[0;32mI (21691) MONITOR: UDP RX: [TELEM] proto=UDP seq=39 rpm=120.3 count=0 estop=false ts_sntp=000020 ts_us=20720857[0m
+
+[0;32mI (22191) MONITOR: UDP RX: [TELEM] proto=UDP seq=40 rpm=120.3 count=0 estop=false ts_sntp=000021 ts_us=21220392[0m
+
+[0;32mI (22591) TIME: Hora atual: 1970-01-01 00:00:22 | Ciclos desde sync: 11[0m
+[0;32mI (22691) MONITOR: UDP RX: [TELEM] proto=UDP seq=41 rpm=120.3 count=0 estop=false ts_sntp=000021 ts_us=21720851[0m
+
+[0;32mI (23191) MONITOR: UDP RX: [TELEM] proto=UDP seq=42 rpm=120.3 count=0 estop=false ts_sntp=000022 ts_us=22220410[0m
+
+[0;32mI (23591) TIME: Hora atual: 1970-01-01 00:00:23 | Ciclos desde sync: 12[0m
+[0;32mI (23691) MONITOR: UDP RX: [TELEM] proto=UDP seq=43 rpm=120.3 count=0 estop=false ts_sntp=000022 ts_us=22720874[0m
+
+[0;32mI (24191) MONITOR: UDP RX: [TELEM] proto=UDP seq=44 rpm=120.3 count=0 estop=false ts_sntp=000023 ts_us=23220397[0m
+
+[0;32mI (24591) TIME: Hora atual: 1970-01-01 00:00:24 | Ciclos desde sync: 13[0m
+[0;32mI (24691) MONITOR: UDP RX: [TELEM] proto=UDP seq=45 rpm=120.3 count=0 estop=false ts_sntp=000023 ts_us=23720850[0m
+
+[0;32mI (25191) MONITOR: UDP RX: [TELEM] proto=UDP seq=46 rpm=120.3 count=0 estop=false ts_sntp=000024 ts_us=24220401[0m
+
+[0;32mI (25591) TIME: Hora atual: 1970-01-01 00:00:25 | Ciclos desde sync: 14[0m
+[0;32mI (25691) MONITOR: UDP RX: [TELEM] proto=UDP seq=47 rpm=120.2 count=0 estop=false ts_sntp=000024 ts_us=24721181[0m
+
+[0;32mI (26191) MONITOR: UDP RX: [TELEM] proto=UDP seq=48 rpm=120.2 count=0 estop=false ts_sntp=000025 ts_us=25220402[0m
+
+[0;32mI (26591) TIME: Hora atual: 1970-01-01 00:00:26 | Ciclos desde sync: 15[0m
+[0;32mI (26691) MONITOR: UDP RX: [TELEM] proto=UDP seq=49 rpm=120.2 count=0 estop=false ts_sntp=000025 ts_us=25720842[0m
+
+[0;32mI (27191) MONITOR: UDP RX: [TELEM] proto=UDP seq=50 rpm=120.2 count=0 estop=false ts_sntp=000026 ts_us=26220391[0m
+
+[0;32mI (27591) TIME: Hora atual: 1970-01-01 00:00:27 | Ciclos desde sync: 16[0m
+[0;32mI (27691) MONITOR: UDP RX: [TELEM] proto=UDP seq=51 rpm=120.2 count=0 estop=false ts_sntp=000026 ts_us=26720840[0m
+
+[0;32mI (28191) MONITOR: UDP RX: [TELEM] proto=UDP seq=52 rpm=120.2 count=0 estop=false ts_sntp=000027 ts_us=27220405[0m
+
+[0;32mI (28591) TIME: Hora atual: 1970-01-01 00:00:28 | Ciclos desde sync: 17[0m
+[0;32mI (28691) MONITOR: UDP RX: [TELEM] proto=UDP seq=53 rpm=120.2 count=0 estop=false ts_sntp=000027 ts_us=27720856[0m
+
+[0;32mI (29191) MONITOR: UDP RX: [TELEM] proto=UDP seq=54 rpm=120.2 count=0 estop=false ts_sntp=000028 ts_us=28220417[0m
+
+[0;32mI (29591) TIME: Hora atual: 1970-01-01 00:00:29 | Ciclos desde sync: 18[0m
+[0;32mI (29691) MONITOR: UDP RX: [TELEM] proto=UDP seq=55 rpm=120.2 count=0 estop=false ts_sntp=000028 ts_us=28720853[0m
+
+[0;32mI (30191) MONITOR: UDP RX: [TELEM] proto=UDP seq=56 rpm=120.2 count=0 estop=false ts_sntp=000029 ts_us=29220404[0m
+
+[0;32mI (30591) TIME: Hora atual: 1970-01-01 00:00:30 | Ciclos desde sync: 19[0m
+[0;32mI (30691) MONITOR: UDP RX: [TELEM] proto=UDP seq=57 rpm=120.2 count=0 estop=false ts_sntp=000029 ts_us=29720868[0m
+
+[0;32mI (31191) MONITOR: UDP RX: [TELEM] proto=UDP seq=58 rpm=120.2 count=0 estop=false ts_sntp=000030 ts_us=30220397[0m
+
+[0;32mI (31591) TIME: Hora atual: 1970-01-01 00:00:31 | Ciclos desde sync: 20[0m
+[0;32mI (31691) MONITOR: UDP RX: [TELEM] proto=UDP seq=59 rpm=120.2 count=0 estop=false ts_sntp=000030 ts_us=30720844[0m
+
+[0;32mI (32131) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (32151) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (32191) MONITOR: UDP RX: [TELEM] proto=UDP seq=60 rpm=120.2 count=0 estop=false ts_sntp=000031 ts_us=31220417[0m
+
+[0;32mI (32591) TIME: Hora atual: 2025-10-27 20:36:39 | Ciclos desde sync: 21[0m
+[0;32mI (32691) MONITOR: UDP RX: [TELEM] proto=UDP seq=61 rpm=120.2 count=0 estop=false ts_sntp=203638 ts_us=31720651[0m
+
+[0;32mI (33191) MONITOR: UDP RX: [TELEM] proto=UDP seq=62 rpm=120.2 count=0 estop=false ts_sntp=203639 ts_us=32220404[0m
+
+[0;32mI (33591) TIME: Hora atual: 2025-10-27 20:36:40 | Ciclos desde sync: 22[0m
+[0;32mI (33691) MONITOR: UDP RX: [TELEM] proto=UDP seq=63 rpm=120.2 count=0 estop=false ts_sntp=203639 ts_us=32720825[0m
+
+[0;32mI (34191) MONITOR: UDP RX: [TELEM] proto=UDP seq=64 rpm=120.2 count=0 estop=false ts_sntp=203640 ts_us=33220429[0m
+
+[0;32mI (34591) TIME: Hora atual: 2025-10-27 20:36:41 | Ciclos desde sync: 23[0m
+[0;32mI (34691) MONITOR: UDP RX: [TELEM] proto=UDP seq=65 rpm=120.2 count=0 estop=false ts_sntp=203640 ts_us=33720832[0m
+
+[0;32mI (35191) MONITOR: UDP RX: [TELEM] proto=UDP seq=66 rpm=120.2 count=0 estop=false ts_sntp=203641 ts_us=34220433[0m
+
+[0;32mI (35591) TIME: Hora atual: 2025-10-27 20:36:42 | Ciclos desde sync: 24[0m
+[0;32mI (35691) MONITOR: UDP RX: [TELEM] proto=UDP seq=67 rpm=120.2 count=0 estop=false ts_sntp=203641 ts_us=34720832[0m
+
+[0;32mI (36191) MONITOR: UDP RX: [TELEM] proto=UDP seq=68 rpm=120.2 count=0 estop=false ts_sntp=203642 ts_us=35220400[0m
+
+[0;32mI (36591) TIME: Hora atual: 2025-10-27 20:36:43 | Ciclos desde sync: 25[0m
+[0;32mI (36691) MONITOR: UDP RX: [TELEM] proto=UDP seq=69 rpm=120.2 count=0 estop=false ts_sntp=203642 ts_us=35720825[0m
+
+[0;32mI (37191) MONITOR: UDP RX: [TELEM] proto=UDP seq=70 rpm=120.2 count=0 estop=false ts_sntp=203643 ts_us=36220420[0m
+
+[0;32mI (37591) TIME: Hora atual: 2025-10-27 20:36:44 | Ciclos desde sync: 26[0m
+[0;32mI (37691) MONITOR: UDP RX: [TELEM] proto=UDP seq=71 rpm=120.2 count=0 estop=false ts_sntp=203643 ts_us=36720898[0m
+
+[0;32mI (38191) MONITOR: UDP RX: [TELEM] proto=UDP seq=72 rpm=120.2 count=0 estop=false ts_sntp=203644 ts_us=37220452[0m
+
+[0;32mI (38591) TIME: Hora atual: 2025-10-27 20:36:45 | Ciclos desde sync: 27[0m
+[0;32mI (38691) MONITOR: UDP RX: [TELEM] proto=UDP seq=73 rpm=120.2 count=0 estop=false ts_sntp=203644 ts_us=37720851[0m
+
+[0;32mI (39191) MONITOR: UDP RX: [TELEM] proto=UDP seq=74 rpm=120.2 count=0 estop=false ts_sntp=203645 ts_us=38220403[0m
+
+[0;32mI (39591) TIME: Hora atual: 2025-10-27 20:36:46 | Ciclos desde sync: 28[0m
+[0;32mI (39691) MONITOR: UDP RX: [TELEM] proto=UDP seq=75 rpm=120.2 count=0 estop=false ts_sntp=203645 ts_us=38720825[0m
+
+[0;32mI (40191) MONITOR: UDP RX: [TELEM] proto=UDP seq=76 rpm=120.2 count=0 estop=false ts_sntp=203646 ts_us=39220422[0m
+
+[0;32mI (40591) TIME: Hora atual: 2025-10-27 20:36:47 | Ciclos desde sync: 29[0m
+[0;32mI (40691) MONITOR: UDP RX: [TELEM] proto=UDP seq=77 rpm=120.1 count=0 estop=false ts_sntp=203646 ts_us=39720832[0m
+
+[0;32mI (41191) MONITOR: UDP RX: [TELEM] proto=UDP seq=78 rpm=120.1 count=0 estop=false ts_sntp=203647 ts_us=40220434[0m
+
+[0;32mI (41591) TIME: Hora atual: 2025-10-27 20:36:48 | Ciclos desde sync: 30[0m
+[0;32mI (41691) MONITOR: UDP RX: [TELEM] proto=UDP seq=79 rpm=120.1 count=0 estop=false ts_sntp=203647 ts_us=40720825[0m
+
+[0;32mI (42191) MONITOR: UDP RX: [TELEM] proto=UDP seq=80 rpm=120.1 count=0 estop=false ts_sntp=203648 ts_us=41220403[0m
+
+[0;32mI (42591) TIME: Hora atual: 2025-10-27 20:36:49 | Ciclos desde sync: 31[0m
+[0;32mI (42691) MONITOR: UDP RX: [TELEM] proto=UDP seq=81 rpm=120.1 count=0 estop=false ts_sntp=203648 ts_us=41720825[0m
+
+[0;32mI (43191) MONITOR: UDP RX: [TELEM] proto=UDP seq=82 rpm=120.1 count=0 estop=false ts_sntp=203649 ts_us=42220423[0m
+
+[0;32mI (43591) TIME: Hora atual: 2025-10-27 20:36:50 | Ciclos desde sync: 32[0m
+[0;32mI (43691) MONITOR: UDP RX: [TELEM] proto=UDP seq=83 rpm=120.1 count=0 estop=false ts_sntp=203649 ts_us=42720853[0m
+
+[0;32mI (44191) MONITOR: UDP RX: [TELEM] proto=UDP seq=84 rpm=120.1 count=0 estop=false ts_sntp=203650 ts_us=43220428[0m
+
+[0;32mI (44591) TIME: Hora atual: 2025-10-27 20:36:51 | Ciclos desde sync: 33[0m
+[0;32mI (44691) MONITOR: UDP RX: [TELEM] proto=UDP seq=85 rpm=120.1 count=0 estop=false ts_sntp=203650 ts_us=43720828[0m
+
+[0;32mI (45191) MONITOR: UDP RX: [TELEM] proto=UDP seq=86 rpm=120.1 count=0 estop=false ts_sntp=203651 ts_us=44220403[0m
+
+[0;32mI (45591) TIME: Hora atual: 2025-10-27 20:36:52 | Ciclos desde sync: 34[0m
+[0;32mI (45691) MONITOR: UDP RX: [TELEM] proto=UDP seq=87 rpm=120.1 count=0 estop=false ts_sntp=203651 ts_us=44720825[0m
+
+[0;32mI (46191) MONITOR: UDP RX: [TELEM] proto=UDP seq=88 rpm=120.1 count=0 estop=false ts_sntp=203652 ts_us=45220411[0m
+
+[0;32mI (46591) TIME: Hora atual: 2025-10-27 20:36:53 | Ciclos desde sync: 35[0m
+[0;32mI (46691) MONITOR: UDP RX: [TELEM] proto=UDP seq=89 rpm=120.1 count=0 estop=false ts_sntp=203652 ts_us=45720820[0m
+
+[0;32mI (47191) MONITOR: UDP RX: [TELEM] proto=UDP seq=90 rpm=120.1 count=0 estop=false ts_sntp=203653 ts_us=46220403[0m
+
+[0;32mI (47591) TIME: Hora atual: 2025-10-27 20:36:54 | Ciclos desde sync: 36[0m
+[0;32mI (47691) MONITOR: UDP RX: [TELEM] proto=UDP seq=91 rpm=120.1 count=0 estop=false ts_sntp=203653 ts_us=46720838[0m
+
+[0;32mI (48191) MONITOR: UDP RX: [TELEM] proto=UDP seq=92 rpm=120.1 count=0 estop=false ts_sntp=203654 ts_us=47220403[0m
+
+[0;32mI (48591) TIME: Hora atual: 2025-10-27 20:36:55 | Ciclos desde sync: 37[0m
+[0;32mI (48691) MONITOR: UDP RX: [TELEM] proto=UDP seq=93 rpm=120.1 count=0 estop=false ts_sntp=203654 ts_us=47720802[0m
+
+[0;32mI (49191) MONITOR: UDP RX: [TELEM] proto=UDP seq=94 rpm=120.1 count=0 estop=false ts_sntp=203655 ts_us=48220407[0m
+
+[0;32mI (49591) TIME: Hora atual: 2025-10-27 20:36:56 | Ciclos desde sync: 38[0m
+[0;32mI (49691) MONITOR: UDP RX: [TELEM] proto=UDP seq=95 rpm=120.1 count=0 estop=false ts_sntp=203655 ts_us=48720812[0m
+
+[0;32mI (50191) MONITOR: UDP RX: [TELEM] proto=UDP seq=96 rpm=120.1 count=0 estop=false ts_sntp=203656 ts_us=49220416[0m
+
+[0;32mI (50591) TIME: Hora atual: 2025-10-27 20:36:57 | Ciclos desde sync: 39[0m
+[0;32mI (50691) MONITOR: UDP RX: [TELEM] proto=UDP seq=97 rpm=120.1 count=0 estop=false ts_sntp=203656 ts_us=49720815[0m
+
+[0;32mI (51191) MONITOR: UDP RX: [TELEM] proto=UDP seq=98 rpm=120.1 count=0 estop=false ts_sntp=203657 ts_us=50220396[0m
+
+[0;32mI (51591) TIME: Hora atual: 2025-10-27 20:36:58 | Ciclos desde sync: 40[0m
+[0;32mI (51691) MONITOR: UDP RX: [TELEM] proto=UDP seq=99 rpm=120.1 count=0 estop=false ts_sntp=203657 ts_us=50720816[0m
+
+[0;32mI (52191) MONITOR: UDP RX: [TELEM] proto=UDP seq=100 rpm=120.1 count=0 estop=false ts_sntp=203658 ts_us=51220411[0m
+
+[0;32mI (52591) TIME: Hora atual: 2025-10-27 20:36:59 | Ciclos desde sync: 41[0m
+[0;32mI (52691) MONITOR: UDP RX: [TELEM] proto=UDP seq=101 rpm=120.1 count=0 estop=false ts_sntp=203658 ts_us=51720849[0m
+
+[0;32mI (53191) MONITOR: UDP RX: [TELEM] proto=UDP seq=102 rpm=120.1 count=0 estop=false ts_sntp=203659 ts_us=52220429[0m
+
+[0;32mI (53591) TIME: Hora atual: 2025-10-27 20:37:00 | Ciclos desde sync: 42[0m
+[0;32mI (53691) MONITOR: UDP RX: [TELEM] proto=UDP seq=103 rpm=120.1 count=0 estop=false ts_sntp=203659 ts_us=52720831[0m
+
+[0;32mI (54191) MONITOR: UDP RX: [TELEM] proto=UDP seq=104 rpm=120.1 count=0 estop=false ts_sntp=203700 ts_us=53220405[0m
+
+[0;32mI (54591) TIME: Hora atual: 2025-10-27 20:37:01 | Ciclos desde sync: 43[0m
+[0;32mI (54691) MONITOR: UDP RX: [TELEM] proto=UDP seq=105 rpm=120.1 count=0 estop=false ts_sntp=203700 ts_us=53720850[0m
+
+[0;32mI (55191) MONITOR: UDP RX: [TELEM] proto=UDP seq=106 rpm=120.1 count=0 estop=false ts_sntp=203701 ts_us=54220432[0m
+
+[0;32mI (55591) TIME: Hora atual: 2025-10-27 20:37:02 | Ciclos desde sync: 44[0m
+[0;32mI (55691) MONITOR: UDP RX: [TELEM] proto=UDP seq=107 rpm=120.1 count=0 estop=false ts_sntp=203701 ts_us=54720859[0m
+
+[0;32mI (56191) MONITOR: UDP RX: [TELEM] proto=UDP seq=108 rpm=120.1 count=0 estop=false ts_sntp=203702 ts_us=55220415[0m
+
+[0;32mI (56591) TIME: Hora atual: 2025-10-27 20:37:03 | Ciclos desde sync: 45[0m
+[0;32mI (56691) MONITOR: UDP RX: [TELEM] proto=UDP seq=109 rpm=120.1 count=0 estop=false ts_sntp=203702 ts_us=55720878[0m
+
+[0;32mI (57191) MONITOR: UDP RX: [TELEM] proto=UDP seq=110 rpm=120.1 count=0 estop=false ts_sntp=203703 ts_us=56220417[0m
+
+[0;32mI (57591) TIME: Hora atual: 2025-10-27 20:37:04 | Ciclos desde sync: 46[0m
+[0;32mI (57691) MONITOR: UDP RX: [TELEM] proto=UDP seq=111 rpm=120.1 count=0 estop=false ts_sntp=203703 ts_us=56720838[0m
+
+[0;32mI (58191) MONITOR: UDP RX: [TELEM] proto=UDP seq=112 rpm=120.1 count=0 estop=false ts_sntp=203704 ts_us=57220421[0m
+
+[0;32mI (58591) TIME: Hora atual: 2025-10-27 20:37:05 | Ciclos desde sync: 47[0m
+[0;32mI (58691) MONITOR: UDP RX: [TELEM] proto=UDP seq=113 rpm=120.1 count=0 estop=false ts_sntp=203704 ts_us=57720857[0m
+
+[0;32mI (59191) MONITOR: UDP RX: [TELEM] proto=UDP seq=114 rpm=120.1 count=0 estop=false ts_sntp=203705 ts_us=58220431[0m
+
+[0;32mI (59591) TIME: Hora atual: 2025-10-27 20:37:06 | Ciclos desde sync: 48[0m
+[0;32mI (59691) MONITOR: UDP RX: [TELEM] proto=UDP seq=115 rpm=120.1 count=0 estop=false ts_sntp=203705 ts_us=58720859[0m
+
+[0;32mI (60191) MONITOR: UDP RX: [TELEM] proto=UDP seq=116 rpm=120.1 count=0 estop=false ts_sntp=203706 ts_us=59220405[0m
+
+[0;32mI (60591) TIME: Hora atual: 2025-10-27 20:37:07 | Ciclos desde sync: 49[0m
+[0;32mI (60691) MONITOR: UDP RX: [TELEM] proto=UDP seq=117 rpm=120.1 count=0 estop=false ts_sntp=203706 ts_us=59720850[0m
+
+[0;32mI (61191) MONITOR: UDP RX: [TELEM] proto=UDP seq=118 rpm=120.1 count=0 estop=false ts_sntp=203707 ts_us=60220425[0m
+
+[0;32mI (61591) TIME: Hora atual: 2025-10-27 20:37:08 | Ciclos desde sync: 50[0m
+[0;32mI (61691) MONITOR: Relatorio enviado (periodo 59989436 us) | CPU=21.06%[0m
+[0;32mI (61691) MONITOR: UDP RX: [TELEM] proto=UDP seq=119 rpm=120.1 count=0 estop=false ts_sntp=203707 ts_us=60720861[0m
+
+[0;32mI (62191) MONITOR: UDP RX: === REPORT (period 59989436 us) ===[0m
+WCET (us): ENC=2021 | CTRL=3305 | SORT=0 | SAFETY=0 | MON=3794
+Misses (period): ENC=0 | CTR
+[0;32mI (62591) TIME: Hora atual: 2025-10-27 20:37:09 | Ciclos desde sync: 51[0m
+[0;32mI (62691) MONITOR: UDP RX: [TELEM] proto=UDP seq=120 rpm=120.1 count=0 estop=false ts_sntp=203708 ts_us=61228023[0m
+
+[0;32mI (63191) MONITOR: UDP RX: [TELEM] proto=UDP seq=121 rpm=120.1 count=0 estop=false ts_sntp=203708 ts_us=61723274[0m
+
+[0;32mI (63591) TIME: Hora atual: 2025-10-27 20:37:10 | Ciclos desde sync: 52[0m
+[0;32mI (63691) MONITOR: UDP RX: [TELEM] proto=UDP seq=122 rpm=120.1 count=0 estop=false ts_sntp=203709 ts_us=62220403[0m
+
+[0;32mI (64191) MONITOR: UDP RX: [TELEM] proto=UDP seq=123 rpm=120.1 count=0 estop=false ts_sntp=203709 ts_us=62720849[0m
+
+[0;32mI (64591) TIME: Hora atual: 2025-10-27 20:37:11 | Ciclos desde sync: 53[0m
+[0;32mI (64691) MONITOR: UDP RX: [TELEM] proto=UDP seq=124 rpm=120.1 count=0 estop=false ts_sntp=203710 ts_us=63220416[0m
+
+[0;32mI (65191) MONITOR: UDP RX: [TELEM] proto=UDP seq=125 rpm=120.1 count=0 estop=false ts_sntp=203710 ts_us=63720841[0m
+
+[0;32mI (65591) TIME: Hora atual: 2025-10-27 20:37:12 | Ciclos desde sync: 54[0m
+[0;32mI (65691) MONITOR: UDP RX: [TELEM] proto=UDP seq=126 rpm=120.1 count=0 estop=false ts_sntp=203711 ts_us=64220396[0m
+
+[0;32mI (66191) MONITOR: UDP RX: [TELEM] proto=UDP seq=127 rpm=120.1 count=0 estop=false ts_sntp=203711 ts_us=64720860[0m
+
+[0;32mI (66591) TIME: Hora atual: 2025-10-27 20:37:13 | Ciclos desde sync: 55[0m
+[0;32mI (66691) MONITOR: UDP RX: [TELEM] proto=UDP seq=128 rpm=120.1 count=0 estop=false ts_sntp=203712 ts_us=65220412[0m
+
+[0;32mI (67191) MONITOR: UDP RX: [TELEM] proto=UDP seq=129 rpm=120.1 count=0 estop=false ts_sntp=203712 ts_us=65720839[0m
+
+[0;32mI (67591) TIME: Hora atual: 2025-10-27 20:37:14 | Ciclos desde sync: 56[0m
+[0;32mI (67691) MONITOR: UDP RX: [TELEM] proto=UDP seq=130 rpm=120.1 count=0 estop=false ts_sntp=203713 ts_us=66220405[0m
+
+[0;32mI (68191) MONITOR: UDP RX: [TELEM] proto=UDP seq=131 rpm=120.1 count=0 estop=false ts_sntp=203713 ts_us=66720820[0m
+
+[0;32mI (68591) TIME: Hora atual: 2025-10-27 20:37:15 | Ciclos desde sync: 57[0m
+[0;32mI (68691) MONITOR: UDP RX: [TELEM] proto=UDP seq=132 rpm=120.1 count=0 estop=false ts_sntp=203714 ts_us=67220446[0m
+
+[0;32mI (69191) MONITOR: UDP RX: [TELEM] proto=UDP seq=133 rpm=120.1 count=0 estop=false ts_sntp=203714 ts_us=67721230[0m
+
+[0;32mI (69591) TIME: Hora atual: 2025-10-27 20:37:16 | Ciclos desde sync: 58[0m
+[0;32mI (69691) MONITOR: UDP RX: [TELEM] proto=UDP seq=134 rpm=120.1 count=0 estop=false ts_sntp=203715 ts_us=68220397[0m
+
+[0;32mI (70191) MONITOR: UDP RX: [TELEM] proto=UDP seq=135 rpm=120.1 count=0 estop=false ts_sntp=203715 ts_us=68720828[0m
+
+[0;32mI (70591) TIME: Hora atual: 2025-10-27 20:37:17 | Ciclos desde sync: 59[0m
+[0;32mI (70591) TIME: Re-sincronizando tempo via SNTP...[0m
+[0;32mI (70591) TIME: Inicializando SNTP...[0m
+
+assert failed: sntp_setoperatingmode /IDF/components/lwip/lwip/src/apps/sntp/sntp.c:748 (Operating mode must not be set while SNTP client is running)
+
+
+Backtrace: 0x40088b7d:0x3ffbcc80 0x40088b45:0x3ffbcca0 0x40090b15:0x3ffbccc0 0x400e2fd1:0x3ffbcde0 0x400e0d6e:0x3ffbce00 0x400e2a69:0x3ffbce20 0x400e2ac9:0x3ffbce40 0x400897fd:0x3ffbce70
+
+
+
+
+ELF file SHA256: 93eff6323
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ab80h (109440) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002aba8 vaddr=3ffb0000 size=03f8ch ( 16268) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002eb3c vaddr=40080000 size=014dch (  5340) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=90e40h (593472) map[0m
+[0;32mI (339) esp_image: segment 4: paddr=000c0e68 vaddr=400814dc size=16a9ch ( 92828) load[0m
+[0;32mI (376) esp_image: segment 5: paddr=000d790c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (388) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (388) boot: Disabling RNG early entropy source...[0m
+[0;32mI (398) cpu_start: Multicore app[0m
+[0;32mI (407) cpu_start: Pro cpu start user code[0m
+[0;32mI (407) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (407) app_init: Application information:[0m
+[0;32mI (407) app_init: Project name:     hello_world[0m
+[0;32mI (411) app_init: App version:      1[0m
+[0;32mI (414) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (419) app_init: ELF file SHA256:  93eff6323...[0m
+[0;32mI (424) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (428) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (431) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (435) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (440) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFB86B8 len 00027948 (158 KiB): DRAM[0m
+[0;32mI (456) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (461) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (467) heap_init: At 40097F78 len 00008088 (32 KiB): IRAM[0m
+[0;32mI (474) spi_flash: detected chip: generic[0m
+[0;32mI (476) spi_flash: flash io: dio[0m
+[0;33mW (479) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (491) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (501) main_task: Started on CPU0[0m
+[0;32mI (511) main_task: Calling app_main()[0m
+[0;32mI (531) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1431) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (1441) wifi:wifi driver task: 3ffc06ec, prio:23, stack:6656, core=0[0m
+[0;32mI (1451) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1451) wifi:wifi certification version: v7.0[0m
+[0;32mI (1451) wifi:config NVS flash: enabled[0m
+[0;32mI (1451) wifi:config nano formatting: disabled[0m
+[0;32mI (1461) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1461) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1461) wifi:Init management short buffer num: 32[0m
+[0;32mI (1471) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1471) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1481) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1481) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1491) wifi_init: rx ba win: 6[0m
+[0;32mI (1491) wifi_init: accept mbox: 6[0m
+[0;32mI (1491) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1491) wifi_init: udp mbox: 6[0m
+[0;32mI (1501) wifi_init: tcp mbox: 6[0m
+[0;32mI (1501) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1501) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1511) wifi_init: tcp mss: 1440[0m
+[0;32mI (1511) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1511) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1521) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1601) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (1601) wifi:enable tsf[0m
+[0;32mI (1601) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (1621) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1621) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1661) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1681) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1691) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1691) TIME: Iniciando TIME_TASK (periodo 1s)[0m
+[0;32mI (1691) TIME: Inicializando SNTP...[0m
+[0;32mI (1691) MONITOR: INICIANDO MODO UDP: Foco na periodicidade (D: 500ms).[0m
+[0;32mI (1691) SISTEMA: Sistema iniciado. Use touch pads:[0m
+[0;32mI (1701) SISTEMA: - Touch B (GPIO 12): Detecção objeto[0m
+[0;32mI (1701) SISTEMA: - Touch C (GPIO 14): HMI/Telemetria[0m
+[0;32mI (1711) SISTEMA: - Touch D (GPIO 27): E-stop (zera RPM instantaneamente)[0m
+[0;32mI (1711) main_task: Returned from app_main()[0m
+[0;32mI (1791) wifi:connected with Suite3, aid = 19, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (1791) wifi:security: WPA2-PSK, phy: bgn, rssi: -34[0m
+[0;32mI (1801) wifi:pm start, type: 1[0m
+
+[0;32mI (1801) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1851) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3321) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:6, winSize:64[0m
+[0;32mI (4311) esp_netif_handlers: sta ip: 192.168.7.6, mask: 255.255.255.0, gw: 192.168.7.1[0m
+[0;32mI (4831) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (4871) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (4891) TIME: Hora atual: Mon Oct 27 17:37:22 2025[0m
+[0;32mI (4891) TIME: Hora atual: 2025-10-27 17:37:22 | Ciclos desde sync: 0[0m
+[0;32mI (5191) MONITOR: UDP RX: [TELEM] proto=UDP seq=6 rpm=120.5 count=0 estop=false ts_sntp=203721 ts_us=4220058[0m
+
+[0;32mI (5691) MONITOR: UDP RX: [TELEM] proto=UDP seq=7 rpm=120.5 count=0 estop=false ts_sntp=173722 ts_us=4720447[0m
+
+[0;32mI (5891) TIME: Hora atual: 2025-10-27 17:37:23 | Ciclos desde sync: 1[0m
+[0;32mI (6191) MONITOR: UDP RX: [TELEM] proto=UDP seq=8 rpm=120.5 count=0 estop=false ts_sntp=173722 ts_us=5220866[0m
+
+[0;32mI (6691) MONITOR: UDP RX: [TELEM] proto=UDP seq=9 rpm=120.5 count=0 estop=false ts_sntp=173723 ts_us=5720431[0m
+
+[0;32mI (6891) TIME: Hora atual: 2025-10-27 17:37:24 | Ciclos desde sync: 2[0m
+[0;32mI (7191) MONITOR: UDP RX: [TELEM] proto=UDP seq=10 rpm=120.5 count=0 estop=false ts_sntp=173723 ts_us=6220920[0m
+
+[0;32mI (7691) MONITOR: UDP RX: [TELEM] proto=UDP seq=11 rpm=120.5 count=0 estop=false ts_sntp=173724 ts_us=6720419[0m
+
+[0;32mI (7891) TIME: Hora atual: 2025-10-27 17:37:25 | Ciclos desde sync: 3[0m
+[0;32mI (8191) MONITOR: UDP RX: [TELEM] proto=UDP seq=12 rpm=120.5 count=0 estop=false ts_sntp=173724 ts_us=7220901[0m
+
+[0;32mI (8691) MONITOR: UDP RX: [TELEM] proto=UDP seq=13 rpm=120.4 count=0 estop=false ts_sntp=173725 ts_us=7720433[0m
+
+[0;32mI (8891) TIME: Hora atual: 2025-10-27 17:37:26 | Ciclos desde sync: 4[0m
+[0;32mI (9191) MONITOR: UDP RX: [TELEM] proto=UDP seq=14 rpm=120.4 count=0 estop=false ts_sntp=173725 ts_us=8220839[0m
+
+[0;32mI (9691) MONITOR: UDP RX: [TELEM] proto=UDP seq=15 rpm=120.4 count=0 estop=false ts_sntp=173726 ts_us=8720410[0m
+
+[0;32mI (9891) TIME: Hora atual: 2025-10-27 17:37:27 | Ciclos desde sync: 5[0m
+[0;32mI (10191) MONITOR: UDP RX: [TELEM] proto=UDP seq=16 rpm=120.4 count=0 estop=false ts_sntp=173726 ts_us=9220847[0m
+
+[0;32mI (10691) MONITOR: UDP RX: [TELEM] proto=UDP seq=17 rpm=120.4 count=0 estop=false ts_sntp=173727 ts_us=9720387[0m
+
+[0;32mI (10891) TIME: Hora atual: 2025-10-27 17:37:28 | Ciclos desde sync: 6[0m
+[0;32mI (11191) MONITOR: UDP RX: [TELEM] proto=UDP seq=18 rpm=120.4 count=0 estop=false ts_sntp=173727 ts_us=10220850[0m
+
+[0;32mI (11691) MONITOR: UDP RX: [TELEM] proto=UDP seq=19 rpm=120.4 count=0 estop=false ts_sntp=173728 ts_us=10720403[0m
+
+[0;32mI (11891) TIME: Hora atual: 2025-10-27 17:37:29 | Ciclos desde sync: 7[0m
+[0;32mI (12191) MONITOR: UDP RX: [TELEM] proto=UDP seq=20 rpm=120.4 count=0 estop=false ts_sntp=173728 ts_us=11220856[0m
+
+[0;32mI (12691) MONITOR: UDP RX: [TELEM] proto=UDP seq=21 rpm=120.4 count=0 estop=false ts_sntp=173729 ts_us=11720421[0m
+
+[0;32mI (12891) TIME: Hora atual: 2025-10-27 17:37:30 | Ciclos desde sync: 8[0m
+[0;32mI (13191) MONITOR: UDP RX: [TELEM] proto=UDP seq=22 rpm=120.4 count=0 estop=false ts_sntp=173729 ts_us=12220833[0m
+
+[0;32mI (13691) MONITOR: UDP RX: [TELEM] proto=UDP seq=23 rpm=120.4 count=0 estop=false ts_sntp=173730 ts_us=12720389[0m
+
+[0;32mI (13891) TIME: Hora atual: 2025-10-27 17:37:31 | Ciclos desde sync: 9[0m
+[0;32mI (14191) MONITOR: UDP RX: [TELEM] proto=UDP seq=24 rpm=120.4 count=0 estop=false ts_sntp=173730 ts_us=13220862[0m
+
+[0;32mI (14691) MONITOR: UDP RX: [TELEM] proto=UDP seq=25 rpm=120.4 count=0 estop=false ts_sntp=173731 ts_us=13720409[0m
+
+[0;32mI (14891) TIME: Hora atual: 2025-10-27 17:37:32 | Ciclos desde sync: 10[0m
+[0;32mI (15191) MONITOR: UDP RX: [TELEM] proto=UDP seq=26 rpm=120.4 count=0 estop=false ts_sntp=173731 ts_us=14220839[0m
+
+[0;32mI (15691) MONITOR: UDP RX: [TELEM] proto=UDP seq=27 rpm=120.4 count=0 estop=false ts_sntp=173732 ts_us=14720431[0m
+
+[0;32mI (15891) TIME: Hora atual: 2025-10-27 17:37:33 | Ciclos desde sync: 11[0m
+[0;32mI (16191) MONITOR: UDP RX: [TELEM] proto=UDP seq=28 rpm=120.3 count=0 estop=false ts_sntp=173732 ts_us=15220556[0m
+
+[0;32mI (16691) MONITOR: UDP RX: [TELEM] proto=UDP seq=29 rpm=120.3 count=0 estop=false ts_sntp=173733 ts_us=15720403[0m
+
+[0;32mI (16891) TIME: Hora atual: 2025-10-27 17:37:34 | Ciclos desde sync: 12[0m
+[0;32mI (17191) MONITOR: UDP RX: [TELEM] proto=UDP seq=30 rpm=120.3 count=0 estop=false ts_sntp=173733 ts_us=16220846[0m
+
+[0;32mI (17691) MONITOR: UDP RX: [TELEM] proto=UDP seq=31 rpm=120.3 count=0 estop=false ts_sntp=173734 ts_us=16720431[0m
+
+[0;32mI (17891) TIME: Hora atual: 2025-10-27 17:37:35 | Ciclos desde sync: 13[0m
+[0;32mI (18191) MONITOR: UDP RX: [TELEM] proto=UDP seq=32 rpm=120.3 count=0 estop=false ts_sntp=173734 ts_us=17220846[0m
+
+[0;32mI (18691) MONITOR: UDP RX: [TELEM] proto=UDP seq=33 rpm=120.3 count=0 estop=false ts_sntp=173735 ts_us=17720434[0m
+
+[0;32mI (18891) TIME: Hora atual: 2025-10-27 17:37:36 | Ciclos desde sync: 14[0m
+[0;32mI (19191) MONITOR: UDP RX: [TELEM] proto=UDP seq=34 rpm=120.3 count=0 estop=false ts_sntp=173735 ts_us=18220846[0m
+
+[0;32mI (19691) MONITOR: UDP RX: [TELEM] proto=UDP seq=35 rpm=120.3 count=0 estop=false ts_sntp=173736 ts_us=18720398[0m
+

@@ -1,0 +1,407 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM3'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1aab8h (109240) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002aae0 vaddr=3ffb0000 size=03fach ( 16300) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002ea94 vaddr=40080000 size=01584h (  5508) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=921b0h (598448) map[0m
+[0;32mI (341) esp_image: segment 4: paddr=000c21d8 vaddr=40081584 size=169f4h ( 92660) load[0m
+[0;32mI (377) esp_image: segment 5: paddr=000d8bd4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (389) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (389) boot: Disabling RNG early entropy source...[0m
+[0;32mI (400) cpu_start: Multicore app[0m
+[0;32mI (408) cpu_start: Pro cpu start user code[0m
+[0;32mI (408) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (409) app_init: Application information:[0m
+[0;32mI (409) app_init: Project name:     hello_world[0m
+[0;32mI (413) app_init: App version:      1[0m
+[0;32mI (416) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (421) app_init: ELF file SHA256:  9847505a1...[0m
+[0;32mI (426) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (429) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (433) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (437) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (441) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (447) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB8750 len 000278B0 (158 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (469) heap_init: At 40097F78 len 00008088 (32 KiB): IRAM[0m
+[0;32mI (475) spi_flash: detected chip: generic[0m
+[0;32mI (477) spi_flash: flash io: dio[0m
+[0;33mW (480) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (493) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (503) main_task: Started on CPU0[0m
+[0;32mI (513) main_task: Calling app_main()[0m
+[0;32mI (533) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (543) wifi:wifi driver task: 3ffc0988, prio:23, stack:6656, core=0[0m
+[0;32mI (553) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (553) wifi:wifi certification version: v7.0[0m
+[0;32mI (553) wifi:config NVS flash: enabled[0m
+[0;32mI (553) wifi:config nano formatting: disabled[0m
+[0;32mI (563) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (563) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (563) wifi:Init management short buffer num: 32[0m
+[0;32mI (573) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (573) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (583) wifi:Init static rx buffer num: 10[0m
+[0;32mI (583) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (593) wifi_init: rx ba win: 6[0m
+[0;32mI (593) wifi_init: accept mbox: 6[0m
+[0;32mI (593) wifi_init: tcpip mbox: 32[0m
+[0;32mI (593) wifi_init: udp mbox: 6[0m
+[0;32mI (603) wifi_init: tcp mbox: 6[0m
+[0;32mI (603) wifi_init: tcp tx win: 5760[0m
+[0;32mI (603) wifi_init: tcp rx win: 5760[0m
+[0;32mI (613) wifi_init: tcp mss: 1440[0m
+[0;32mI (613) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (613) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (623) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (703) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (703) wifi:enable tsf[0m
+[0;32mI (703) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (713) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (723) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (763) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (783) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (793) SISTEMA: Deadlines: ENC=5000us | CTRL=5000us | SORT=10000us | ESTOP=5000us | MON=500000us[0m
+[0;32mI (793) SISTEMA: Modo de Teste: TCP[0m
+[0;32mI (793) SISTEMA: m-k FIRM: (9, 10)[0m
+[0;32mI (793) SISTEMA: Sistema iniciado.[0m
+[0;32mI (793) main_task: Returned from app_main()[0m
+[0;32mI (803) TIME: Aguardando sincronização SNTP...[0m
+[0;32mI (803) MONITOR: INICIANDO MODO TCP[0m
+[0;32mI (893) wifi:connected with Suite3, aid = 18, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (893) wifi:security: WPA2-PSK, phy: bgn, rssi: -45[0m
+[0;32mI (893) wifi:pm start, type: 1[0m
+
+[0;32mI (893) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (963) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2413) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:6, winSize:64[0m
+[0;32mI (3403) esp_netif_handlers: sta ip: 192.168.7.7, mask: 255.255.255.0, gw: 192.168.7.1[0m
+[0;32mI (4473) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (4653) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (4803) TIME: SNTP sincronizado com sucesso.[0m
+[0;32mI (4803) TIME: Hora de referencia: 28/10/2025 22:04:57 | Ciclo: 1[0m
+[0;32mI (5803) TIME: Hora de referencia: 28/10/2025 22:04:58 | Ciclo: 2[0m
+[0;32mI (6803) TIME: Hora de referencia: 28/10/2025 22:04:59 | Ciclo: 3[0m
+[0;32mI (7803) TIME: Hora de referencia: 28/10/2025 22:05:00 | Ciclo: 4[0m
+[0;32mI (8803) TIME: Hora de referencia: 28/10/2025 22:05:01 | Ciclo: 5[0m
+[0;32mI (9803) TIME: Hora de referencia: 28/10/2025 22:05:02 | Ciclo: 6[0m
+[0;32mI (10303) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=9830.94 ms | Total peças=1[0m
+[0;32mI (10803) TIME: Hora de referencia: 28/10/2025 22:05:03 | Ciclo: 7[0m
+[0;32mI (11803) TIME: Hora de referencia: 28/10/2025 22:05:04 | Ciclo: 8[0m
+[0;32mI (12803) TIME: Hora de referencia: 28/10/2025 22:05:05 | Ciclo: 9[0m
+[0;32mI (13803) TIME: Hora de referencia: 28/10/2025 22:05:06 | Ciclo: 10[0m
+[0;32mI (14803) TIME: Hora de referencia: 28/10/2025 22:05:07 | Ciclo: 11[0m
+[0;32mI (15803) TIME: Hora de referencia: 28/10/2025 22:05:08 | Ciclo: 12[0m
+[0;32mI (16803) TIME: Hora de referencia: 28/10/2025 22:05:09 | Ciclo: 13[0m
+[0;32mI (17803) TIME: Hora de referencia: 28/10/2025 22:05:10 | Ciclo: 14[0m
+[0;32mI (18803) TIME: Hora de referencia: 28/10/2025 22:05:11 | Ciclo: 15[0m
+[0;32mI (19803) TIME: Hora de referencia: 28/10/2025 22:05:12 | Ciclo: 16[0m
+[0;32mI (20303) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20803) TIME: Hora de referencia: 28/10/2025 22:05:13 | Ciclo: 17[0m
+[0;32mI (21803) TIME: Hora de referencia: 28/10/2025 22:05:14 | Ciclo: 18[0m
+[0;32mI (22303) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=21831.16 ms | Total peças=2[0m
+[0;32mI (22803) TIME: Hora de referencia: 28/10/2025 22:05:15 | Ciclo: 19[0m
+[0;32mI (23303) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (23803) TIME: Hora de referencia: 28/10/2025 22:05:16 | Ciclo: 20[0m
+[0;32mI (24303) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=23831.89 ms | Total peças=3[0m
+[0;32mI (24803) TIME: Hora de referencia: 28/10/2025 22:05:17 | Ciclo: 21[0m
+[0;32mI (25803) TIME: Hora de referencia: 28/10/2025 22:05:18 | Ciclo: 22[0m
+[0;32mI (25803) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (26803) TIME: Hora de referencia: 28/10/2025 22:05:19 | Ciclo: 23[0m
+[0;32mI (26803) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=26332.22 ms | Total peças=4[0m
+[0;32mI (27393) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (27803) TIME: Hora de referencia: 28/10/2025 22:05:20 | Ciclo: 24[0m
+[0;32mI (28303) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=27832.44 ms | Total peças=5[0m
+[0;32mI (28803) TIME: Hora de referencia: 28/10/2025 22:05:21 | Ciclo: 25[0m
+[0;32mI (29303) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (29803) TIME: Hora de referencia: 28/10/2025 22:05:22 | Ciclo: 26[0m
+[0;32mI (29843) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=29377.00 ms | Total peças=6[0m
+[0;32mI (30803) TIME: Hora de referencia: 28/10/2025 22:05:23 | Ciclo: 27[0m
+[0;32mI (30803) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (31413) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=30941.78 ms | Total peças=7[0m
+[0;32mI (31803) TIME: Hora de referencia: 28/10/2025 22:05:24 | Ciclo: 28[0m
+[0;32mI (32303) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (32803) TIME: Hora de referencia: 28/10/2025 22:05:25 | Ciclo: 29[0m
+[0;32mI (33303) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=32831.24 ms | Total peças=8[0m
+[0;32mI (33803) TIME: Hora de referencia: 28/10/2025 22:05:26 | Ciclo: 30[0m
+[0;32mI (34803) TIME: Hora de referencia: 28/10/2025 22:05:27 | Ciclo: 31[0m
+[0;32mI (34853) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (35803) TIME: Hora de referencia: 28/10/2025 22:05:28 | Ciclo: 0[0m
+[0;32mI (36303) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (36803) TIME: Hora de referencia: 28/10/2025 22:05:29 | Ciclo: 1[0m
+[0;32mI (37803) TIME: Hora de referencia: 28/10/2025 22:05:30 | Ciclo: 2[0m
+[0;32mI (38803) TIME: Hora de referencia: 28/10/2025 22:05:31 | Ciclo: 3[0m
+[0;32mI (39803) TIME: Hora de referencia: 28/10/2025 22:05:32 | Ciclo: 4[0m
+[0;32mI (40803) TIME: Hora de referencia: 28/10/2025 22:05:33 | Ciclo: 5[0m
+[0;32mI (41803) TIME: Hora de referencia: 28/10/2025 22:05:34 | Ciclo: 6[0m
+[0;32mI (42803) TIME: Hora de referencia: 28/10/2025 22:05:35 | Ciclo: 7[0m
+[0;32mI (42803) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=42332.20 ms | Total peças=9[0m
+[0;32mI (43373) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (43803) TIME: Hora de referencia: 28/10/2025 22:05:36 | Ciclo: 8[0m
+[0;32mI (44803) TIME: Hora de referencia: 28/10/2025 22:05:37 | Ciclo: 9[0m
+[0;32mI (44803) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=44332.11 ms | Total peças=10[0m
+[0;32mI (45803) TIME: Hora de referencia: 28/10/2025 22:05:38 | Ciclo: 10[0m
+[0;32mI (46803) TIME: Hora de referencia: 28/10/2025 22:05:39 | Ciclo: 11[0m
+[0;32mI (46803) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (47803) TIME: Hora de referencia: 28/10/2025 22:05:40 | Ciclo: 12[0m
+[0;32mI (48803) TIME: Hora de referencia: 28/10/2025 22:05:41 | Ciclo: 13[0m
+[0;32mI (49303) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=48830.84 ms | Total peças=11[0m
+[0;32mI (49803) TIME: Hora de referencia: 28/10/2025 22:05:42 | Ciclo: 14[0m
+[0;32mI (50803) TIME: Hora de referencia: 28/10/2025 22:05:43 | Ciclo: 15[0m
+[0;32mI (50803) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=50332.16 ms | Total peças=12[0m
+[0;32mI (51803) TIME: Hora de referencia: 28/10/2025 22:05:44 | Ciclo: 16[0m
+[0;32mI (52303) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (52803) TIME: Hora de referencia: 28/10/2025 22:05:45 | Ciclo: 17[0m
+[0;32mI (53393) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (53803) TIME: Hora de referencia: 28/10/2025 22:05:46 | Ciclo: 18[0m
+[0;32mI (54803) TIME: Hora de referencia: 28/10/2025 22:05:47 | Ciclo: 19[0m
+[0;32mI (55303) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (55803) TIME: Hora de referencia: 28/10/2025 22:05:48 | Ciclo: 20[0m
+[0;32mI (56363) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=55897.48 ms | Total peças=13[0m
+[0;32mI (56803) TIME: Hora de referencia: 28/10/2025 22:05:49 | Ciclo: 21[0m
+[0;32mI (57803) TIME: Hora de referencia: 28/10/2025 22:05:50 | Ciclo: 22[0m
+[0;32mI (58803) TIME: Hora de referencia: 28/10/2025 22:05:51 | Ciclo: 23[0m
+[0;32mI (59803) TIME: Hora de referencia: 28/10/2025 22:05:52 | Ciclo: 24[0m
+[0;32mI (60803) TIME: Hora de referencia: 28/10/2025 22:05:53 | Ciclo: 25[0m
+[0;32mI (61803) TIME: Hora de referencia: 28/10/2025 22:05:54 | Ciclo: 26[0m
+[0;32mI (62803) TIME: Hora de referencia: 28/10/2025 22:05:55 | Ciclo: 27[0m
+[0;32mI (63803) TIME: Hora de referencia: 28/10/2025 22:05:56 | Ciclo: 28[0m
+[0;32mI (64803) TIME: Hora de referencia: 28/10/2025 22:05:57 | Ciclo: 29[0m
+[0;32mI (65003) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (65803) TIME: Hora de referencia: 28/10/2025 22:05:58 | Ciclo: 0[0m
+[0;32mI (66803) TIME: Hora de referencia: 28/10/2025 22:05:59 | Ciclo: 1[0m
+[0;32mI (67803) TIME: Hora de referencia: 28/10/2025 22:06:00 | Ciclo: 2[0m
+[0;32mI (68803) TIME: Hora de referencia: 28/10/2025 22:06:01 | Ciclo: 3[0m
+[0;32mI (69803) TIME: Hora de referencia: 28/10/2025 22:06:02 | Ciclo: 4[0m
+[0;32mI (70803) TIME: Hora de referencia: 28/10/2025 22:06:03 | Ciclo: 5[0m
+[0;32mI (71803) TIME: Hora de referencia: 28/10/2025 22:06:04 | Ciclo: 6[0m
+[0;32mI (72803) TIME: Hora de referencia: 28/10/2025 22:06:05 | Ciclo: 7[0m
+[0;32mI (73803) TIME: Hora de referencia: 28/10/2025 22:06:06 | Ciclo: 8[0m
+[0;32mI (74803) TIME: Hora de referencia: 28/10/2025 22:06:07 | Ciclo: 9[0m
+[0;32mI (75803) TIME: Hora de referencia: 28/10/2025 22:06:08 | Ciclo: 10[0m
+[0;32mI (76803) TIME: Hora de referencia: 28/10/2025 22:06:09 | Ciclo: 11[0m
+[0;32mI (77803) TIME: Hora de referencia: 28/10/2025 22:06:10 | Ciclo: 12[0m
+[0;32mI (78803) TIME: Hora de referencia: 28/10/2025 22:06:11 | Ciclo: 13[0m
+[0;32mI (78923) MONITOR: Relatório TCP enviado (14.53% CPU)[0m
+[0;32mI (79803) TIME: Hora de referencia: 28/10/2025 22:06:12 | Ciclo: 14[0m
+[0;32mI (80803) TIME: Hora de referencia: 28/10/2025 22:06:13 | Ciclo: 15[0m
+[0;32mI (81803) TIME: Hora de referencia: 28/10/2025 22:06:14 | Ciclo: 16[0m
+[0;32mI (82803) TIME: Hora de referencia: 28/10/2025 22:06:15 | Ciclo: 17[0m
+[0;32mI (83803) TIME: Hora de referencia: 28/10/2025 22:06:16 | Ciclo: 18[0m
+[0;32mI (84803) TIME: Hora de referencia: 28/10/2025 22:06:17 | Ciclo: 19[0m
+[0;32mI (85803) TIME: Hora de referencia: 28/10/2025 22:06:18 | Ciclo: 20[0m
+[0;32mI (86803) TIME: Hora de referencia: 28/10/2025 22:06:19 | Ciclo: 21[0m
+[0;32mI (87803) TIME: Hora de referencia: 28/10/2025 22:06:20 | Ciclo: 22[0m
+[0;32mI (88803) TIME: Hora de referencia: 28/10/2025 22:06:21 | Ciclo: 23[0m
+[0;32mI (89803) TIME: Hora de referencia: 28/10/2025 22:06:22 | Ciclo: 24[0m
+[0;32mI (90803) TIME: Hora de referencia: 28/10/2025 22:06:23 | Ciclo: 25[0m
+[0;32mI (91803) TIME: Hora de referencia: 28/10/2025 22:06:24 | Ciclo: 26[0m
+[0;32mI (92803) TIME: Hora de referencia: 28/10/2025 22:06:25 | Ciclo: 27[0m
+[0;32mI (93803) TIME: Hora de referencia: 28/10/2025 22:06:26 | Ciclo: 28[0m
+[0;32mI (94803) TIME: Hora de referencia: 28/10/2025 22:06:27 | Ciclo: 29[0m
+[0;32mI (95173) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (95803) TIME: Hora de referencia: 28/10/2025 22:06:28 | Ciclo: 0[0m
+[0;32mI (96803) TIME: Hora de referencia: 28/10/2025 22:06:29 | Ciclo: 1[0m
+[0;32mI (97803) TIME: Hora de referencia: 28/10/2025 22:06:30 | Ciclo: 2[0m
+[0;32mI (98803) TIME: Hora de referencia: 28/10/2025 22:06:31 | Ciclo: 3[0m
+[0;32mI (99803) TIME: Hora de referencia: 28/10/2025 22:06:32 | Ciclo: 4[0m
+[0;32mI (100803) TIME: Hora de referencia: 28/10/2025 22:06:33 | Ciclo: 5[0m
+[0;32mI (101803) TIME: Hora de referencia: 28/10/2025 22:06:34 | Ciclo: 6[0m
+[0;32mI (102803) TIME: Hora de referencia: 28/10/2025 22:06:35 | Ciclo: 7[0m
+[0;32mI (103803) TIME: Hora de referencia: 28/10/2025 22:06:36 | Ciclo: 8[0m
+[0;32mI (104803) TIME: Hora de referencia: 28/10/2025 22:06:37 | Ciclo: 9[0m
+[0;32mI (105803) TIME: Hora de referencia: 28/10/2025 22:06:38 | Ciclo: 10[0m
+[0;32mI (106803) TIME: Hora de referencia: 28/10/2025 22:06:39 | Ciclo: 11[0m
+[0;32mI (107803) TIME: Hora de referencia: 28/10/2025 22:06:40 | Ciclo: 12[0m
+[0;32mI (108803) TIME: Hora de referencia: 28/10/2025 22:06:41 | Ciclo: 13[0m
+[0;32mI (109303) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (109803) TIME: Hora de referencia: 28/10/2025 22:06:42 | Ciclo: 14[0m
+[0;32mI (110803) TIME: Hora de referencia: 28/10/2025 22:06:43 | Ciclo: 15[0m
+[0;32mI (110843) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=110375.40 ms | Total peças=14[0m
+[0;32mI (111803) TIME: Hora de referencia: 28/10/2025 22:06:44 | Ciclo: 16[0m
+[0;32mI (112803) TIME: Hora de referencia: 28/10/2025 22:06:45 | Ciclo: 17[0m
+[0;32mI (113803) TIME: Hora de referencia: 28/10/2025 22:06:46 | Ciclo: 18[0m
+[0;32mI (114803) TIME: Hora de referencia: 28/10/2025 22:06:47 | Ciclo: 19[0m
+[0;32mI (115803) TIME: Hora de referencia: 28/10/2025 22:06:48 | Ciclo: 20[0m
+[0;32mI (116803) TIME: Hora de referencia: 28/10/2025 22:06:49 | Ciclo: 21[0m
+[0;32mI (117803) TIME: Hora de referencia: 28/10/2025 22:06:50 | Ciclo: 22[0m
+[0;32mI (118803) TIME: Hora de referencia: 28/10/2025 22:06:51 | Ciclo: 23[0m
+[0;32mI (119803) TIME: Hora de referencia: 28/10/2025 22:06:52 | Ciclo: 24[0m
+[0;32mI (120803) TIME: Hora de referencia: 28/10/2025 22:06:53 | Ciclo: 25[0m
+[0;32mI (121803) TIME: Hora de referencia: 28/10/2025 22:06:54 | Ciclo: 26[0m
+[0;32mI (122803) TIME: Hora de referencia: 28/10/2025 22:06:55 | Ciclo: 27[0m
+[0;32mI (123803) TIME: Hora de referencia: 28/10/2025 22:06:56 | Ciclo: 28[0m
+[0;32mI (124803) TIME: Hora de referencia: 28/10/2025 22:06:57 | Ciclo: 29[0m
+[0;32mI (125383) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (125803) TIME: Hora de referencia: 28/10/2025 22:06:58 | Ciclo: 0[0m
+[0;32mI (126803) TIME: Hora de referencia: 28/10/2025 22:06:59 | Ciclo: 1[0m
+[0;32mI (127803) TIME: Hora de referencia: 28/10/2025 22:07:00 | Ciclo: 2[0m
+[0;32mI (128803) TIME: Hora de referencia: 28/10/2025 22:07:01 | Ciclo: 3[0m
+[0;32mI (129803) TIME: Hora de referencia: 28/10/2025 22:07:02 | Ciclo: 4[0m
+[0;32mI (130803) TIME: Hora de referencia: 28/10/2025 22:07:03 | Ciclo: 5[0m
+[0;32mI (131803) TIME: Hora de referencia: 28/10/2025 22:07:04 | Ciclo: 6[0m
+[0;32mI (132803) TIME: Hora de referencia: 28/10/2025 22:07:05 | Ciclo: 7[0m
+[0;32mI (133803) TIME: Hora de referencia: 28/10/2025 22:07:06 | Ciclo: 8[0m
+[0;32mI (134803) TIME: Hora de referencia: 28/10/2025 22:07:07 | Ciclo: 9[0m
+[0;32mI (135803) TIME: Hora de referencia: 28/10/2025 22:07:08 | Ciclo: 10[0m
+[0;32mI (136803) TIME: Hora de referencia: 28/10/2025 22:07:09 | Ciclo: 11[0m
+[0;32mI (137803) TIME: Hora de referencia: 28/10/2025 22:07:10 | Ciclo: 12[0m
+[0;32mI (138803) TIME: Hora de referencia: 28/10/2025 22:07:11 | Ciclo: 13[0m
+[0;32mI (139423) MONITOR: Relatório TCP enviado (-4.45% CPU)[0m
+[0;32mI (139803) TIME: Hora de referencia: 28/10/2025 22:07:12 | Ciclo: 14[0m
+[0;32mI (140803) TIME: Hora de referencia: 28/10/2025 22:07:13 | Ciclo: 15[0m
+[0;32mI (141803) TIME: Hora de referencia: 28/10/2025 22:07:14 | Ciclo: 16[0m
+[0;32mI (142803) TIME: Hora de referencia: 28/10/2025 22:07:15 | Ciclo: 17[0m
+[0;32mI (143803) TIME: Hora de referencia: 28/10/2025 22:07:16 | Ciclo: 18[0m
+[0;32mI (144803) TIME: Hora de referencia: 28/10/2025 22:07:17 | Ciclo: 19[0m
+[0;32mI (145803) TIME: Hora de referencia: 28/10/2025 22:07:18 | Ciclo: 20[0m
+[0;32mI (146803) TIME: Hora de referencia: 28/10/2025 22:07:19 | Ciclo: 21[0m
+[0;32mI (147803) TIME: Hora de referencia: 28/10/2025 22:07:20 | Ciclo: 22[0m
+[0;32mI (148803) TIME: Hora de referencia: 28/10/2025 22:07:21 | Ciclo: 23[0m
+[0;32mI (149803) TIME: Hora de referencia: 28/10/2025 22:07:22 | Ciclo: 24[0m
+[0;32mI (150803) TIME: Hora de referencia: 28/10/2025 22:07:23 | Ciclo: 25[0m
+[0;32mI (151803) TIME: Hora de referencia: 28/10/2025 22:07:24 | Ciclo: 26[0m
+[0;32mI (152803) TIME: Hora de referencia: 28/10/2025 22:07:25 | Ciclo: 27[0m
+[0;32mI (153803) TIME: Hora de referencia: 28/10/2025 22:07:26 | Ciclo: 28[0m
+[0;32mI (154803) TIME: Hora de referencia: 28/10/2025 22:07:27 | Ciclo: 29[0m
+[0;32mI (155583) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (155803) TIME: Hora de referencia: 28/10/2025 22:07:28 | Ciclo: 0[0m
+[0;32mI (156803) TIME: Hora de referencia: 28/10/2025 22:07:29 | Ciclo: 1[0m
+[0;32mI (157803) TIME: Hora de referencia: 28/10/2025 22:07:30 | Ciclo: 2[0m
+[0;32mI (158803) TIME: Hora de referencia: 28/10/2025 22:07:31 | Ciclo: 3[0m
+[0;32mI (159803) TIME: Hora de referencia: 28/10/2025 22:07:32 | Ciclo: 4[0m
+[0;32mI (160803) TIME: Hora de referencia: 28/10/2025 22:07:33 | Ciclo: 5[0m
+[0;32mI (161803) TIME: Hora de referencia: 28/10/2025 22:07:34 | Ciclo: 6[0m
+[0;32mI (162803) TIME: Hora de referencia: 28/10/2025 22:07:35 | Ciclo: 7[0m
+[0;32mI (163803) TIME: Hora de referencia: 28/10/2025 22:07:36 | Ciclo: 8[0m
+[0;32mI (164803) TIME: Hora de referencia: 28/10/2025 22:07:37 | Ciclo: 9[0m
+[0;32mI (165803) TIME: Hora de referencia: 28/10/2025 22:07:38 | Ciclo: 10[0m
+[0;32mI (166803) TIME: Hora de referencia: 28/10/2025 22:07:39 | Ciclo: 11[0m
+[0;32mI (167803) TIME: Hora de referencia: 28/10/2025 22:07:40 | Ciclo: 12[0m
+[0;32mI (168803) TIME: Hora de referencia: 28/10/2025 22:07:41 | Ciclo: 13[0m
+[0;32mI (169803) TIME: Hora de referencia: 28/10/2025 22:07:42 | Ciclo: 14[0m
+[0;32mI (170803) TIME: Hora de referencia: 28/10/2025 22:07:43 | Ciclo: 15[0m
+[0;32mI (171803) TIME: Hora de referencia: 28/10/2025 22:07:44 | Ciclo: 16[0m
+[0;32mI (172803) TIME: Hora de referencia: 28/10/2025 22:07:45 | Ciclo: 17[0m
+[0;32mI (173803) TIME: Hora de referencia: 28/10/2025 22:07:46 | Ciclo: 18[0m
+[0;32mI (174803) TIME: Hora de referencia: 28/10/2025 22:07:47 | Ciclo: 19[0m
+[0;32mI (175803) TIME: Hora de referencia: 28/10/2025 22:07:48 | Ciclo: 20[0m
+[0;32mI (176803) TIME: Hora de referencia: 28/10/2025 22:07:49 | Ciclo: 21[0m
+[0;32mI (177803) TIME: Hora de referencia: 28/10/2025 22:07:50 | Ciclo: 22[0m
+[0;32mI (178803) TIME: Hora de referencia: 28/10/2025 22:07:51 | Ciclo: 23[0m
+[0;32mI (179803) TIME: Hora de referencia: 28/10/2025 22:07:52 | Ciclo: 24[0m
+[0;32mI (180803) TIME: Hora de referencia: 28/10/2025 22:07:53 | Ciclo: 25[0m
+[0;32mI (181803) TIME: Hora de referencia: 28/10/2025 22:07:54 | Ciclo: 26[0m
+[0;32mI (182803) TIME: Hora de referencia: 28/10/2025 22:07:55 | Ciclo: 27[0m
+[0;32mI (183803) TIME: Hora de referencia: 28/10/2025 22:07:56 | Ciclo: 28[0m
+[0;32mI (184803) TIME: Hora de referencia: 28/10/2025 22:07:57 | Ciclo: 29[0m
+[0;32mI (185793) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (185803) TIME: Hora de referencia: 28/10/2025 22:07:58 | Ciclo: 0[0m
+[0;32mI (186803) TIME: Hora de referencia: 28/10/2025 22:07:59 | Ciclo: 1[0m
+[0;32mI (187803) TIME: Hora de referencia: 28/10/2025 22:08:00 | Ciclo: 2[0m
+[0;32mI (188803) TIME: Hora de referencia: 28/10/2025 22:08:01 | Ciclo: 3[0m
+[0;32mI (189803) TIME: Hora de referencia: 28/10/2025 22:08:02 | Ciclo: 4[0m
+[0;32mI (190803) TIME: Hora de referencia: 28/10/2025 22:08:03 | Ciclo: 5[0m
+[0;32mI (191803) TIME: Hora de referencia: 28/10/2025 22:08:04 | Ciclo: 6[0m
+[0;32mI (192803) TIME: Hora de referencia: 28/10/2025 22:08:05 | Ciclo: 7[0m
+[0;32mI (193803) TIME: Hora de referencia: 28/10/2025 22:08:06 | Ciclo: 8[0m
+[0;32mI (194803) TIME: Hora de referencia: 28/10/2025 22:08:07 | Ciclo: 9[0m
+[0;32mI (195803) TIME: Hora de referencia: 28/10/2025 22:08:08 | Ciclo: 10[0m
+[0;32mI (196803) TIME: Hora de referencia: 28/10/2025 22:08:09 | Ciclo: 11[0m
+[0;32mI (197803) TIME: Hora de referencia: 28/10/2025 22:08:10 | Ciclo: 12[0m
+[0;32mI (198803) TIME: Hora de referencia: 28/10/2025 22:08:11 | Ciclo: 13[0m
+[0;32mI (199423) MONITOR: Relatório TCP enviado (-0.15% CPU)[0m
+[0;32mI (199803) TIME: Hora de referencia: 28/10/2025 22:08:12 | Ciclo: 14[0m
+[0;32mI (200803) TIME: Hora de referencia: 28/10/2025 22:08:13 | Ciclo: 15[0m
+[0;32mI (201803) TIME: Hora de referencia: 28/10/2025 22:08:14 | Ciclo: 16[0m
+[0;32mI (202803) TIME: Hora de referencia: 28/10/2025 22:08:15 | Ciclo: 17[0m
+[0;32mI (203803) TIME: Hora de referencia: 28/10/2025 22:08:16 | Ciclo: 18[0m
+[0;32mI (204803) TIME: Hora de referencia: 28/10/2025 22:08:17 | Ciclo: 19[0m
+[0;32mI (205803) TIME: Hora de referencia: 28/10/2025 22:08:18 | Ciclo: 20[0m
+[0;32mI (206803) TIME: Hora de referencia: 28/10/2025 22:08:19 | Ciclo: 21[0m
+[0;32mI (207803) TIME: Hora de referencia: 28/10/2025 22:08:20 | Ciclo: 22[0m
+[0;32mI (208803) TIME: Hora de referencia: 28/10/2025 22:08:21 | Ciclo: 23[0m
+[0;32mI (209803) TIME: Hora de referencia: 28/10/2025 22:08:22 | Ciclo: 24[0m
+[0;32mI (210803) TIME: Hora de referencia: 28/10/2025 22:08:23 | Ciclo: 25[0m
+[0;32mI (211803) TIME: Hora de referencia: 28/10/2025 22:08:24 | Ciclo: 26[0m
+[0;32mI (212803) TIME: Hora de referencia: 28/10/2025 22:08:25 | Ciclo: 27[0m
+[0;32mI (213803) TIME: Hora de referencia: 28/10/2025 22:08:26 | Ciclo: 28[0m
+[0;32mI (214803) TIME: Hora de referencia: 28/10/2025 22:08:27 | Ciclo: 29[0m
+[0;32mI (215803) TIME: Hora de referencia: 28/10/2025 22:08:28 | Ciclo: 30[0m
+[0;32mI (216003) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (216803) TIME: Hora de referencia: 28/10/2025 22:08:29 | Ciclo: 0[0m
+[0;32mI (217803) TIME: Hora de referencia: 28/10/2025 22:08:30 | Ciclo: 1[0m
+[0;32mI (218803) TIME: Hora de referencia: 28/10/2025 22:08:31 | Ciclo: 2[0m
+[0;32mI (219803) TIME: Hora de referencia: 28/10/2025 22:08:32 | Ciclo: 3[0m
+[0;32mI (220803) TIME: Hora de referencia: 28/10/2025 22:08:33 | Ciclo: 4[0m
+[0;32mI (221803) TIME: Hora de referencia: 28/10/2025 22:08:34 | Ciclo: 5[0m
+[0;32mI (222803) TIME: Hora de referencia: 28/10/2025 22:08:35 | Ciclo: 6[0m
+[0;32mI (223803) TIME: Hora de referencia: 28/10/2025 22:08:36 | Ciclo: 7[0m
+[0;32mI (224803) TIME: Hora de referencia: 28/10/2025 22:08:37 | Ciclo: 8[0m
+[0;32mI (225803) TIME: Hora de referencia: 28/10/2025 22:08:38 | Ciclo: 9[0m
+[0;32mI (226803) TIME: Hora de referencia: 28/10/2025 22:08:39 | Ciclo: 10[0m
+[0;32mI (227803) TIME: Hora de referencia: 28/10/2025 22:08:40 | Ciclo: 11[0m
+[0;32mI (228803) TIME: Hora de referencia: 28/10/2025 22:08:41 | Ciclo: 12[0m
+[0;32mI (229803) TIME: Hora de referencia: 28/10/2025 22:08:42 | Ciclo: 13[0m
+[0;32mI (230803) TIME: Hora de referencia: 28/10/2025 22:08:43 | Ciclo: 14[0m
+[0;32mI (231803) TIME: Hora de referencia: 28/10/2025 22:08:44 | Ciclo: 15[0m
+[0;32mI (232803) TIME: Hora de referencia: 28/10/2025 22:08:45 | Ciclo: 16[0m
+[0;32mI (233803) TIME: Hora de referencia: 28/10/2025 22:08:46 | Ciclo: 17[0m
+[0;32mI (234803) TIME: Hora de referencia: 28/10/2025 22:08:47 | Ciclo: 18[0m
+[0;32mI (235803) TIME: Hora de referencia: 28/10/2025 22:08:48 | Ciclo: 19[0m
+[0;32mI (236803) TIME: Hora de referencia: 28/10/2025 22:08:49 | Ciclo: 20[0m
+[0;32mI (237803) TIME: Hora de referencia: 28/10/2025 22:08:50 | Ciclo: 21[0m
+[0;32mI (238803) TIME: Hora de referencia: 28/10/2025 22:08:51 | Ciclo: 22[0m
+[0;32mI (239803) TIME: Hora de referencia: 28/10/2025 22:08:52 | Ciclo: 23[0m
+[0;32mI (240803) TIME: Hora de referencia: 28/10/2025 22:08:53 | Ciclo: 24[0m
+[0;32mI (241803) TIME: Hora de referencia: 28/10/2025 22:08:54 | Ciclo: 25[0m
+[0;32mI (242803) TIME: Hora de referencia: 28/10/2025 22:08:55 | Ciclo: 26[0m
+[0;32mI (243803) TIME: Hora de referencia: 28/10/2025 22:08:56 | Ciclo: 27[0m
+[0;32mI (244803) TIME: Hora de referencia: 28/10/2025 22:08:57 | Ciclo: 28[0m
+[0;32mI (245803) TIME: Hora de referencia: 28/10/2025 22:08:58 | Ciclo: 29[0m
+[0;32mI (246213) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (246803) TIME: Hora de referencia: 28/10/2025 22:08:59 | Ciclo: 0[0m
+[0;32mI (247803) TIME: Hora de referencia: 28/10/2025 22:09:00 | Ciclo: 1[0m
+[0;32mI (248803) TIME: Hora de referencia: 28/10/2025 22:09:01 | Ciclo: 2[0m
+[0;32mI (249803) TIME: Hora de referencia: 28/10/2025 22:09:02 | Ciclo: 3[0m
+[0;32mI (250803) TIME: Hora de referencia: 28/10/2025 22:09:03 | Ciclo: 4[0m
+[0;32mI (251803) TIME: Hora de referencia: 28/10/2025 22:09:04 | Ciclo: 5[0m
+[0;32mI (252803) TIME: Hora de referencia: 28/10/2025 22:09:05 | Ciclo: 6[0m
+[0;32mI (253803) TIME: Hora de referencia: 28/10/2025 22:09:06 | Ciclo: 7[0m
+[0;32mI (254803) TIME: Hora de referencia: 28/10/2025 22:09:07 | Ciclo: 8[0m
+[0;32mI (255803) TIME: Hora de referencia: 28/10/2025 22:09:08 | Ciclo: 9[0m
+[0;32mI (256803) TIME: Hora de referencia: 28/10/2025 22:09:09 | Ciclo: 10[0m
+[0;32mI (257803) TIME: Hora de referencia: 28/10/2025 22:09:10 | Ciclo: 11[0m
+[0;32mI (258803) TIME: Hora de referencia: 28/10/2025 22:09:11 | Ciclo: 12[0m
+[0;32mI (259803) TIME: Hora de referencia: 28/10/2025 22:09:12 | Ciclo: 13[0m
+[0;32mI (259903) MONITOR: Relatório TCP enviado (0.02% CPU)[0m
+[0;32mI (260803) TIME: Hora de referencia: 28/10/2025 22:09:13 | Ciclo: 14[0m
+[0;32mI (261803) TIME: Hora de referencia: 28/10/2025 22:09:14 | Ciclo: 15[0m
+[0;32mI (262803) TIME: Hora de referencia: 28/10/2025 22:09:15 | Ciclo: 16[0m
+[0;32mI (263803) TIME: Hora de referencia: 28/10/2025 22:09:16 | Ciclo: 17[0m

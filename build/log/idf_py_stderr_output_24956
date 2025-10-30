@@ -1,0 +1,18 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM3'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.8.0 on \\.\COM3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40088b7d: [0;33mpanic_abort[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40088b45: [0;33mesp_system_abort[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x40090b15: [0;33m__assert_func[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/newlib/src/assert.c[0m[0m:[1;31m80[0m
+[0m--- 0x400e2fd1: [0;33msntp_setoperatingmode[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/lwip/lwip/src/apps/sntp/sntp.c[0m[0m:[1;31m748[0m
+[0m--- 0x400e0d6e: [0;33mdo_setoperatingmode[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/lwip/apps/sntp/sntp.c[0m[0m:[1;31m163[0m
+[0m--- 0x400e2a69: [0;33mtcpip_thread_handle_msg[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/lwip/lwip/src/api/tcpip.c[0m[0m:[1;31m201[0m
+[0m--- 0x400e2ac9: [0;33mtcpip_thread[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/lwip/lwip/src/api/tcpip.c[0m[0m:[1;31m148[0m
+[0m--- 0x400897fd: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/Rafael/esp/v5.5.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m

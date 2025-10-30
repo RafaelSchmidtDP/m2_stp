@@ -1,0 +1,1739 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a980h (108928) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002a9a8 vaddr=3ffb0000 size=03f8ch ( 16268) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002e93c vaddr=40080000 size=016dch (  5852) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=903c0h (590784) map[0m
+[0;32mI (338) esp_image: segment 4: paddr=000c03e8 vaddr=400816dc size=1689ch ( 92316) load[0m
+[0;32mI (375) esp_image: segment 5: paddr=000d6c8c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (386) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (387) boot: Disabling RNG early entropy source...[0m
+[0;32mI (397) cpu_start: Multicore app[0m
+[0;32mI (406) cpu_start: Pro cpu start user code[0m
+[0;32mI (406) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (406) app_init: Application information:[0m
+[0;32mI (406) app_init: Project name:     hello_world[0m
+[0;32mI (410) app_init: App version:      1[0m
+[0;32mI (413) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (418) app_init: ELF file SHA256:  38d218000...[0m
+[0;32mI (423) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (427) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (430) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (434) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (438) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (445) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (450) heap_init: At 3FFB8638 len 000279C8 (158 KiB): DRAM[0m
+[0;32mI (455) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (466) heap_init: At 40097F78 len 00008088 (32 KiB): IRAM[0m
+[0;32mI (472) spi_flash: detected chip: generic[0m
+[0;32mI (475) spi_flash: flash io: dio[0m
+[0;33mW (478) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (490) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (500) main_task: Started on CPU0[0m
+[0;32mI (510) main_task: Calling app_main()[0m
+[0;32mI (530) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1430) SISTEMA: Esteira industrial inicializada.[0m
+[0;32mI (1440) wifi:wifi driver task: 3ffc05e8, prio:23, stack:6656, core=0[0m
+[0;32mI (1450) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1450) wifi:wifi certification version: v7.0[0m
+[0;32mI (1450) wifi:config NVS flash: enabled[0m
+[0;32mI (1450) wifi:config nano formatting: disabled[0m
+[0;32mI (1460) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1460) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1460) wifi:Init management short buffer num: 32[0m
+[0;32mI (1470) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1470) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1480) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1480) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1490) wifi_init: rx ba win: 6[0m
+[0;32mI (1490) wifi_init: accept mbox: 6[0m
+[0;32mI (1490) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1490) wifi_init: udp mbox: 6[0m
+[0;32mI (1500) wifi_init: tcp mbox: 6[0m
+[0;32mI (1500) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1500) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1510) wifi_init: tcp mss: 1440[0m
+[0;32mI (1510) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1510) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1520) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1600) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (1600) wifi:enable tsf[0m
+[0;32mI (1600) SISTEMA: Conectando ao WiFi...[0m
+[0;32mI (1610) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1610) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1660) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1680) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1690) CPU: Frequência atual da CPU: 160 MHz[0m
+[0;32mI (1690) TIME: Iniciando TIME_TASK (periodo 1s)[0m
+[0;32mI (1690) TIME: Inicializando SNTP...[0m
+[0;32mI (1690) MONITOR: INICIANDO MODO UDP: Foco na periodicidade (D: 500ms).[0m
+[0;32mI (1690) SISTEMA: Sistema iniciado. Use touch pads:[0m
+[0;32mI (1700) SISTEMA: - Touch B (GPIO 12): Detecção objeto[0m
+[0;32mI (1700) SISTEMA: - Touch C (GPIO 14): HMI/Telemetria[0m
+[0;32mI (1710) SISTEMA: - Touch D (GPIO 27): E-stop (zera RPM instantaneamente)[0m
+[0;32mI (1710) main_task: Returned from app_main()[0m
+[0;32mI (1790) wifi:connected with Suite3, aid = 16, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (1790) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (1790) wifi:pm start, type: 1[0m
+
+[0;32mI (1790) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;33mW (1800) SISTEMA: ENC miss: dur=15748 us (dl=5000) total=1[0m
+[0;32mI (1860) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2070) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (2140) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (2150) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 0[0m
+[0;32mI (2180) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 0[0m
+[0;32mI (2180) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (2210) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (2810) esp_netif_handlers: sta ip: 192.168.7.7, mask: 255.255.255.0, gw: 192.168.7.1[0m
+[0;32mI (2840) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (2870) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (2900) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (2930) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (2960) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3000) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3030) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3060) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3090) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3130) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3140) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:7, winSize:64[0m
+[0;32mI (3150) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (3190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3220) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3250) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3280) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3310) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3340) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3380) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3400) TIME: Tempo sincronizado via SNTP.[0m
+[0;32mI (3410) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3440) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3470) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3490) TIME: Hora atual: Sat Oct 25 22:28:04 2025[0m
+[0;32mI (3490) TIME: Hora atual: 2025-10-25 22:28:04 | Ciclos desde sync: 0[0m
+[0;32mI (3500) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3530) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3560) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3600) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3630) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3660) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (3690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3220.97 ms | Total peças=1[0m
+[0;32mI (3690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (3700) SISTEMA: SAFETY miss: dur=6078 us (dl=5000) total=1[0m
+[0;32mI (3720) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3750) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3790) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3820) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3850) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3880) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3910) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3940) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (3980) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4010) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4040) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4070) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4100) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4130) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4140) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4160) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4170) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (4190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4200) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4200) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4230) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4240) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4260) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4270) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4290) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4300) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4320) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4330) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4350) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4360) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4390) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4390) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4420) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4430) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4450) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4460) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4480) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4490) TIME: Hora atual: 2025-10-25 22:28:05 | Ciclos desde sync: 1[0m
+[0;32mI (4490) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4510) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4520) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4540) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4550) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4580) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4580) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4610) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4610) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4640) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4650) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4670) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4680) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 1[0m
+[0;32mI (4690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (4690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4220.98 ms | Total peças=2[0m
+[0;32mI (4700) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4710) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (4730) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4740) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (4760) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4770) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (4800) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (4800) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4830) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4840) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (4860) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4870) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (4890) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4900) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (4920) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4930) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (4950) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (4960) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (4990) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (4990) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5020) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5030) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5050) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5060) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5080) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5090) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5110) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5120) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5140) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5150) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5180) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5180) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (5190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5210) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5210) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5240) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5250) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5270) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5280) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5300) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5310) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5330) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5340) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5360) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5370) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5400) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5400) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5430) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5430) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5460) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5470) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5490) TIME: Hora atual: 2025-10-25 22:28:06 | Ciclos desde sync: 2[0m
+[0;32mI (5490) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5500) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5520) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5530) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5550) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5560) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5590) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5590) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5620) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5630) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5650) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5660) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5680) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (5690) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 2[0m
+[0;32mI (5690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=5221.55 ms | Total peças=3[0m
+[0;32mI (5710) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5720) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (5740) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5750) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (5780) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (5780) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5810) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (5810) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5840) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5850) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (5870) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5880) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (5900) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5910) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (5930) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5940) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (5960) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (5970) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6000) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6000) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6030) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6040) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6060) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6070) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6090) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6100) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6120) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6130) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6160) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6160) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (6190) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6220) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6230) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6250) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6260) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6280) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6290) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6310) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6320) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6340) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6350) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6380) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6380) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6410) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6410) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6440) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6450) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6470) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6480) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6490) TIME: Hora atual: 2025-10-25 22:28:07 | Ciclos desde sync: 3[0m
+[0;32mI (6500) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6510) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6530) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6540) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6560) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6570) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6600) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6600) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6630) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6640) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6660) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6670) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 3[0m
+[0;32mI (6690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (6690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=6220.97 ms | Total peças=4[0m
+[0;32mI (6690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6700) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;33mW (6700) SISTEMA: SAFETY miss: dur=9938 us (dl=5000) total=2[0m
+[0;32mI (6720) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6730) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (6750) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6760) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (6790) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (6790) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6820) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6830) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (6850) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6860) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (6880) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6890) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (6910) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6920) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (6940) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (6950) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (6980) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (6970) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7010) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7010) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7040) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7050) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7070) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7080) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7100) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7110) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7130) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7140) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7160) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7170) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (7190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7200) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7200) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7230) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7240) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7260) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7270) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7290) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7300) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7320) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7330) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7350) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7360) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7390) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7390) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7420) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7420) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7450) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7460) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7480) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7490) TIME: Hora atual: 2025-10-25 22:28:08 | Ciclos desde sync: 4[0m
+[0;32mI (7490) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7510) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7520) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7540) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7550) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7570) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7580) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7610) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7610) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7640) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7650) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7670) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7680) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 4[0m
+[0;32mI (7690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (7690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=7220.98 ms | Total peças=5[0m
+[0;32mI (7700) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7710) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (7730) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7740) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (7760) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7770) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (7800) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (7800) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7830) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7840) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (7860) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7870) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (7890) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7900) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (7920) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7930) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (7950) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (7960) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (7990) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (7990) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8020) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8020) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8050) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8060) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8080) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8090) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8110) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8120) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8140) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8150) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8170) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8180) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (8190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8210) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8210) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8240) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8250) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8270) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8280) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8300) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8310) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8330) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8340) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8360) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8370) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8400) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8400) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8430) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8430) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8460) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8470) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8490) TIME: Hora atual: 2025-10-25 22:28:09 | Ciclos desde sync: 5[0m
+[0;32mI (8490) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8500) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8520) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8530) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8550) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8560) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8580) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8590) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8620) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8620) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8650) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8660) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8680) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (8690) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 5[0m
+[0;32mI (8690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=8223.32 ms | Total peças=6[0m
+[0;32mI (8710) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8720) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (8740) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8750) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (8770) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8780) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (8810) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (8810) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8840) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8850) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (8870) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8880) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (8900) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8910) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (8930) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8940) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (8960) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (8970) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9000) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9000) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9030) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9030) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9060) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9070) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9090) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9100) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9120) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9130) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9150) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9160) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9180) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9190) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (9190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (9200) SISTEMA: SAFETY miss: dur=8806 us (dl=5000) total=3[0m
+[0;32mI (9220) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9220) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9250) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9260) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9280) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9290) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9310) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9320) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 6[0m
+[0;32mI (9340) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9350) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 7[0m
+[0;32mI (9350) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.42 ms | Total peças=7[0m
+[0;32mI (9370) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9380) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 7[0m
+[0;32mI (9380) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.40 ms | Total peças=8[0m
+[0;32mI (9410) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 8[0m
+[0;32mI (9410) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9410) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.29 ms | Total peças=9[0m
+[0;32mI (9440) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9440) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.72 ms | Total peças=10[0m
+[0;32mI (9450) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 10[0m
+[0;32mI (9470) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9470) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=11[0m
+[0;32mI (9480) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 11[0m
+[0;32mI (9490) TIME: Hora atual: 2025-10-25 22:28:10 | Ciclos desde sync: 6[0m
+[0;32mI (9500) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9500) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=12[0m
+[0;32mI (9510) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 12[0m
+[0;32mI (9530) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9530) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=13[0m
+[0;32mI (9540) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 13[0m
+[0;33mW (9540) SISTEMA: CTRL miss: dur=5873 us (dl=5000) total=1[0m
+[0;32mI (9560) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9570) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 14[0m
+[0;32mI (9570) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=14[0m
+[0;32mI (9600) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 14[0m
+[0;32mI (9600) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9600) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.01 ms | Total peças=15[0m
+[0;32mI (9630) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 15[0m
+[0;32mI (9630) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9630) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.46 ms | Total peças=16[0m
+[0;32mI (9660) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9660) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.56 ms | Total peças=17[0m
+[0;32mI (9670) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 17[0m
+[0;32mI (9690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (9690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=9220.96 ms | Total peças=18[0m
+[0;32mI (9690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.54 ms | Total peças=19[0m
+[0;32mI (9700) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 19[0m
+[0;33mW (9710) SISTEMA: CTRL miss: dur=10670 us (dl=5000) total=2[0m
+[0;32mI (9720) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9720) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=20[0m
+[0;32mI (9730) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 20[0m
+[0;33mW (9730) SISTEMA: CTRL miss: dur=5937 us (dl=5000) total=3[0m
+[0;32mI (9750) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9760) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 21[0m
+[0;32mI (9760) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.47 ms | Total peças=21[0m
+[0;32mI (9780) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9790) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 21[0m
+[0;32mI (9790) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.99 ms | Total peças=22[0m
+[0;32mI (9820) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 22[0m
+[0;32mI (9820) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9820) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.97 ms | Total peças=23[0m
+[0;32mI (9850) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9850) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.71 ms | Total peças=24[0m
+[0;32mI (9860) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 24[0m
+[0;32mI (9880) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9880) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=25[0m
+[0;32mI (9890) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 25[0m
+[0;32mI (9910) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9910) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=26[0m
+[0;32mI (9920) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 26[0m
+[0;32mI (9940) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9950) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 27[0m
+[0;32mI (9940) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.58 ms | Total peças=27[0m
+[0;32mI (9970) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (9980) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 27[0m
+[0;32mI (9980) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.72 ms | Total peças=28[0m
+[0;32mI (10010) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 28[0m
+[0;32mI (10010) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10010) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.80 ms | Total peças=29[0m
+[0;32mI (10040) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10040) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=30[0m
+[0;32mI (10050) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 30[0m
+[0;32mI (10070) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10070) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.32 ms | Total peças=31[0m
+[0;32mI (10080) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 31[0m
+[0;32mI (10100) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10100) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=32[0m
+[0;32mI (10110) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 32[0m
+[0;32mI (10130) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10130) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.14 ms | Total peças=33[0m
+[0;32mI (10140) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 33[0m
+[0;33mW (10140) SISTEMA: CTRL miss: dur=5567 us (dl=5000) total=4[0m
+[0;32mI (10160) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10170) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 34[0m
+[0;32mI (10170) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.55 ms | Total peças=34[0m
+[0;32mI (10190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (10190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10200) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 34[0m
+[0;33mW (10200) SISTEMA: SAFETY miss: dur=5902 us (dl=5000) total=4[0m
+[0;32mI (10210) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=12.19 ms | Total peças=35[0m
+[0;32mI (10230) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 35[0m
+[0;32mI (10230) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10230) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.86 ms | Total peças=36[0m
+[0;32mI (10260) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 36[0m
+[0;32mI (10260) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10260) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.82 ms | Total peças=37[0m
+[0;32mI (10290) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10290) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.12 ms | Total peças=38[0m
+[0;32mI (10300) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 38[0m
+[0;32mI (10320) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10320) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=39[0m
+[0;32mI (10330) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 39[0m
+[0;33mW (10330) SISTEMA: CTRL miss: dur=5020 us (dl=5000) total=5[0m
+[0;32mI (10350) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10360) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 39[0m
+[0;32mI (10360) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.15 ms | Total peças=40[0m
+[0;32mI (10380) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10390) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 40[0m
+[0;32mI (10390) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.34 ms | Total peças=41[0m
+[0;32mI (10420) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 41[0m
+[0;32mI (10420) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10420) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.41 ms | Total peças=42[0m
+[0;32mI (10450) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10450) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.21 ms | Total peças=43[0m
+[0;32mI (10460) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 43[0m
+[0;32mI (10480) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10480) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.32 ms | Total peças=44[0m
+[0;32mI (10490) TIME: Hora atual: 2025-10-25 22:28:11 | Ciclos desde sync: 7[0m
+[0;32mI (10490) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 44[0m
+[0;33mW (10500) SISTEMA: CTRL miss: dur=9991 us (dl=5000) total=6[0m
+[0;32mI (10510) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10510) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=45[0m
+[0;32mI (10520) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 45[0m
+[0;32mI (10540) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10540) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=46[0m
+[0;32mI (10550) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 46[0m
+[0;33mW (10550) SISTEMA: CTRL miss: dur=5890 us (dl=5000) total=7[0m
+[0;32mI (10570) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10580) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 46[0m
+[0;32mI (10580) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.08 ms | Total peças=47[0m
+[0;32mI (10610) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 47[0m
+[0;32mI (10610) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10610) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.14 ms | Total peças=48[0m
+[0;32mI (10640) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 48[0m
+[0;32mI (10640) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10640) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.58 ms | Total peças=49[0m
+[0;32mI (10670) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10670) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.50 ms | Total peças=50[0m
+[0;32mI (10680) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 50[0m
+[0;32mI (10690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (10690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=10220.96 ms | Total peças=51[0m
+[0;32mI (10700) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10700) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.14 ms | Total peças=52[0m
+[0;32mI (10710) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 52[0m
+[0;33mW (10710) SISTEMA: CTRL miss: dur=5047 us (dl=5000) total=8[0m
+[0;32mI (10730) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10730) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=53[0m
+[0;32mI (10740) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 53[0m
+[0;33mW (10740) SISTEMA: CTRL miss: dur=5274 us (dl=5000) total=9[0m
+[0;32mI (10760) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10770) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 54[0m
+[0;32mI (10770) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.52 ms | Total peças=54[0m
+[0;32mI (10790) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10800) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 54[0m
+[0;32mI (10800) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=5.05 ms | Total peças=55[0m
+[0;32mI (10830) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 55[0m
+[0;32mI (10830) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10830) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.10 ms | Total peças=56[0m
+[0;32mI (10860) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10860) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=57[0m
+[0;32mI (10870) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 57[0m
+[0;32mI (10890) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10890) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.32 ms | Total peças=58[0m
+[0;32mI (10900) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 58[0m
+[0;32mI (10920) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10920) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=59[0m
+[0;32mI (10930) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 59[0m
+[0;32mI (10950) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10950) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=60[0m
+[0;32mI (10960) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 60[0m
+[0;33mW (10960) SISTEMA: CTRL miss: dur=6219 us (dl=5000) total=10[0m
+[0;32mI (10980) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (10990) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 60[0m
+[0;32mI (10990) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.73 ms | Total peças=61[0m
+[0;32mI (11020) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 61[0m
+[0;32mI (11020) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11020) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.78 ms | Total peças=62[0m
+[0;32mI (11050) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11050) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=63[0m
+[0;32mI (11060) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 63[0m
+[0;32mI (11080) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11080) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.63 ms | Total peças=64[0m
+[0;32mI (11090) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 64[0m
+[0;32mI (11110) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11110) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=65[0m
+[0;32mI (11120) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 65[0m
+[0;32mI (11140) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11140) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.33 ms | Total peças=66[0m
+[0;32mI (11150) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 66[0m
+[0;33mW (11150) SISTEMA: CTRL miss: dur=5818 us (dl=5000) total=11[0m
+[0;32mI (11170) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11180) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 67[0m
+[0;32mI (11180) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.35 ms | Total peças=67[0m
+[0;32mI (11190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (11190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (11190) SISTEMA: SAFETY miss: dur=6315 us (dl=5000) total=5[0m
+[0;32mI (11210) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 67[0m
+[0;32mI (11210) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11210) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=6.37 ms | Total peças=68[0m
+[0;32mI (11240) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 68[0m
+[0;32mI (11240) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11240) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.79 ms | Total peças=69[0m
+[0;32mI (11270) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11270) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.31 ms | Total peças=70[0m
+[0;32mI (11280) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 70[0m
+[0;32mI (11300) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11300) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.32 ms | Total peças=71[0m
+[0;32mI (11310) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 71[0m
+[0;32mI (11330) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11330) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=72[0m
+[0;32mI (11340) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 72[0m
+[0;33mW (11340) SISTEMA: CTRL miss: dur=5068 us (dl=5000) total=12[0m
+[0;32mI (11360) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11360) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=73[0m
+[0;32mI (11370) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 73[0m
+[0;33mW (11370) SISTEMA: CTRL miss: dur=6618 us (dl=5000) total=13[0m
+[0;32mI (11390) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11400) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 73[0m
+[0;32mI (11400) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.33 ms | Total peças=74[0m
+[0;32mI (11430) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 74[0m
+[0;32mI (11430) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11430) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.90 ms | Total peças=75[0m
+[0;32mI (11460) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11460) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=76[0m
+[0;32mI (11470) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 76[0m
+[0;32mI (11490) TIME: Hora atual: 2025-10-25 22:28:12 | Ciclos desde sync: 8[0m
+[0;32mI (11490) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11490) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.44 ms | Total peças=77[0m
+[0;32mI (11500) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 77[0m
+[0;33mW (11500) SISTEMA: CTRL miss: dur=6626 us (dl=5000) total=14[0m
+[0;32mI (11520) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11520) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=78[0m
+[0;32mI (11530) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 78[0m
+[0;32mI (11550) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11550) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=79[0m
+[0;32mI (11560) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 79[0m
+[0;33mW (11560) SISTEMA: CTRL miss: dur=5959 us (dl=5000) total=15[0m
+[0;32mI (11580) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11590) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 79[0m
+[0;32mI (11590) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.95 ms | Total peças=80[0m
+[0;32mI (11620) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 80[0m
+[0;32mI (11620) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11620) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.08 ms | Total peças=81[0m
+[0;32mI (11650) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 81[0m
+[0;32mI (11650) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11650) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.75 ms | Total peças=82[0m
+[0;32mI (11680) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11680) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=83[0m
+[0;32mI (11690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (11690) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 83[0m
+[0;33mW (11690) SISTEMA: CTRL miss: dur=6616 us (dl=5000) total=16[0m
+[0;32mI (11700) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=11231.45 ms | Total peças=84[0m
+[0;32mI (11710) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11710) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.71 ms | Total peças=85[0m
+[0;32mI (11720) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 85[0m
+[0;33mW (11730) SISTEMA: CTRL miss: dur=9997 us (dl=5000) total=17[0m
+[0;32mI (11740) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11740) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.15 ms | Total peças=86[0m
+[0;32mI (11750) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 86[0m
+[0;33mW (11750) SISTEMA: CTRL miss: dur=7079 us (dl=5000) total=18[0m
+[0;32mI (11770) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11780) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 87[0m
+[0;32mI (11780) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=87[0m
+[0;32mI (11810) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 87[0m
+[0;32mI (11800) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11810) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.84 ms | Total peças=88[0m
+[0;32mI (11840) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 88[0m
+[0;32mI (11840) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11840) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.92 ms | Total peças=89[0m
+[0;32mI (11870) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11870) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=90[0m
+[0;32mI (11880) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 90[0m
+[0;32mI (11900) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11900) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.43 ms | Total peças=91[0m
+[0;32mI (11910) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 91[0m
+[0;32mI (11930) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11930) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=92[0m
+[0;32mI (11940) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 92[0m
+[0;32mI (11960) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (11960) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=93[0m
+[0;32mI (11970) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 93[0m
+[0;33mW (11970) SISTEMA: CTRL miss: dur=6456 us (dl=5000) total=19[0m
+[0;32mI (11990) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12000) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 93[0m
+[0;32mI (12000) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.67 ms | Total peças=94[0m
+[0;32mI (12030) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 94[0m
+[0;32mI (12030) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12030) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.62 ms | Total peças=95[0m
+[0;32mI (12060) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12060) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=96[0m
+[0;32mI (12070) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 96[0m
+[0;32mI (12090) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12090) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=97[0m
+[0;32mI (12100) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 97[0m
+[0;32mI (12120) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12120) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.47 ms | Total peças=98[0m
+[0;32mI (12130) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 98[0m
+[0;32mI (12150) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12150) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.25 ms | Total peças=99[0m
+[0;32mI (12160) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 99[0m
+[0;33mW (12160) SISTEMA: CTRL miss: dur=5838 us (dl=5000) total=20[0m
+[0;32mI (12180) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (12190) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 100[0m
+[0;32mI (12190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (12200) SISTEMA: SAFETY miss: dur=7218 us (dl=5000) total=6[0m
+[0;33mW (12200) SISTEMA: SORT miss: dur=15600 us (dl=10000) total=1[0m
+[0;32mI (12210) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.12 ms | Total peças=100[0m
+[0;32mI (12220) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 100[0m
+[0;32mI (12220) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (12230) SISTEMA: SAFETY miss: dur=7786 us (dl=5000) total=7[0m
+[0;32mI (12230) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=16.45 ms | Total peças=101[0m
+[0;32mI (12250) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 101[0m
+[0;32mI (12250) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (12250) SISTEMA: SAFETY miss: dur=5141 us (dl=5000) total=8[0m
+[0;32mI (12260) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=10.81 ms | Total peças=102[0m
+[0;32mI (12280) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12280) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.12 ms | Total peças=103[0m
+[0;32mI (12290) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 103[0m
+[0;32mI (12310) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12310) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.43 ms | Total peças=104[0m
+[0;32mI (12320) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 104[0m
+[0;32mI (12340) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12340) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=105[0m
+[0;32mI (12350) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 105[0m
+[0;33mW (12350) SISTEMA: CTRL miss: dur=5517 us (dl=5000) total=21[0m
+[0;32mI (12370) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12380) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 106[0m
+[0;32mI (12380) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=106[0m
+[0;32mI (12400) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12410) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 106[0m
+[0;33mW (12410) SISTEMA: SAFETY miss: dur=5444 us (dl=5000) total=9[0m
+[0;32mI (12410) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=9.28 ms | Total peças=107[0m
+[0;32mI (12440) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 107[0m
+[0;32mI (12440) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12440) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.23 ms | Total peças=108[0m
+[0;32mI (12470) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12470) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=109[0m
+[0;32mI (12480) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 109[0m
+[0;32mI (12490) TIME: Hora atual: 2025-10-25 22:28:13 | Ciclos desde sync: 9[0m
+[0;32mI (12500) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12500) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=110[0m
+[0;32mI (12510) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 110[0m
+[0;32mI (12530) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12530) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.31 ms | Total peças=111[0m
+[0;32mI (12540) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 111[0m
+[0;33mW (12540) SISTEMA: CTRL miss: dur=5099 us (dl=5000) total=22[0m
+[0;32mI (12560) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12560) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=112[0m
+[0;32mI (12570) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 112[0m
+[0;33mW (12570) SISTEMA: CTRL miss: dur=6469 us (dl=5000) total=23[0m
+[0;32mI (12590) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12600) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 112[0m
+[0;32mI (12600) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.54 ms | Total peças=113[0m
+[0;32mI (12630) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 113[0m
+[0;32mI (12630) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12630) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.32 ms | Total peças=114[0m
+[0;32mI (12660) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12660) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=115[0m
+[0;32mI (12670) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 115[0m
+[0;32mI (12690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (12690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=12220.97 ms | Total peças=116[0m
+[0;32mI (12700) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 116[0m
+[0;33mW (12700) SISTEMA: CTRL miss: dur=5755 us (dl=5000) total=24[0m
+[0;32mI (12710) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=19.23 ms | Total peças=117[0m
+[0;32mI (12720) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12720) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.52 ms | Total peças=118[0m
+[0;32mI (12730) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 118[0m
+[0;33mW (12740) SISTEMA: CTRL miss: dur=9992 us (dl=5000) total=25[0m
+[0;32mI (12750) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12750) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.32 ms | Total peças=119[0m
+[0;32mI (12760) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 119[0m
+[0;33mW (12760) SISTEMA: CTRL miss: dur=7554 us (dl=5000) total=26[0m
+[0;32mI (12780) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12790) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 120[0m
+[0;32mI (12790) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=120[0m
+[0;32mI (12820) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 120[0m
+[0;32mI (12820) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12820) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=5.75 ms | Total peças=121[0m
+[0;32mI (12850) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 121[0m
+[0;32mI (12850) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12850) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.69 ms | Total peças=122[0m
+[0;32mI (12880) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12880) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=123[0m
+[0;32mI (12890) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 123[0m
+[0;32mI (12910) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12910) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=124[0m
+[0;32mI (12920) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 124[0m
+[0;33mW (12920) SISTEMA: CTRL miss: dur=5082 us (dl=5000) total=27[0m
+[0;32mI (12940) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12940) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.12 ms | Total peças=125[0m
+[0;32mI (12950) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 125[0m
+[0;33mW (12950) SISTEMA: CTRL miss: dur=5359 us (dl=5000) total=28[0m
+[0;32mI (12970) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (12980) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 126[0m
+[0;32mI (12970) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=126[0m
+[0;32mI (13000) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13010) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 126[0m
+[0;32mI (13010) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.10 ms | Total peças=127[0m
+[0;32mI (13040) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 127[0m
+[0;32mI (13040) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13040) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.78 ms | Total peças=128[0m
+[0;32mI (13070) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13070) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=129[0m
+[0;32mI (13080) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 129[0m
+[0;32mI (13100) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13100) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=130[0m
+[0;32mI (13110) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 130[0m
+[0;32mI (13130) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13130) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.52 ms | Total peças=131[0m
+[0;32mI (13140) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 131[0m
+[0;33mW (13140) SISTEMA: CTRL miss: dur=5073 us (dl=5000) total=29[0m
+[0;32mI (13160) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13160) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=132[0m
+[0;32mI (13170) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 132[0m
+[0;33mW (13170) SISTEMA: CTRL miss: dur=6262 us (dl=5000) total=30[0m
+[0;32mI (13190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (13190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13200) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 132[0m
+[0;33mW (13200) SISTEMA: SAFETY miss: dur=5754 us (dl=5000) total=10[0m
+[0;32mI (13210) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=10.95 ms | Total peças=133[0m
+[0;32mI (13230) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 133[0m
+[0;32mI (13230) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13230) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.93 ms | Total peças=134[0m
+[0;32mI (13260) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13260) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.33 ms | Total peças=135[0m
+[0;32mI (13270) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 135[0m
+[0;32mI (13290) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13290) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=136[0m
+[0;32mI (13300) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 136[0m
+[0;32mI (13320) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13320) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=137[0m
+[0;32mI (13330) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 137[0m
+[0;32mI (13350) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13350) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.35 ms | Total peças=138[0m
+[0;32mI (13360) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 138[0m
+[0;33mW (13360) SISTEMA: CTRL miss: dur=6022 us (dl=5000) total=31[0m
+[0;32mI (13380) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13390) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 139[0m
+[0;32mI (13390) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=139[0m
+[0;32mI (13420) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 139[0m
+[0;32mI (13420) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13420) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.44 ms | Total peças=140[0m
+[0;32mI (13450) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 140[0m
+[0;32mI (13450) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13450) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.32 ms | Total peças=141[0m
+[0;32mI (13480) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13480) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=142[0m
+[0;32mI (13490) TIME: Hora atual: 2025-10-25 22:28:14 | Ciclos desde sync: 10[0m
+[0;32mI (13490) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 142[0m
+[0;33mW (13490) SISTEMA: CTRL miss: dur=8403 us (dl=5000) total=32[0m
+[0;32mI (13510) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13510) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=143[0m
+[0;32mI (13520) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 143[0m
+[0;32mI (13540) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13540) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.44 ms | Total peças=144[0m
+[0;32mI (13550) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 144[0m
+[0;33mW (13550) SISTEMA: CTRL miss: dur=5482 us (dl=5000) total=33[0m
+[0;32mI (13570) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13570) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=145[0m
+[0;32mI (13580) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 145[0m
+[0;33mW (13580) SISTEMA: CTRL miss: dur=6741 us (dl=5000) total=34[0m
+[0;32mI (13600) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13610) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 145[0m
+[0;32mI (13610) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.26 ms | Total peças=146[0m
+[0;32mI (13640) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 146[0m
+[0;32mI (13640) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13640) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.79 ms | Total peças=147[0m
+[0;32mI (13670) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13670) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.25 ms | Total peças=148[0m
+[0;32mI (13680) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 148[0m
+[0;32mI (13690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (13690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=13220.97 ms | Total peças=149[0m
+[0;32mI (13700) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13700) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.13 ms | Total peças=150[0m
+[0;32mI (13710) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 150[0m
+[0;32mI (13730) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13730) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.42 ms | Total peças=151[0m
+[0;32mI (13740) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 151[0m
+[0;32mI (13760) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13760) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.39 ms | Total peças=152[0m
+[0;32mI (13770) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 152[0m
+[0;33mW (13770) SISTEMA: CTRL miss: dur=6492 us (dl=5000) total=35[0m
+[0;32mI (13790) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13800) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 152[0m
+[0;32mI (13800) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.71 ms | Total peças=153[0m
+[0;32mI (13830) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 153[0m
+[0;32mI (13830) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13830) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.97 ms | Total peças=154[0m
+[0;32mI (13860) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13860) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.45 ms | Total peças=155[0m
+[0;32mI (13870) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 155[0m
+[0;32mI (13890) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13890) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=156[0m
+[0;32mI (13900) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 156[0m
+[0;32mI (13920) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13920) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=157[0m
+[0;32mI (13930) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 157[0m
+[0;32mI (13950) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13950) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.45 ms | Total peças=158[0m
+[0;32mI (13960) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 158[0m
+[0;33mW (13960) SISTEMA: CTRL miss: dur=5976 us (dl=5000) total=36[0m
+[0;32mI (13980) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (13990) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 159[0m
+[0;32mI (13990) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=159[0m
+[0;32mI (14010) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14020) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 159[0m
+[0;32mI (14020) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=5.04 ms | Total peças=160[0m
+[0;32mI (14050) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 160[0m
+[0;32mI (14050) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14050) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.50 ms | Total peças=161[0m
+[0;32mI (14080) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14080) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=162[0m
+[0;32mI (14090) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 162[0m
+[0;32mI (14110) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14110) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=163[0m
+[0;32mI (14120) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 163[0m
+[0;32mI (14140) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14140) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.40 ms | Total peças=164[0m
+[0;32mI (14150) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 164[0m
+[0;33mW (14150) SISTEMA: CTRL miss: dur=5295 us (dl=5000) total=37[0m
+[0;32mI (14170) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14170) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.12 ms | Total peças=165[0m
+[0;32mI (14180) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 165[0m
+[0;33mW (14180) SISTEMA: CTRL miss: dur=6574 us (dl=5000) total=38[0m
+[0;32mI (14190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (14190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (14200) SISTEMA: SAFETY miss: dur=7302 us (dl=5000) total=11[0m
+[0;32mI (14200) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14210) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 165[0m
+[0;33mW (14220) SISTEMA: CTRL miss: dur=10414 us (dl=5000) total=39[0m
+[0;33mW (14220) SISTEMA: SAFETY miss: dur=18506 us (dl=5000) total=12[0m
+[0;32mI (14230) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=22.86 ms | Total peças=166[0m
+[0;32mI (14240) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 166[0m
+[0;32mI (14240) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (14250) SISTEMA: SAFETY miss: dur=7603 us (dl=5000) total=13[0m
+[0;32mI (14250) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=16.56 ms | Total peças=167[0m
+[0;32mI (14270) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14270) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.15 ms | Total peças=168[0m
+[0;32mI (14280) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 168[0m
+[0;33mW (14280) SISTEMA: CTRL miss: dur=5280 us (dl=5000) total=40[0m
+[0;32mI (14300) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14300) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=169[0m
+[0;32mI (14310) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 169[0m
+[0;32mI (14330) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14330) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=170[0m
+[0;32mI (14340) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 170[0m
+[0;32mI (14360) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14360) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.43 ms | Total peças=171[0m
+[0;32mI (14370) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 171[0m
+[0;33mW (14370) SISTEMA: CTRL miss: dur=6339 us (dl=5000) total=41[0m
+[0;32mI (14390) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14400) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 172[0m
+[0;32mI (14400) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=172[0m
+[0;32mI (14430) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 172[0m
+[0;32mI (14430) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14430) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.73 ms | Total peças=173[0m
+[0;32mI (14460) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 173[0m
+[0;32mI (14460) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14460) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.78 ms | Total peças=174[0m
+[0;32mI (14490) TIME: Hora atual: 2025-10-25 22:28:15 | Ciclos desde sync: 11[0m
+[0;32mI (14490) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14490) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=175[0m
+[0;32mI (14500) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 175[0m
+[0;33mW (14500) SISTEMA: CTRL miss: dur=6566 us (dl=5000) total=42[0m
+[0;32mI (14520) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14520) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=176[0m
+[0;32mI (14530) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 176[0m
+[0;32mI (14550) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14550) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.67 ms | Total peças=177[0m
+[0;32mI (14560) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 177[0m
+[0;33mW (14560) SISTEMA: CTRL miss: dur=6277 us (dl=5000) total=43[0m
+[0;32mI (14580) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14590) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 178[0m
+[0;32mI (14590) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=178[0m
+[0;32mI (14610) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14620) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 178[0m
+[0;32mI (14620) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.05 ms | Total peças=179[0m
+[0;32mI (14650) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 179[0m
+[0;32mI (14650) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14650) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.29 ms | Total peças=180[0m
+[0;32mI (14680) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14680) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.54 ms | Total peças=181[0m
+[0;32mI (14690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (14690) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 181[0m
+[0;33mW (14690) SISTEMA: CTRL miss: dur=5255 us (dl=5000) total=44[0m
+[0;32mI (14700) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=14231.23 ms | Total peças=182[0m
+[0;32mI (14710) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14710) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.39 ms | Total peças=183[0m
+[0;32mI (14720) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 183[0m
+[0;33mW (14730) SISTEMA: CTRL miss: dur=9998 us (dl=5000) total=45[0m
+[0;32mI (14740) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14740) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.25 ms | Total peças=184[0m
+[0;32mI (14750) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 184[0m
+[0;33mW (14750) SISTEMA: CTRL miss: dur=5319 us (dl=5000) total=46[0m
+[0;32mI (14770) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14770) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.41 ms | Total peças=185[0m
+[0;32mI (14780) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 185[0m
+[0;33mW (14780) SISTEMA: CTRL miss: dur=6702 us (dl=5000) total=47[0m
+[0;32mI (14800) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14810) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 185[0m
+[0;32mI (14810) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.56 ms | Total peças=186[0m
+[0;32mI (14840) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 186[0m
+[0;32mI (14840) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14840) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.80 ms | Total peças=187[0m
+[0;32mI (14870) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 187[0m
+[0;32mI (14870) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14870) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.69 ms | Total peças=188[0m
+[0;32mI (14900) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14900) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.13 ms | Total peças=189[0m
+[0;32mI (14910) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 189[0m
+[0;32mI (14930) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14930) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=190[0m
+[0;32mI (14940) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 190[0m
+[0;32mI (14960) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (14960) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.29 ms | Total peças=191[0m
+[0;32mI (14970) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 191[0m
+[0;33mW (14970) SISTEMA: CTRL miss: dur=6027 us (dl=5000) total=48[0m
+[0;32mI (14990) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15000) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 192[0m
+[0;32mI (15000) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=192[0m
+[0;32mI (15030) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 192[0m
+[0;32mI (15030) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15030) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.42 ms | Total peças=193[0m
+[0;32mI (15060) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 193[0m
+[0;32mI (15060) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15060) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.85 ms | Total peças=194[0m
+[0;32mI (15090) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15090) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.55 ms | Total peças=195[0m
+[0;32mI (15100) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 195[0m
+[0;32mI (15120) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15120) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=196[0m
+[0;32mI (15130) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 196[0m
+[0;32mI (15150) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15150) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.16 ms | Total peças=197[0m
+[0;32mI (15160) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 197[0m
+[0;33mW (15160) SISTEMA: CTRL miss: dur=5284 us (dl=5000) total=49[0m
+[0;32mI (15180) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (15190) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 198[0m
+[0;32mI (15190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (15200) SISTEMA: SAFETY miss: dur=6912 us (dl=5000) total=14[0m
+[0;33mW (15200) SISTEMA: SORT miss: dur=15652 us (dl=10000) total=2[0m
+[0;32mI (15210) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.45 ms | Total peças=198[0m
+[0;32mI (15210) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15220) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 198[0m
+[0;33mW (15230) SISTEMA: CTRL miss: dur=10404 us (dl=5000) total=50[0m
+[0;33mW (15230) SISTEMA: SAFETY miss: dur=18907 us (dl=5000) total=15[0m
+[0;32mI (15240) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=22.63 ms | Total peças=199[0m
+[0;32mI (15250) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 199[0m
+[0;33mW (15250) SISTEMA: CTRL miss: dur=5557 us (dl=5000) total=51[0m
+[0;32mI (15260) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (15260) SISTEMA: SAFETY miss: dur=6087 us (dl=5000) total=16[0m
+[0;32mI (15270) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=22.73 ms | Total peças=200[0m
+[0;32mI (15280) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 200[0m
+[0;33mW (15280) SISTEMA: CTRL miss: dur=6082 us (dl=5000) total=52[0m
+[0;32mI (15290) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (15300) SISTEMA: SAFETY miss: dur=8024 us (dl=5000) total=17[0m
+[0;32mI (15300) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=22.13 ms | Total peças=201[0m
+[0;32mI (15310) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15320) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 201[0m
+[0;33mW (15320) SISTEMA: SAFETY miss: dur=11395 us (dl=5000) total=18[0m
+[0;32mI (15330) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=17.84 ms | Total peças=202[0m
+[0;32mI (15340) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15340) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=203[0m
+[0;32mI (15350) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 203[0m
+[0;33mW (15350) SISTEMA: CTRL miss: dur=8857 us (dl=5000) total=53[0m
+[0;32mI (15370) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15370) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.32 ms | Total peças=204[0m
+[0;32mI (15380) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 204[0m
+[0;33mW (15380) SISTEMA: CTRL miss: dur=6850 us (dl=5000) total=54[0m
+[0;32mI (15400) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15410) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 204[0m
+[0;32mI (15410) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.70 ms | Total peças=205[0m
+[0;32mI (15440) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 205[0m
+[0;32mI (15440) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15440) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.95 ms | Total peças=206[0m
+[0;32mI (15470) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15470) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=207[0m
+[0;32mI (15480) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 207[0m
+[0;32mI (15490) TIME: Hora atual: 2025-10-25 22:28:16 | Ciclos desde sync: 12[0m
+[0;32mI (15500) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15500) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.31 ms | Total peças=208[0m
+[0;32mI (15510) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 208[0m
+[0;32mI (15530) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15530) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=209[0m
+[0;32mI (15540) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 209[0m
+[0;32mI (15560) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15560) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=210[0m
+[0;32mI (15570) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 210[0m
+[0;33mW (15570) SISTEMA: CTRL miss: dur=5731 us (dl=5000) total=55[0m
+[0;32mI (15590) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15600) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 211[0m
+[0;32mI (15600) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.53 ms | Total peças=211[0m
+[0;32mI (15620) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15630) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 211[0m
+[0;32mI (15630) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.89 ms | Total peças=212[0m
+[0;32mI (15660) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 212[0m
+[0;32mI (15660) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15660) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.15 ms | Total peças=213[0m
+[0;32mI (15690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (15690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=15221.48 ms | Total peças=214[0m
+[0;32mI (15700) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 214[0m
+[0;33mW (15700) SISTEMA: CTRL miss: dur=5758 us (dl=5000) total=56[0m
+[0;32mI (15710) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=19.71 ms | Total peças=215[0m
+[0;32mI (15720) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15720) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.24 ms | Total peças=216[0m
+[0;32mI (15730) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 216[0m
+[0;33mW (15740) SISTEMA: CTRL miss: dur=9997 us (dl=5000) total=57[0m
+[0;32mI (15750) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15750) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.29 ms | Total peças=217[0m
+[0;32mI (15760) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 217[0m
+[0;33mW (15760) SISTEMA: CTRL miss: dur=7550 us (dl=5000) total=58[0m
+[0;32mI (15780) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15790) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 218[0m
+[0;32mI (15790) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.33 ms | Total peças=218[0m
+[0;32mI (15810) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15820) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 218[0m
+[0;32mI (15820) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.19 ms | Total peças=219[0m
+[0;32mI (15850) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 219[0m
+[0;32mI (15850) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15850) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.39 ms | Total peças=220[0m
+[0;32mI (15880) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15880) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=221[0m
+[0;32mI (15890) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 221[0m
+[0;32mI (15910) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15910) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.31 ms | Total peças=222[0m
+[0;32mI (15920) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 222[0m
+[0;32mI (15940) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15940) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=223[0m
+[0;32mI (15950) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 223[0m
+[0;32mI (15970) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (15970) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=224[0m
+[0;32mI (15980) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;33mW (15980) SISTEMA: CTRL miss: dur=6266 us (dl=5000) total=59[0m
+[0;32mI (16000) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16010) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16040) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16040) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16070) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16080) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16100) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16110) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16130) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16140) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16160) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16170) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (16190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16200) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16230) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16230) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16260) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16260) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16290) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16300) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16320) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16330) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16350) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16360) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16380) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16390) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16410) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16420) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16450) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16450) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16480) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16490) TIME: Hora atual: 2025-10-25 22:28:17 | Ciclos desde sync: 13[0m
+[0;32mI (16490) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16510) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16520) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16540) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16550) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16570) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16580) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16600) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16610) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;33mW (16610) SISTEMA: SAFETY miss: dur=5626 us (dl=5000) total=19[0m
+[0;32mI (16640) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16640) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16670) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16680) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 224[0m
+[0;32mI (16690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (16690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=16220.98 ms | Total peças=225[0m
+[0;32mI (16700) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16710) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (16730) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16740) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (16760) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16770) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (16790) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16800) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (16830) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (16830) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16860) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (16860) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16890) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16900) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (16920) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16930) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (16950) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16960) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (16980) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (16990) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17010) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17020) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17050) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17050) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17080) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17090) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17110) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17120) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17140) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17150) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17170) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17180) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (17190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17200) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17210) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17240) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17240) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17270) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17270) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17300) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17310) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17330) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17340) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17360) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17370) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17390) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17400) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17430) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17430) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17460) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17460) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17490) TIME: Hora atual: 2025-10-25 22:28:18 | Ciclos desde sync: 14[0m
+[0;32mI (17490) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17500) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17520) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17530) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17550) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17560) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17580) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17590) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17610) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17620) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17650) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17650) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17680) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (17690) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 225[0m
+[0;32mI (17690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=17222.51 ms | Total peças=226[0m
+[0;32mI (17710) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17720) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (17740) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17750) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (17770) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17780) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (17800) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17810) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (17840) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (17840) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17870) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17880) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (17900) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17910) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (17930) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17940) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (17960) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (17970) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (17990) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18000) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18030) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18030) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18060) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18060) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18090) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18100) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18120) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18130) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18150) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18160) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18180) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (18190) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (18190) SISTEMA: SAFETY miss: dur=6557 us (dl=5000) total=20[0m
+[0;32mI (18210) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18220) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18250) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18250) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18280) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18290) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18310) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18320) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18340) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18350) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18370) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18380) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18400) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18410) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18440) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18440) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18470) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18480) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18490) TIME: Hora atual: 2025-10-25 22:28:19 | Ciclos desde sync: 15[0m
+[0;32mI (18500) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18510) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18530) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18540) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18560) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18570) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18590) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18600) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18620) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18630) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 226[0m
+[0;32mI (18630) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.75 ms | Total peças=227[0m
+[0;32mI (18660) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 227[0m
+[0;32mI (18660) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18660) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.02 ms | Total peças=228[0m
+[0;32mI (18690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (18690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=18220.96 ms | Total peças=229[0m
+[0;32mI (18690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.92 ms | Total peças=230[0m
+[0;32mI (18700) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 230[0m
+[0;33mW (18710) SISTEMA: CTRL miss: dur=11442 us (dl=5000) total=60[0m
+[0;32mI (18720) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18720) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=231[0m
+[0;32mI (18730) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 231[0m
+[0;33mW (18730) SISTEMA: CTRL miss: dur=7317 us (dl=5000) total=61[0m
+[0;32mI (18750) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18750) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.41 ms | Total peças=232[0m
+[0;32mI (18760) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 232[0m
+[0;33mW (18760) SISTEMA: CTRL miss: dur=5422 us (dl=5000) total=62[0m
+[0;32mI (18780) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18780) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.12 ms | Total peças=233[0m
+[0;32mI (18790) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 233[0m
+[0;33mW (18790) SISTEMA: CTRL miss: dur=6727 us (dl=5000) total=63[0m
+[0;32mI (18810) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18820) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 233[0m
+[0;32mI (18820) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.28 ms | Total peças=234[0m
+[0;32mI (18850) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 234[0m
+[0;32mI (18850) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18850) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.51 ms | Total peças=235[0m
+[0;32mI (18880) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18880) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.45 ms | Total peças=236[0m
+[0;32mI (18890) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 236[0m
+[0;32mI (18910) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18910) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=237[0m
+[0;32mI (18920) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 237[0m
+[0;32mI (18940) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18940) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=238[0m
+[0;32mI (18950) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 238[0m
+[0;32mI (18970) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (18970) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.43 ms | Total peças=239[0m
+[0;32mI (18980) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 239[0m
+[0;33mW (18980) SISTEMA: CTRL miss: dur=6398 us (dl=5000) total=64[0m
+[0;32mI (19000) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19010) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 240[0m
+[0;32mI (19010) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=240[0m
+[0;32mI (19040) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 240[0m
+[0;32mI (19040) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19040) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.13 ms | Total peças=241[0m
+[0;32mI (19070) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 241[0m
+[0;32mI (19070) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19070) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.12 ms | Total peças=242[0m
+[0;32mI (19100) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19100) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=243[0m
+[0;32mI (19110) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 243[0m
+[0;32mI (19130) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19130) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.13 ms | Total peças=244[0m
+[0;32mI (19140) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 244[0m
+[0;32mI (19160) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19160) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.31 ms | Total peças=245[0m
+[0;32mI (19170) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 245[0m
+[0;32mI (19190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (19190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19200) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 246[0m
+[0;32mI (19200) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.23 ms | Total peças=246[0m
+[0;32mI (19220) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19230) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 246[0m
+[0;32mI (19230) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.98 ms | Total peças=247[0m
+[0;32mI (19260) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 247[0m
+[0;32mI (19260) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19260) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.44 ms | Total peças=248[0m
+[0;32mI (19290) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19290) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.45 ms | Total peças=249[0m
+[0;32mI (19300) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 249[0m
+[0;32mI (19320) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19320) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=250[0m
+[0;32mI (19330) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 250[0m
+[0;32mI (19350) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19350) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=251[0m
+[0;32mI (19360) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 251[0m
+[0;32mI (19380) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19380) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.44 ms | Total peças=252[0m
+[0;32mI (19390) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 252[0m
+[0;33mW (19390) SISTEMA: CTRL miss: dur=6817 us (dl=5000) total=65[0m
+[0;32mI (19410) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19420) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 252[0m
+[0;32mI (19420) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.49 ms | Total peças=253[0m
+[0;32mI (19450) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 253[0m
+[0;32mI (19450) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19450) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=3.79 ms | Total peças=254[0m
+[0;32mI (19480) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19480) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.45 ms | Total peças=255[0m
+[0;32mI (19490) TIME: Hora atual: 2025-10-25 22:28:20 | Ciclos desde sync: 16[0m
+[0;32mI (19490) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 255[0m
+[0;33mW (19490) SISTEMA: CTRL miss: dur=7823 us (dl=5000) total=66[0m
+[0;32mI (19510) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19510) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=256[0m
+[0;32mI (19520) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 256[0m
+[0;32mI (19540) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19540) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=257[0m
+[0;32mI (19550) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 257[0m
+[0;32mI (19570) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19570) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.34 ms | Total peças=258[0m
+[0;32mI (19580) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 258[0m
+[0;33mW (19580) SISTEMA: CTRL miss: dur=5363 us (dl=5000) total=67[0m
+[0;32mI (19600) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19610) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 259[0m
+[0;32mI (19610) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.10 ms | Total peças=259[0m
+[0;32mI (19640) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 259[0m
+[0;32mI (19640) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19640) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=4.36 ms | Total peças=260[0m
+[0;32mI (19670) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 260[0m
+[0;32mI (19670) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19670) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=2.80 ms | Total peças=261[0m
+[0;32mI (19690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (19690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=19221.07 ms | Total peças=262[0m
+[0;32mI (19700) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19700) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.14 ms | Total peças=263[0m
+[0;32mI (19710) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 263[0m
+[0;32mI (19730) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19740) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 263[0m
+[0;32mI (19760) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19760) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.30 ms | Total peças=264[0m
+[0;32mI (19770) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 264[0m
+[0;33mW (19770) SISTEMA: CTRL miss: dur=5527 us (dl=5000) total=68[0m
+[0;32mI (19790) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19800) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 264[0m
+[0;32mI (19820) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19830) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 264[0m
+[0;32mI (19860) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 264[0m
+[0;32mI (19860) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19890) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19890) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.42 ms | Total peças=265[0m
+[0;32mI (19900) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 265[0m
+[0;32mI (19920) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19920) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=266[0m
+[0;32mI (19930) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 266[0m
+[0;32mI (19950) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19950) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=267[0m
+[0;32mI (19960) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (19980) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (19990) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20010) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20020) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20050) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20050) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20080) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20090) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20110) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20120) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20140) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20150) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20170) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20180) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (20190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20200) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20210) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20240) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20240) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20270) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20270) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20300) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20310) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20330) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20340) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20360) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20370) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20390) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20400) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20420) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20430) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20460) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20460) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20490) TIME: Hora atual: 2025-10-25 22:28:21 | Ciclos desde sync: 17[0m
+[0;32mI (20490) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20500) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20520) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20530) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20550) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20560) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20580) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20590) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20610) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20620) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20650) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20650) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20680) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (20690) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 267[0m
+[0;32mI (20690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=20223.19 ms | Total peças=268[0m
+[0;32mI (20710) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20720) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (20740) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20750) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (20770) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20780) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (20800) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20810) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (20840) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (20840) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20870) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (20870) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20900) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20910) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (20930) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20940) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (20960) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (20970) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (20990) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21000) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (21020) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21030) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (21060) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 268[0m
+[0;32mI (21060) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21090) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21090) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=269[0m
+[0;32mI (21100) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 269[0m
+[0;32mI (21120) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21120) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.54 ms | Total peças=270[0m
+[0;32mI (21130) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 270[0m
+[0;32mI (21150) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21150) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.11 ms | Total peças=271[0m
+[0;32mI (21160) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 271[0m
+[0;32mI (21180) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21180) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.31 ms | Total peças=272[0m
+[0;32mI (21190) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 272[0m
+[0;32mI (21190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;33mW (21190) SISTEMA: CTRL miss: dur=6450 us (dl=5000) total=69[0m
+[0;32mI (21200) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (21210) SISTEMA: SAFETY miss: dur=6461 us (dl=5000) total=21[0m
+[0;32mI (21210) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21220) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 272[0m
+[0;33mW (21230) SISTEMA: CTRL miss: dur=10372 us (dl=5000) total=70[0m
+[0;33mW (21230) SISTEMA: SAFETY miss: dur=17696 us (dl=5000) total=22[0m
+[0;32mI (21240) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=23.21 ms | Total peças=273[0m
+[0;32mI (21250) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 273[0m
+[0;32mI (21250) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;33mW (21260) SISTEMA: SAFETY miss: dur=7751 us (dl=5000) total=23[0m
+[0;32mI (21260) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=16.73 ms | Total peças=274[0m
+[0;32mI (21280) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21280) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.14 ms | Total peças=275[0m
+[0;32mI (21290) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 275[0m
+[0;33mW (21290) SISTEMA: CTRL miss: dur=5145 us (dl=5000) total=71[0m
+[0;32mI (21310) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21310) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=1.99 ms | Total peças=276[0m
+[0;32mI (21320) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 276[0m
+[0;32mI (21340) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21350) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 276[0m
+[0;32mI (21370) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21380) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 276[0m
+[0;32mI (21400) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21410) SISTEMA: [TOUCH C] Telemetria | Vel: 0.0 RPM | Peças: 276[0m
+[0;32mI (21440) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (21490) TIME: Hora atual: 2025-10-25 22:28:22 | Ciclos desde sync: 18[0m
+[0;32mI (21690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (21690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=21221.00 ms | Total peças=277[0m
+[0;32mI (22190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (22190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (22490) TIME: Hora atual: 2025-10-25 22:28:23 | Ciclos desde sync: 19[0m
+[0;32mI (22690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (22690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=22220.97 ms | Total peças=278[0m
+[0;32mI (23190) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (23190) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (23490) TIME: Hora atual: 2025-10-25 22:28:24 | Ciclos desde sync: 20[0m
+[0;32mI (23690) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (23690) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=23220.98 ms | Total peças=279[0m
+[0;32mI (24490) TIME: Hora atual: 2025-10-25 22:28:25 | Ciclos desde sync: 21[0m
+[0;32mI (24690) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (24690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (25190) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (25190) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=24720.97 ms | Total peças=280[0m
+[0;32mI (25490) TIME: Hora atual: 2025-10-25 22:28:26 | Ciclos desde sync: 22[0m
+[0;32mI (25690) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (25690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (26190) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (26190) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=25720.98 ms | Total peças=281[0m
+[0;32mI (26490) TIME: Hora atual: 2025-10-25 22:28:27 | Ciclos desde sync: 23[0m
+[0;32mI (26690) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (26690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (27190) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (27190) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=26720.97 ms | Total peças=282[0m
+[0;32mI (27490) TIME: Hora atual: 2025-10-25 22:28:28 | Ciclos desde sync: 24[0m
+[0;32mI (27690) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (27690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (28190) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (28190) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=27721.04 ms | Total peças=283[0m
+[0;32mI (28490) TIME: Hora atual: 2025-10-25 22:28:29 | Ciclos desde sync: 25[0m
+[0;32mI (28690) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (28690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m
+[0;32mI (29190) MONITOR: UDP RX: SORT_ACT[0m
+[0;32mI (29190) SISTEMA: [TOUCH B] Objeto detectado | Lat ISR→Task=28720.97 ms | Total peças=284[0m
+[0;32mI (29490) TIME: Hora atual: 2025-10-25 22:28:30 | Ciclos desde sync: 26[0m
+[0;32mI (29690) MONITOR: UDP RX: SAFETY_ON[0m
+[0;32mI (29690) SISTEMA: [TOUCH D] E-stop acionado | Sistema totalmente zerado[0m

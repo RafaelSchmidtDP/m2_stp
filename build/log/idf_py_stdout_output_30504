@@ -1,0 +1,244 @@
+Command: C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Rafael\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\hello_world.elf C:\Users\Rafael\OneDrive - UNIVALI\Anexos\Arquivo pra envio\Sistema Temp Real\Network Project M2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Rafael\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Rafael\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM3'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 15:22:41[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1b2fch (111356) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=0002b324 vaddr=3ffb0000 size=03f8ch ( 16268) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002f2b8 vaddr=40080000 size=00d60h (  3424) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=94518h (607512) map[0m
+[0;32mI (345) esp_image: segment 4: paddr=000c4540 vaddr=40080d60 size=17410h ( 95248) load[0m
+[0;32mI (382) esp_image: segment 5: paddr=000db958 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (394) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (394) boot: Disabling RNG early entropy source...[0m
+[0;32mI (405) cpu_start: Multicore app[0m
+[0;32mI (413) cpu_start: Pro cpu start user code[0m
+[0;32mI (413) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (413) app_init: Application information:[0m
+[0;32mI (414) app_init: Project name:     hello_world[0m
+[0;32mI (418) app_init: App version:      1[0m
+[0;32mI (421) app_init: Compile time:     Oct 17 2025 18:40:40[0m
+[0;32mI (426) app_init: ELF file SHA256:  c574ef511...[0m
+[0;32mI (431) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (434) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (438) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (442) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (446) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (452) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (457) heap_init: At 3FFBEF78 len 00021088 (132 KiB): DRAM[0m
+[0;32mI (463) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (468) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (474) heap_init: At 40098170 len 00007E90 (31 KiB): IRAM[0m
+[0;32mI (480) spi_flash: detected chip: generic[0m
+[0;32mI (482) spi_flash: flash io: dio[0m
+[0;33mW (485) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (498) legacy_touch_driver: legacy touch driver is deprecated, please migrate to use driver/touch_sens.h[0m
+[0;32mI (508) main_task: Started on CPU0[0m
+[0;32mI (518) main_task: Calling app_main()[0m
+[0;32mI (548) wifi:wifi driver task: 3ffc77f8, prio:23, stack:6656, core=0[0m
+[0;32mI (558) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (558) wifi:wifi certification version: v7.0[0m
+[0;32mI (558) wifi:config NVS flash: enabled[0m
+[0;32mI (558) wifi:config nano formatting: disabled[0m
+[0;32mI (568) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (568) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (568) wifi:Init management short buffer num: 32[0m
+[0;32mI (578) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (578) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (588) wifi:Init static rx buffer num: 10[0m
+[0;32mI (588) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (598) wifi_init: rx ba win: 6[0m
+[0;32mI (598) wifi_init: accept mbox: 6[0m
+[0;32mI (598) wifi_init: tcpip mbox: 32[0m
+[0;32mI (598) wifi_init: udp mbox: 6[0m
+[0;32mI (608) wifi_init: tcp mbox: 6[0m
+[0;32mI (608) wifi_init: tcp tx win: 5760[0m
+[0;32mI (608) wifi_init: tcp rx win: 5760[0m
+[0;32mI (618) wifi_init: tcp mss: 1440[0m
+[0;32mI (618) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (618) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (628) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (628) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (708) wifi:mode : sta (38:18:2b:8a:fc:d8)[0m
+[0;32mI (708) wifi:enable tsf[0m
+[0;32mI (708) ESTEIRA: Conectando ao WiFi...[0m
+[0;32mI (718) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (728) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (748) ESTEIRA: Iniciando SNTP...[0m
+[0;32mI (748) ESTEIRA: Monitor Task (Controle) - Servidor TCP ativo na porta 10420[0m
+[0;32mI (748) ESTEIRA: Monitor Task - Enviando status UDP para 192.168.7.3:10421 a cada 500ms.[0m
+[0;32mI (748) ESTEIRA: Tasks criadas e esteira inicializada com Touch pads[0m
+[0;32mI (758) main_task: Returned from app_main()[0m
+[0;32mI (758) ESTEIRA: Aguardando sincronizacao SNTP inicial...[0m
+[0;32mI (768) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (788) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (898) wifi:connected with Suite3, aid = 18, channel 10, 40D, bssid = 24:2f:d0:6f:d6:28[0m
+[0;32mI (898) wifi:security: WPA2-PSK, phy: bgn, rssi: -37[0m
+[0;32mI (908) wifi:pm start, type: 0[0m
+
+[0;32mI (908) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (938) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1928) esp_netif_handlers: sta ip: 192.168.7.7, mask: 255.255.255.0, gw: 192.168.7.1[0m
+[0;32mI (3678) wifi:<ba-add>idx:0 (ifx:0, 24:2f:d0:6f:d6:28), tid:5, ssn:7, winSize:64[0m
+[0;32mI (3698) wifi:<ba-add>idx:1 (ifx:0, 24:2f:d0:6f:d6:28), tid:0, ssn:1, winSize:64[0m
+[0;32mI (3788) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (4768) ESTEIRA: Hora inicial sincronizada: 28/10/2025 23:54:28[0m
+[0;32mI (4768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:28[0m
+[0;32mI (5748) ESTEIRA: Cliente TCP conectado.[0m
+[0;32mI (5768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:29[0m
+[0;32mI (6248) ESTEIRA: TCP RX: status[0m
+
+[0;32mI (6768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:30[0m
+[0;32mI (7748) ESTEIRA: TCP RX: estop_on[0m
+
+[0;32mI (7748) ESTEIRA: Comando E-STOP acionado (via cliente).[0m
+SAFETY: triggered start=7270189 end=7271087 lat=28 us met=1
+[0;32mI (7768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:31[0m
+[0;32mI (8768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:32[0m
+[0;32mI (9248) ESTEIRA: TCP RX: status[0m
+
+[0;32mI (9768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:33[0m
+[0;32mI (10748) ESTEIRA: TCP RX: set_rpm 150.0[0m
+
+[0;32mI (10768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:34[0m
+[0;32mI (11768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:35[0m
+[0;32mI (12248) ESTEIRA: TCP RX: status[0m
+
+[0;32mI (12768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:36[0m
+[0;32mI (13748) ESTEIRA: TCP RX: set_rpm 120.0[0m
+
+[0;32mI (13768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:37[0m
+[0;32mI (14768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:38[0m
+[0;32mI (15248) ESTEIRA: TCP RX: status[0m
+
+[0;32mI (15768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:39[0m
+[0;32mI (16748) ESTEIRA: TCP RX: estop_reset[0m
+
+[0;32mI (16748) ESTEIRA: Comando E-STOP resetado (via cliente).[0m
+[0;32mI (16768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:40[0m
+[0;32mI (17768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:41[0m
+[0;32mI (18248) ESTEIRA: TCP RX: status[0m
+
+[0;32mI (18768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:42[0m
+[0;32mI (19748) ESTEIRA: Cliente TCP saiu/erro: 128[0m
+[0;32mI (19768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:43[0m
+[0;32mI (20768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:44[0m
+[0;32mI (21768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:45[0m
+[0;32mI (22768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:46[0m
+[0;32mI (23768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:47[0m
+[0;32mI (23898) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (24768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:48[0m
+[0;32mI (25768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:49[0m
+[0;32mI (26768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:50[0m
+[0;32mI (27768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:51[0m
+[0;32mI (28768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:52[0m
+[0;32mI (29768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:53[0m
+[0;32mI (30248) ESTEIRA: Relatorio Estatistico Enviado (seq=1 size=616).[0m
+[0;32mI (30768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:54[0m
+[0;32mI (31768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:55[0m
+[0;32mI (32768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:56[0m
+[0;32mI (33768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:57[0m
+[0;32mI (34768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:58[0m
+[0;32mI (35768) ESTEIRA: Hora de Referencia: 28/10/2025 23:54:59[0m
+[0;32mI (36768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:00[0m
+[0;32mI (37768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:01[0m
+[0;32mI (38768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:02[0m
+[0;32mI (39768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:03[0m
+[0;32mI (40768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:04[0m
+[0;32mI (41768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:05[0m
+[0;32mI (42768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:06[0m
+[0;32mI (43768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:07[0m
+[0;32mI (43988) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (44768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:08[0m
+[0;32mI (45768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:09[0m
+[0;32mI (46768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:10[0m
+[0;32mI (47768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:11[0m
+[0;32mI (48768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:12[0m
+[0;32mI (49768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:13[0m
+[0;32mI (50768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:14[0m
+[0;32mI (51768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:15[0m
+[0;32mI (52768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:16[0m
+[0;32mI (53768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:17[0m
+[0;32mI (54768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:18[0m
+[0;32mI (55748) ESTEIRA: Cliente TCP conectado.[0m
+[0;32mI (55768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:19[0m
+[0;32mI (56248) ESTEIRA: TCP RX: status[0m
+
+[0;32mI (56768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:20[0m
+[0;32mI (57748) ESTEIRA: TCP RX: estop_on[0m
+
+[0;32mI (57748) ESTEIRA: Comando E-STOP acionado (via cliente).[0m
+SAFETY: triggered start=57270198 end=57271020 lat=29 us met=1
+[0;32mI (57768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:21[0m
+[0;32mI (58768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:22[0m
+[0;32mI (59248) ESTEIRA: TCP RX: status[0m
+
+[0;32mI (59768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:23[0m
+[0;32mI (60248) ESTEIRA: Relatorio Estatistico Enviado (seq=2 size=612).[0m
+[0;32mI (60748) ESTEIRA: TCP RX: set_rpm 150.0[0m
+
+[0;32mI (60768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:24[0m
+[0;32mI (61768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:25[0m
+[0;32mI (62248) ESTEIRA: TCP RX: status[0m
+
+[0;32mI (62768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:26[0m
+[0;32mI (63748) ESTEIRA: TCP RX: set_rpm 120.0[0m
+
+[0;32mI (63768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:27[0m
+[0;32mI (64088) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (64768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:28[0m
+[0;32mI (65248) ESTEIRA: TCP RX: status[0m
+
+[0;32mI (65768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:29[0m
+[0;32mI (66748) ESTEIRA: TCP RX: estop_reset[0m
+
+[0;32mI (66748) ESTEIRA: Comando E-STOP resetado (via cliente).[0m
+[0;32mI (66768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:30[0m
+[0;32mI (67768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:31[0m
+[0;32mI (68248) ESTEIRA: TCP RX: status[0m
+
+[0;32mI (68768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:32[0m
+[0;32mI (69748) ESTEIRA: Cliente TCP saiu/erro: 128[0m
+[0;32mI (69768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:33[0m
+[0;32mI (70768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:34[0m
+[0;32mI (71768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:35[0m
+[0;32mI (72768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:36[0m
+[0;32mI (73768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:37[0m
+[0;32mI (74768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:38[0m
+[0;32mI (75768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:39[0m
+[0;32mI (76768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:40[0m
+[0;32mI (77768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:41[0m
+[0;32mI (78768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:42[0m
+[0;32mI (79768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:43[0m
+[0;32mI (80768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:44[0m
+[0;32mI (81768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:45[0m
+[0;32mI (82768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:46[0m
+[0;32mI (83768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:47[0m
+[0;32mI (84188) ESTEIRA: Tempo sincronizado via SNTP.[0m
+[0;32mI (84768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:48[0m
+[0;32mI (85768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:49[0m
+[0;32mI (86768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:50[0m
+[0;32mI (87768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:51[0m
+[0;32mI (88768) ESTEIRA: Hora de Referencia: 28/10/2025 23:55:52[0m
