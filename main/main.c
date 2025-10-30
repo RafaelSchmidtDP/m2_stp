@@ -779,7 +779,7 @@ static void task_monitor(void *arg)
             ESP_LOGE(TAG_MONITOR, "Falha TCP Listen (%d)", errno);
             vTaskDelete(NULL);
         }
-
+        // reutilize o mesmo endereço de porta imediatamente após ser fechado ou após uma falha
         int opt = 1;
         setsockopt(tcp_listen_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
 
