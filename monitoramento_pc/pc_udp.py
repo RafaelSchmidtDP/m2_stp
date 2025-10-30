@@ -2,9 +2,9 @@ import socket
 import threading
 import time
 
-# ===========================================================
+# 
 #  CONFIGURAÇÕES DE REDE
-# ===========================================================
+# 
 
 PC_LISTEN_IP = "0.0.0.0"          # Escuta em todas as interfaces de rede do PC
 
@@ -15,9 +15,9 @@ ESP32_IP = "10.81.100.217"        # IP da ESP32 (ajustar conforme sua rede)
 ESP32_COMMAND_PORT = 10421        # Porta da ESP32 que escuta comandos vindos do PC
 
 
-# ===========================================================
+# 
 #  THREAD DE RECEBIMENTO DE LOGS PERIÓDICOS (task_monitor)
-# ===========================================================
+# 
 def log_receiver_thread():
     try:
         # Cria socket UDP para receber logs
@@ -41,9 +41,9 @@ def log_receiver_thread():
     log_socket.close()  # Fecha o socket ao encerrar
 
 
-# ===========================================================
+# 
 #  THREAD DE RECEBIMENTO DE RELATÓRIOS DE 60s (task_report_60s)
-# ===========================================================
+# 
 def report_receiver_thread():
     try:
         # Cria socket UDP para relatórios
@@ -72,9 +72,9 @@ def report_receiver_thread():
     report_socket.close()
 
 
-# ===========================================================
+# 
 #  FUNÇÃO DE ENVIO DE COMANDOS (CLIENTE UDP)
-# ===========================================================
+# 
 def send_command(command: str):
     try:
         # Cria socket UDP temporário
@@ -90,9 +90,9 @@ def send_command(command: str):
         cmd_socket.close()  # Fecha o socket após envio
 
 
-# ===========================================================
+# 
 #  FUNÇÃO DE PING/PONG PARA TESTAR RTT (Round Trip Time)
-# ===========================================================
+# 
 def ping_esp():
     try:
         ping_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -116,9 +116,9 @@ def ping_esp():
         ping_sock.close()
 
 
-# ===========================================================
+# 
 #  PROGRAMA PRINCIPAL
-# ===========================================================
+# 
 if __name__ == "__main__":
     print(f"--- Servidor de Log UDP iniciado. ---")
 
