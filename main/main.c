@@ -737,15 +737,21 @@ static void task_safety(void *arg)
 // ======== TASK: MONITORAMENTO E COMUNICAÇÃO PC ↔ ESP32 ========
 static void task_monitor(void *arg)
 {
-    protocol_mode_t *current_mode = (protocol_mode_t *)arg; // Ponteiro para modo de operação atual (UDP ou TCP)
-    // sockets locais da task_monitor que armazenam temporariamente
-    // os descritores de socket antes de passá-los para os globais protegidos por mutex.
+    // Recebe o modo de protocolo (UDP ou TCP) definido em 'app_main'.
+    protocol_mode_t *current_mode = (protocol_mode_t *)arg;
+
+    // Sockets temporários locais usados para a inicialização.
     int sock_udp = -1;
     int tcp_listen_fd = -1;
+
+    // =======================================================
+    // I. CONFIGURAÇÃO INICIAL DO SOCKET (FORA DO LOOP)
+    // =======================================================
 
     // Configura sockets conforme modo
     if (*current_mode == MODE_TESTE_UDP)
     {
+        // 1. Cria o socket UDP: AF_INET (IPv4), SOCK_DGRAM (Datagrama).
         sock_udp = socket(AF_INET, SOCK_DGRAM, IPPROTO_IP);
         if (sock_udp < 0)
         {
@@ -753,11 +759,13 @@ static void task_monitor(void *arg)
             vTaskDelete(NULL);
         }
 
+        // 2. Define o endereço local para RECEBER dados
         struct sockaddr_in local_addr = {0};
         local_addr.sin_family = AF_INET;
-        local_addr.sin_port = htons(UDP_PORT);
-        local_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+        local_addr.sin_port = htons(UDP_PORT);          // Define a porta local para escuta (10421).
+        local_addr.sin_addr.s_addr = htonl(INADDR_ANY); // Escuta em qualquer endereço (servidor UDP)
 
+        // 3. Vincula (bind) o socket à porta e endereço local.
         if (bind(sock_udp, (struct sockaddr *)&local_addr, sizeof(local_addr)) < 0)
         {
             ESP_LOGE(TAG_MONITOR, "Erro bind UDP (%d)", errno);
@@ -765,6 +773,7 @@ static void task_monitor(void *arg)
             vTaskDelete(NULL);
         }
 
+        // 4. Salva o socket no descritor global (g_sock_udp) protegido por Mutex para acesso por outras tasks.
         xSemaphoreTake(mutexSock, portMAX_DELAY);
         g_sock_udp = sock_udp;
         xSemaphoreGive(mutexSock);
@@ -773,21 +782,26 @@ static void task_monitor(void *arg)
     }
     else if (*current_mode == MODE_TESTE_TCP)
     {
+        // 1. Cria o socket de escuta TCP: SOCK_STREAM (Orientado à conexão).
         tcp_listen_fd = socket(AF_INET, SOCK_STREAM, IPPROTO_IP);
         if (tcp_listen_fd < 0)
         {
             ESP_LOGE(TAG_MONITOR, "Falha TCP Listen (%d)", errno);
             vTaskDelete(NULL);
         }
+
+        // 2. Configura SO_REUSEADDR para reuso imediato da porta (5000) após fechamento, evitando TIME_WAIT.
         // reutilize o mesmo endereço de porta imediatamente após ser fechado ou após uma falha
         int opt = 1;
         setsockopt(tcp_listen_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
 
+        // 3. Define o endereço local (servidor TCP)
         struct sockaddr_in addr = {0};
         addr.sin_family = AF_INET;
-        addr.sin_port = htons(TCP_PORT);
+        addr.sin_port = htons(TCP_PORT); // Porta local de escuta (5000).
         addr.sin_addr.s_addr = htonl(INADDR_ANY);
 
+        // 4. Vincula (bind) o socket à porta e endereço local.
         if (bind(tcp_listen_fd, (struct sockaddr *)&addr, sizeof(addr)) < 0)
         {
             ESP_LOGE(TAG_MONITOR, "Erro bind TCP (%d)", errno);
@@ -795,13 +809,15 @@ static void task_monitor(void *arg)
             vTaskDelete(NULL);
         }
 
-        if (listen(tcp_listen_fd, 1) < 0) // listen pois é orientado a conexão
+        // 5. Entra no modo de escuta (listen), aguardando conexões (fila de 1 pendente).
+        if (listen(tcp_listen_fd, 1) < 0)
         {
             ESP_LOGE(TAG_MONITOR, "Erro listen TCP (%d)", errno);
             close(tcp_listen_fd);
             vTaskDelete(NULL);
         }
 
+        // 6. Salva o socket de escuta no descritor global (g_tcp_listen_fd).
         xSemaphoreTake(mutexSock, portMAX_DELAY);
         g_tcp_listen_fd = tcp_listen_fd;
         xSemaphoreGive(mutexSock);
@@ -813,21 +829,26 @@ static void task_monitor(void *arg)
         last_report_time_us = esp_timer_get_time();
 
     TickType_t next_wake_time = xTaskGetTickCount();
-    const TickType_t xPeriod = pdMS_TO_TICKS(MONITOR_T_MS);
+    const TickType_t xPeriod = pdMS_TO_TICKS(MONITOR_T_MS); // Período base (500ms).
     int seq = 0;
 
-    char rx_buf[128];
-    char tx_buf[512];
+    char rx_buf[128]; // Buffer para recebimento de comandos do PC
+    char tx_buf[512]; // Buffer para envio de logs periódicos
+
+    // =======================================================
+    // II. LOOP PERIÓDICO DE COMUNICAÇÃO (500ms)
+    // =======================================================
 
     while (1)
     {
-        int64_t t_release = esp_timer_get_time();
+        int64_t t_release = esp_timer_get_time(); // Tempo de liberação da Task (para WCRT)
         int64_t t_start, t_end;
         int len = 0;
 
-        // Aceita conexão TCP
+        // === 1. ACEITAR CONEXÃO TCP ===
         if (*current_mode == MODE_TESTE_TCP)
         {
+            // Tenta aceitar nova conexão APENAS se não houver cliente ativo (g_client_sock < 0).
             if (g_client_sock < 0)
             {
                 xSemaphoreTake(mutexSock, portMAX_DELAY);
@@ -838,9 +859,11 @@ static void task_monitor(void *arg)
                 {
                     struct sockaddr_in source_addr;
                     socklen_t addr_len = sizeof(source_addr);
+                    // accept(): Aguarda um cliente. Essa função pode bloquear o sistema se não houver cliente e a tarefa for preemptiva.
                     int sock = accept(listen_fd, (struct sockaddr *)&source_addr, &addr_len);
                     if (sock >= 0)
                     {
+                        // Novo socket ('sock') criado para a comunicação ATIVA com o cliente
                         xSemaphoreTake(mutexSock, portMAX_DELAY);
                         g_client_sock = sock;
                         xSemaphoreGive(mutexSock);
@@ -850,9 +873,9 @@ static void task_monitor(void *arg)
             }
         }
 
-        t_start = esp_timer_get_time();
+        t_start = esp_timer_get_time(); // Início da execução (para WCET)
 
-        // Recebe comandos
+        // === 2. RECEBER COMANDOS (PC → ESP32) ===
         if (*current_mode == MODE_TESTE_UDP)
         {
             xSemaphoreTake(mutexSock, portMAX_DELAY);
@@ -864,29 +887,32 @@ static void task_monitor(void *arg)
                 struct sockaddr_in sender_addr;
                 socklen_t addr_len = sizeof(sender_addr);
 
+                // recvfrom: Usa MSG_DONTWAIT para tornar a leitura NÃO-BLOQUEANTE (non-blocking).
+                // 'sender_addr' armazena o endereço do PC que enviou o comando (para resposta PONG).
                 len = recvfrom(s_udp, rx_buf, sizeof(rx_buf) - 1, MSG_DONTWAIT,
                                (struct sockaddr *)&sender_addr, &addr_len);
 
-                // Processa PING/PONG usando remetente real
                 if (len > 0)
                 {
                     rx_buf[len] = 0;
                     ESP_LOGI(TAG_MONITOR, "Comando recebido: %s", rx_buf);
 
+                    // Lógica para processar comandos (PING, SAFETY_ON, SORT_ACT)
                     if (strncmp(rx_buf, "PING", 4) == 0)
                     {
                         int tx_len = snprintf(tx_buf, sizeof(tx_buf), "PONG %lld", esp_timer_get_time());
+                        // Envia PONG de volta para o 'sender_addr' que enviou o PING.
                         sendto(s_udp, tx_buf, tx_len, 0, (struct sockaddr *)&sender_addr, addr_len);
                     }
                     else if (strncmp(rx_buf, "SAFETY_ON", 9) == 0)
                     {
-                        xSemaphoreGive(semEStop);
+                        xSemaphoreGive(semEStop); // Libera o semáforo de E-Stop (emergência).
                         gpio_set_level(LED_GPIO, 1);
                     }
                     else if (strncmp(rx_buf, "SORT_ACT", 8) == 0)
                     {
                         sort_evt_t ev = {.t_evt_us = esp_timer_get_time(), .t_isr_us = 0};
-                        xQueueSend(qSort, &ev, 0);
+                        xQueueSend(qSort, &ev, 0); // Envia evento para a task_sort_act.
                     }
                 }
             }
@@ -897,21 +923,25 @@ static void task_monitor(void *arg)
             int c_sock = g_client_sock;
             xSemaphoreGive(mutexSock);
 
-            if (c_sock >= 0)
+            if (c_sock >= 0) // Se há cliente conectado...
             {
+                // recv: Usa MSG_DONTWAIT para leitura NÃO-BLOQUEANTE.
                 len = recv(c_sock, rx_buf, sizeof(rx_buf) - 1, MSG_DONTWAIT);
-                if (len == 0)
+
+                if (len == 0) // len == 0: Cliente TCP desconectou.
                 {
                     ESP_LOGI(TAG_MONITOR, "Cliente TCP desconectado (len==0)");
+                    // Fecha e reseta o socket ativo
                     xSemaphoreTake(mutexSock, portMAX_DELAY);
                     close(g_client_sock);
                     g_client_sock = -1;
                     xSemaphoreGive(mutexSock);
                     len = 0;
                 }
-                else if (len < 0 && errno != EAGAIN && errno != EWOULDBLOCK)
+                else if (len < 0 && errno != EAGAIN && errno != EWOULDBLOCK) // Outro erro
                 {
                     ESP_LOGE(TAG_MONITOR, "Erro TCP recv (%d)", errno);
+                    // Erro: fecha o socket ativo
                     xSemaphoreTake(mutexSock, portMAX_DELAY);
                     close(g_client_sock);
                     g_client_sock = -1;
@@ -923,15 +953,14 @@ static void task_monitor(void *arg)
                     rx_buf[len] = 0;
                     ESP_LOGI(TAG_MONITOR, "Comando recebido: %s", rx_buf);
 
-                    // Processa cada linha separadamente
+                    // Processa comandos linha por linha (necessário para TCP).
                     char *line = strtok(rx_buf, "\n");
                     while (line != NULL)
                     {
                         if (strncmp(line, "PING", 4) == 0 && c_sock >= 0)
                         {
-                            // Adiciona \n no final para separar da próxima linha JSON
                             int tx_len = snprintf(tx_buf, sizeof(tx_buf), "PONG %lld\n", esp_timer_get_time());
-                            send(c_sock, tx_buf, tx_len, 0);
+                            send(c_sock, tx_buf, tx_len, 0); // Responde PONG via TCP
                         }
                         else if (strncmp(line, "SAFETY_ON", 9) == 0)
                         {
@@ -950,11 +979,13 @@ static void task_monitor(void *arg)
             }
         }
 
-        // Envia logs periódicos (500ms)
+        // === 3. ENVIAR LOGS PERIÓDICOS (ESP32 → PC) ===
+        // Obtém o timestamp atual do SNTP para o log.
         struct timeval tv_now;
         gettimeofday(&tv_now, NULL);
         int64_t sntp_timestamp_us = ((int64_t)tv_now.tv_sec * 1000000LL) + (int64_t)tv_now.tv_usec;
 
+        // Formata a mensagem JSON com os dados (RPM, contagem, estop, timestamp).
         int tx_off = snprintf(tx_buf, sizeof(tx_buf),
                               "{\"protocol\":\"%s\",\"seq\":%d,\"rpm\":%.1f,\"count\":%lu,"
                               "\"estop\":%s,\"ts_us\":%lld}\n",
@@ -970,10 +1001,13 @@ static void task_monitor(void *arg)
 
             if (s_udp >= 0)
             {
+                // Configura o endereço de DESTINO fixo do PC (PC_IP: 10.81.100.99, PC_PORT: 10422).
                 struct sockaddr_in dest_addr = {0};
                 dest_addr.sin_family = AF_INET;
                 dest_addr.sin_port = htons(PC_PORT);
                 inet_pton(AF_INET, PC_IP, &dest_addr.sin_addr);
+
+                // sendto: Envia o datagrama (log) para o endereço de destino (PC).
                 int sent = sendto(s_udp, tx_buf, tx_off, 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
                 if (sent < 0)
                     ESP_LOGE(TAG_MONITOR, "Erro sendto UDP (%d)", errno);
@@ -987,9 +1021,11 @@ static void task_monitor(void *arg)
 
             if (c_sock >= 0)
             {
+                // send: Envia o log através da conexão TCP.
                 int sent = send(c_sock, tx_buf, tx_off, 0);
                 if (sent < 0)
                 {
+                    // Se o envio falhar (ex: conexão resetada), fecha o socket para permitir nova conexão.
                     ESP_LOGE(TAG_MONITOR, "Erro send TCP (%d) — fechando cliente", errno);
                     xSemaphoreTake(mutexSock, portMAX_DELAY);
                     close(g_client_sock);
@@ -999,12 +1035,14 @@ static void task_monitor(void *arg)
             }
         }
 
-        cpu_tight_loop_us(500);
+        cpu_tight_loop_us(500); // Simulação de uso de CPU.
 
         t_end = esp_timer_get_time();
-        int64_t duration = t_end - t_start;
-        int64_t response_time = t_end - t_release;
+        int64_t duration = t_end - t_start;        // Duração da execução (WCET)
+        int64_t response_time = t_end - t_release; // Tempo total de resposta (WCRT)
 
+        // 4. ATUALIZAÇÃO DE MÉTRICAS (WCET/WCRT)
+        // Atualiza as estatísticas globais (protegidas por mutexStats).
         if (xSemaphoreTake(mutexStats, pdMS_TO_TICKS(10)) == pdTRUE)
         {
             if (duration > wcet_monitor)
@@ -1016,9 +1054,15 @@ static void task_monitor(void *arg)
             xSemaphoreGive(mutexStats);
         }
 
+        // 5. Bloqueia a task até o próximo ciclo periódico de 500ms
         vTaskDelayUntil(&next_wake_time, xPeriod);
     }
 
+    // =======================================================
+    // V. ENCERRAMENTO DA TASK (Cleanup - se a task for deletada)
+    // =======================================================
+
+    // Fecha todos os sockets globais antes de sair, protegido por mutex.
     xSemaphoreTake(mutexSock, portMAX_DELAY);
     if (g_tcp_listen_fd > 0)
     {
@@ -1037,7 +1081,7 @@ static void task_monitor(void *arg)
     }
     xSemaphoreGive(mutexSock);
 
-    vTaskDelete(NULL);
+    vTaskDelete(NULL); // Deleta a própria task
 }
 
 // ======== TASK: relatório de 60s (separada) ========
