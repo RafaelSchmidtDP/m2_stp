@@ -17,7 +17,8 @@
     "bitset": "c",
     "thread": "c",
     "functional": "c",
-    "netif.h": "c"
+    "netif.h": "c",
+    "random": "c"
   },
   "idf.portWin": "COM3",
   "idf.flashType": "UART"

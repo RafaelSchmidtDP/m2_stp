@@ -551,7 +551,8 @@ static void task_spd_ctrl(void *arg)
             // LÓGICA M-K FIRM
             if (!success)
                 ctrl_misses++;
-
+            // Se a execução antiga era sucesso e agora falhou -> diminui o contador.
+            // Se a execução antiga era falha e agora foi sucesso -> aumenta o contador.
             if (ctrl_firm_history[ctrl_firm_index] && !success) // T -> F
             {
                 ctrl_firm_success_count--;
@@ -560,8 +561,9 @@ static void task_spd_ctrl(void *arg)
             {
                 ctrl_firm_success_count++;
             }
-
+            // gaurda resultado no vetor
             ctrl_firm_history[ctrl_firm_index] = success;
+            // move pra proxima posição
             ctrl_firm_index = (ctrl_firm_index + 1) % K_FIRM;
 
             cpu_time_ctrl_us += execution_time;
