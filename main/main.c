@@ -744,9 +744,7 @@ static void task_monitor(void *arg)
     int sock_udp = -1;
     int tcp_listen_fd = -1;
 
-    // =======================================================
     // I. CONFIGURAÇÃO INICIAL DO SOCKET (FORA DO LOOP)
-    // =======================================================
 
     // Configura sockets conforme modo
     if (*current_mode == MODE_TESTE_UDP)
@@ -835,9 +833,7 @@ static void task_monitor(void *arg)
     char rx_buf[128]; // Buffer para recebimento de comandos do PC
     char tx_buf[512]; // Buffer para envio de logs periódicos
 
-    // =======================================================
     // II. LOOP PERIÓDICO DE COMUNICAÇÃO (500ms)
-    // =======================================================
 
     while (1)
     {
