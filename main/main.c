@@ -559,7 +559,7 @@ static void task_spd_ctrl(void *arg)
             }
             else if (!ctrl_firm_history[ctrl_firm_index] && success) // F -> T
             {
-                ctrl_firm_success_count++;
+                ctrl_firm_success_count++; // quantas das últimas K execuções da tarefa foram cumpridas dentro do deadline (sucesso).
             }
             // gaurda resultado no vetor
             ctrl_firm_history[ctrl_firm_index] = success;
