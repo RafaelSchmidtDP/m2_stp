@@ -35,10 +35,10 @@
 static const char *TAG_TIME = "TIME";
 static const char *TAG_MONITOR = "MONITOR";
 
-#define WIFI_SSID "Suite3"
-#define WIFI_PASS "13Se13Se#"
+#define WIFI_SSID "Galaxy M53 5G D550"
+#define WIFI_PASS "igrt1654"
 #define TCP_PORT 5000
-#define PC_IP "192.168.7.5" // IP do Servidor/Cliente PC
+#define PC_IP "10.81.100.99" // IP do Servidor/Cliente PC
 #define PC_PORT 10422
 #define UDP_PORT 10421
 #define REPORT_PERIOD_CYCLES 120 // Para relatórios TCP (não usado agora)
@@ -792,7 +792,7 @@ static void task_monitor(void *arg)
             vTaskDelete(NULL);
         }
 
-        if (listen(tcp_listen_fd, 1) < 0)
+        if (listen(tcp_listen_fd, 1) < 0) // listen pois é orientado a conexão
         {
             ESP_LOGE(TAG_MONITOR, "Erro listen TCP (%d)", errno);
             close(tcp_listen_fd);

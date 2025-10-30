@@ -3,7 +3,7 @@ import threading
 import json
 import time
 # tcp_c
-ESP32_IP = "192.168.7.7"
+ESP32_IP = "10.81.100.217"
 TCP_PORT = 5000
 RECV_TIMEOUT = 1.0
 stop_thread = False
